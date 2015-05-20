@@ -13,9 +13,7 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
+     <h1>Designer, Developer, Writer, and Dad.</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
@@ -25,13 +23,12 @@ theme_settings:
   email_address: # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
-  dribbble:
-  facebook:
+  dribbble: "joeykirk"
+  facebook: "joeykirk"
   flickr:
   gitlab:
   github: "rohanchandra/type-theme"
-  google_plus:
-  instagram:
+  instagram: "joeykirk"
   linkedin:  # Full URL
   pinterest:
   reddit:
@@ -39,7 +36,7 @@ theme_settings:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "twitter"
+  twitter: "joeykirk"
   wordpress:
   youtube:
 
@@ -71,6 +68,11 @@ theme_settings:
 # PAGINATION
 paginate: 5
 paginate_path: "blog/page:num"
+
+# COLLECTIONS
+collections:
+  portfolio:
+    output: true
 
 # BUILD SETTINGS
 markdown: kramdown
