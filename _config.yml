@@ -5,16 +5,14 @@ url: "http://example.com" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: Type Theme
+  title: Joey Kirk
   avatar: avatar.png
   gravatar: # Email MD5 hash
   description: "A website with blog posts and pages" # used by search engines
 
   # Header and footer text
   header_text: >
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
+     <h1>Designer, Developer, Writer, and Dad.</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
@@ -24,12 +22,12 @@ theme:
   email_address: # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
-  dribbble:
-  facebook:
+  dribbble: "joeykirk"
+  facebook: "joeykirk"
   flickr:
-  github: "rohanchandra/type-theme"
+  github: "madebymunsters/type-theme"
   google_plus:
-  instagram:
+  instagram: "joeykirk"
   linkedin:  # Full URL
   pinterest:
   reddit:
@@ -37,7 +35,7 @@ theme:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "twitter"
+  twitter: "joeykirk"
   wordpress:
   youtube:
 
@@ -61,6 +59,11 @@ theme:
 # PAGINATION
 paginate: 5
 paginate_path: "blog/page:num"
+
+# COLLECTIONS
+collections:
+  portfolio:
+    output: true
 
 # BUILD SETTINGS
 markdown: kramdown

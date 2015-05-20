@@ -29,6 +29,26 @@
     margin-top: 1em;
   }
 }
+
+// Work listing
+.work {
+  @extend %padding-regular;
+  background-size: $feature-image-size;
+  border-bottom: 1px solid $border-color;
+  li {
+    width: 32%;
+    margin-right:0.5%;
+    margin-left:0.5%;
+    margin-bottom: 0;
+    display: inline-block;
+    p a:hover {
+      @extend %link-hover;
+    }
+  }
+  .excerpt {
+    margin-top: 1em;
+  }
+}
 // Pagination
 .pagination .button {
   margin: 0 1.5em;
