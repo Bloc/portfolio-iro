@@ -1,14 +1,14 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://example.com" # the base hostname & protocol for your site
+url: "http://lgreen1133.github.io/" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
   title: Liz Green
-  avatar: avatar.png
-  gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  avatar: 
+  gravatar: 0cc6ea80425be244a149ccaa5b47f1a7
+  description: "My personal portfolio showcasing previous projects" # used by search engines
 
   # Header and footer text
   header_text: >
