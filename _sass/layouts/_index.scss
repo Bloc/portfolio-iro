@@ -30,7 +30,7 @@
     display: inline-block;
     background-size: $feature-image-size;
     border-bottom: 1px solid $border-color;
-    p a:hover {
+    a:hover {
       @extend %link-hover;
     }
   }
@@ -49,18 +49,18 @@
     background-size: $feature-image-size;
     border-bottom: 1px solid $border-color;
     text-align: center;
-    a {
-      font-size: 1.5em;
-      line-height: 2em;
-    }
     li {
       width: 32%;
       margin-right:0.5%;
       margin-left:0.5%;
       margin-bottom: 0;
       display: inline-block;
-      p a:hover {
-        @extend %link-hover;
+      a {
+        font-size: 1.5em;
+        line-height: 2em;
+        &:hover {
+          @extend %link-hover;
+        }
       }
     }
   }
