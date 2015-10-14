@@ -4,25 +4,28 @@ layout: default
 
 <div class="home">
   {% if site.theme.header_text %}
-  <div class="call-out" 
+  <div class="call-out"
   style="background-image: url('{{ site.baseurl }}/{{ site.theme.header_text_feature_image }}')">
-    {{ site.theme.header_text }}
+    <div class="call-out-text">{{ site.theme.header_text }}</div>
+    {{ site.theme.header_subtext }}
   </div>
   {% endif %}
 
   <div class="work">
-    <h2>My Work</h2>
-    {% for project in site.portfolio limit:3 %}
+    <div class="work-links">
+      <h2 class="work-header">My Work</h2>
+      {% for project in site.portfolio limit:3 %}
         <li>
           <img src="{{ project.thumbnail-path }}" alt="{{ project.title }}"/>
           <a href="{{ project.url }}">{{ project.title }}</a>
           <p>{{ project.short-description }}</p>
         </li>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 
   <div class="posts">
-    <h2>My Posts</h2>
+    <h2 class="post-header">My Posts</h2>
     {% for post in paginator.posts %}
     <div class="post-teaser">
       <header>
