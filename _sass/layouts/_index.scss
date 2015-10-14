@@ -30,7 +30,7 @@
     display: inline-block;
     background-size: $feature-image-size;
     border-bottom: 1px solid $border-color;
-    a:hover {
+    p a:hover {
       @extend %link-hover;
     }
   }
