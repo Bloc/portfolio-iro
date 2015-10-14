@@ -39,12 +39,12 @@
   }
 }
 
-// Work listing
-.work {
-  .work-header {
+// project listing
+.project {
+  .project-header {
     text-align: center;
   }
-  .work-links {
+  .project-links {
     @extend %padding-regular;
     background-size: $feature-image-size;
     border-bottom: 1px solid $border-color;
