@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://example.com" # the base hostname & protocol for your site
+baseurl: "/web" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
@@ -65,7 +65,7 @@ paginate_path: "blog/page:num"
 
 # COLLECTIONS
 collections:
-  portfolio:
+  projects:
     output: true
 
 # BUILD SETTINGS
