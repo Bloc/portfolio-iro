@@ -47,3 +47,15 @@ header {
     @extend %padding-regular;
   }
 }
+
+.highlight{
+  padding: 0 1em;
+  margin: 1em;
+  overflow-x: auto;
+  word-wrap: normal;
+  background: $code-block-background-color;
+  border: 1px solid $border-color;
+  pre code {
+    margin: 1em;
+  }
+}
