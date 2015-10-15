@@ -5,15 +5,24 @@
   width: 100%;
   background-color:$header-desc-background-color;
   background-size: cover;
+  border-bottom: 1px solid $border-color;
   font-size: 1.2em;
   text-align: center;
   color: $header-desc-text-color;
+  font-weight: 300;
+  .call-out-text {
+    padding-bottom: 20px;
+    font-size: 3em;
+  }
 }
 .call-out p:last-child {
   margin-bottom: 0;
 }
 // Post listing
 .posts {
+  .post-header {
+    text-align: center;
+  }
   .post-teaser {
     @extend %padding-regular;
     width: 100%;
@@ -30,19 +39,29 @@
   }
 }
 
-// Work listing
-.work {
-  @extend %padding-regular;
-  background-size: $feature-image-size;
-  border-bottom: 1px solid $border-color;
-  li {
-    width: 32%;
-    margin-right:0.5%;
-    margin-left:0.5%;
-    margin-bottom: 0;
-    display: inline-block;
-    p a:hover {
-      @extend %link-hover;
+// project listing
+.project {
+  .project-header {
+    text-align: center;
+  }
+  .project-links {
+    @extend %padding-regular;
+    background-size: $feature-image-size;
+    border-bottom: 1px solid $border-color;
+    text-align: center;
+    li {
+      width: 32%;
+      margin-right:0.5%;
+      margin-left:0.5%;
+      margin-bottom: 0;
+      display: inline-block;
+      a {
+        font-size: 1.5em;
+        line-height: 2em;
+        &:hover {
+          @extend %link-hover;
+        }
+      }
     }
   }
   .excerpt {
