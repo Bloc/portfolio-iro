@@ -1,15 +1,16 @@
-# Portfolio Iro Theme
-## Based on Type Theme
+# Liz's Jekyll Portfolio
 
-![Default Type Theme blog](https://bloc-global-assets.s3.amazonaws.com/portfolio/portfolio-iro.png)
+![Liz's Portfolio Theme](https://s3-us-west-2.amazonaws.com/lgreen-screenshots-bloc/Portfolio_Front.png)
 
-A free and open-source [Jekyll](http://jekyllrb.com) theme. Great for blogs and easy to customize.
+[Take me there](http://lgreen1133.github.io/)
 
-## Get Started
+###### If you like this theme, get started below:
 
 [Demo](https://rohanchandra.github.io/type-theme/)
 
 [Using Type](https://rohanchandra.github.io/project/type/)
 
-## License
+A free and open-source [Jekyll](http://jekyllrb.com) theme. Great for blogs and easy to customize.
+
+###### License
 The MIT License (MIT)
