@@ -1,46 +1,46 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://example.com" # the base hostname & protocol for your site
+url: "http://lgreen1133.github.io/" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: Joey Kirk
-  avatar: avatar.png
-  gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  title: Liz Green
+  avatar: 
+  gravatar: 0cc6ea80425be244a149ccaa5b47f1a7
+  description: "My personal portfolio showcasing previous projects" # used by search engines
 
   # Header and footer text
   header_text: >
-     <h1>Designer, Developer, Writer, and Dad.</h1>
+     <h1>Aspiring Developer, Poet, and Enthusiastic Weightlifter.</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: lizelotte.green@icloud.com 
   behance:
   bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
+  dribbble: 
+  facebook: "liz.verde2"
   flickr:
-  github: "madebymunsters/type-theme"
+  github: "lgreen1133"
   google_plus:
-  instagram: "joeykirk"
+  instagram: 
   linkedin:  # Full URL
   pinterest:
   reddit:
   soundcloud:
-  stack_exchange:  # Full URL
+  stack_exchange: https://stackoverflow.com/users/4687977/lizgee
   steam:
   tumblr:
-  twitter: "joeykirk"
+  twitter: Liz_BGreen
   wordpress:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-68968370-1"
   disqus_shortname:
   katex: true # Enable if using math markup
 
