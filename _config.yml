@@ -5,42 +5,42 @@ url: "http://obsidianpixel.com/" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: Sarah Binion
+  title: Sarah Binion 
   avatar: sbinion400x400.png
   gravatar: # Email MD5 hash
-  description: "Designer and UI Developer Portfolio for Sarah Binion" # used by search engines
+  description: "Designer and UI Developer Portfolio for Sarah Binion Portfolio" # used by search engines
 
   # Header and footer text
   header_text: >
-     <h1>Sarah Binion Designer and UI Developer</h1>
+   <h1>Designer and UI Developer</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
 
   # Icons
+  dribbble: "sarahbinion"
+  github: "srhbinion"
+  linkedin:  "https://www.linkedin.com/in/sarahbinion"
+  # instagram: 
+  twitter: "srhbinion"
   rss: false
   email_address: "srhbinion@gmail.com"
-  behance: "srhbinion"
-  bitbucket:
-  dribbble: "sarahbinion"
-  facebook: 
-  flickr:
-  github: "srhbinion"
-  google_plus:
-  instagram: 
-  linkedin:  "https://www.linkedin.com/in/sarahbinion"
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter: "srhbinion"
-  wordpress:
-  youtube:
+  # behance: 
+  # bitbucket:
+  # facebook: 
+  # flickr:
+  # google_plus: 
+  # pinterest:
+  # reddit:
+  # soundcloud:
+  # stack_exchange:  # Full URL
+  # steam:
+  # tumblr:
+  # wordpress:
+  # youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-70638012-1"
   disqus_shortname:
   katex: true # Enable if using math markup
 
