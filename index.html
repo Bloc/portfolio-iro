@@ -14,7 +14,7 @@ layout: default
     <h2>Work Samples</h2>
     {% for project in site.portfolio limit:3 %}
         <li>
-          <img src="{{ project.thumbnail-path }}" alt="{{ project.title }}"/>
+          <img src="{{ project.thumbnail-path | prepend: site.baseurl }}" alt="{{ project.title }}"/>
           <a href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
           <p>{{ project.short-description }}</p>
         </li>
