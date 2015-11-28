@@ -1,18 +1,18 @@
 ---
 ---
 // External
-@import 'external/reset';
-@import 'external/syntax';
+@import 'sass/external/reset';
+@import 'sass/external/syntax';
 
 // Base
-@import 'base/variables';
-@import 'base/global';
-@import 'base/utility';
+@import 'sass/base/variables';
+@import 'sass/base/global';
+@import 'sass/base/utility';
 
 // Posts
-@import 'layouts/posts';
-@import 'layouts/index';
+@import 'sass/layouts/posts';
+@import 'sass/layouts/index';
 
 // Partials
-@import 'includes/header';
-@import 'includes/footer';
+@import 'sass/includes/header';
+@import 'sass/includes/footer';
