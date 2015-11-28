@@ -1,12 +1,12 @@
 # SITE CONFIGURATION
-baseurl: "/portfolio-iro/" # the subpath of your site, e.g. /blog/
+baseurl: "portfolio-iro" # the subpath of your site, e.g. /blog/
 url: "http://srhbinion.github.io/" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
   title: Sarah Binion 
-  avatar: sbinion400x400.png
+  avatar: 400x400.png
   gravatar: # Email MD5 hash
   description: "Designer and UI Developer Portfolio for Sarah Binion Portfolio" # used by search engines
 
