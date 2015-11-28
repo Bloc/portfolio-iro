@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/portfolio-iro/" # the subpath of your site, e.g. /blog/
+baseurl: "portfolio-iro" # the subpath of your site, e.g. /blog/
 url: "http://srhbinion.github.io/" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
