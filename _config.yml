@@ -1,0 +1,75 @@
+# SITE CONFIGURATION
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://obsidianpixel.com/" # the base hostname & protocol for your site
+
+# THEME-SPECIFIC CONFIGURATION
+theme:
+  # Meta
+  title: Sarah Binion 
+  avatar: sbinion400x400.png
+  gravatar: # Email MD5 hash
+  description: "Designer and UI Developer Portfolio for Sarah Binion Portfolio" # used by search engines
+
+  # Header and footer text
+  header_text: >
+   <h1>Designer and UI Developer</h1>
+   <h3>Sarah Binion</h3>
+  header_text_feature_image:
+  footer_text: >
+   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+
+  # Icons
+  dribbble: "sarahbinion"
+  github: "srhbinion"
+  linkedin:  "https://www.linkedin.com/in/sarahbinion"
+  # instagram: 
+  twitter: "srhbinion"
+  rss: false
+  email_address: "srhbinion@gmail.com"
+  # behance: 
+  # bitbucket:
+  # facebook: 
+  # flickr:
+  # google_plus: 
+  # pinterest:
+  # reddit:
+  # soundcloud:
+  # stack_exchange:  # Full URL
+  # steam:
+  # tumblr:
+  # wordpress:
+  # youtube:
+
+  # Scripts
+  google_analytics: "UA-70638012-1"
+  disqus_shortname:
+  katex: true # Enable if using math markup
+
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "Follow RSS feed"
+  str_email: "Email"
+  str_next: "Next"
+  str_prev: "Prev"
+  str_continue_reading: "Continue reading"
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+gems: [jekyll-paginate]
+
+# COLLECTIONS
+collections:
+  portfolio:
+    output: true
+
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: :compressed
