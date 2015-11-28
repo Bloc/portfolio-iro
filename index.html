@@ -21,9 +21,8 @@ layout: default
     {% endfor %}
   </div>
 
-  <div class="post">
+  <div class="posts">
     <h2>Commentary</h2>
-    <p>test</p>
     {% for post in paginator.posts %}
     <div class="post-teaser">
       <header>
@@ -37,7 +36,7 @@ layout: default
         </p>
       </header>
       <div class="excerpt">
-        {{ post.excerpt }}
+        {{ post.excerpt}}
         <a class="button" href="{{ post.url | prepend: site.baseurl }}">
           {{ site.theme.str_continue_reading }}
         </a>
