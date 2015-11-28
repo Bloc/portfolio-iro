@@ -1,7 +1,7 @@
 ---
 layout: post
 title: When I Finish Bloc.io ...?
-feature-img: "img/octi.jpg"
+feature-img: "img/color.png"
 ---
 
 My goals as a frontend develop is to keep learning.
