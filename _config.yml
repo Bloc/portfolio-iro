@@ -6,7 +6,7 @@ url: "http://srhbinion.github.io/" # the base hostname & protocol for your site
 theme:
   # Meta
   title: Sarah Binion 
-  avatar: 400x400.png
+  avatar: sbinion400x400.png
   gravatar: # Email MD5 hash
   description: "Designer and UI Developer Portfolio for Sarah Binion Portfolio" # used by search engines
 

@@ -6,7 +6,7 @@
 		</a>
 		{% elsif site.theme.avatar %}
 		<a href="{{ site.baseurl }}/">
-			<img class="avatar" src="/img/portfolio-iro{{ site.theme.avatar }}" alt="Sarah Binion"/>
+			<img class="avatar" src="portfolio-iro/img/{{ site.theme.avatar | prepend: site.baseurl }}" alt="Sarah Binion"/>
 		</a>
 		{% endif %}
 		<h1 class="site-title">
