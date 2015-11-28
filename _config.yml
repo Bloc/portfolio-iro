@@ -12,8 +12,8 @@ theme:
 
   # Header and footer text
   header_text: >
-   <h1>Designer and UI Developer Sarah Binion</h1>
-   <button class="btn-primary"> Contact me </button>
+   <h1>Designer and UI Developer</h1>
+   <h3>Sarah Binion</h3>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>

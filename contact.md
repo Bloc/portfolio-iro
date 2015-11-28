@@ -5,13 +5,25 @@ permalink: /contact/
 feature-img: "img/color.png"
 ---
 
-Bacon ipsum dolor amet filet mignon meatball spare ribs fatback bacon shankle. Kielbasa andouille fatback salami, boudin bresaola pig alcatra turkey spare ribs jerky. Corned beef bresaola leberkas salami alcatra beef landjaeger venison shank bacon meatloaf beef ribs picanha. Leberkas sausage brisket porchetta shankle prosciutto chicken picanha kielbasa pig kevin t-bone turducken filet mignon jowl.
+When I am not working, you can find me on [twitter](https://twitter.com/SrhBinion), [ instagram](https://www.instagram.com/srhbinion/), at the dog park (my dog is probably the best dog ever), or listening to cool people speak about ideas they love. I believe in surrounding myself with stuff I enjoy, whether it’s friends, hobbies, or a job. Please send me a message or follow me on social media. I am always interested in connecting with new people.
 
-<form action="https://getsimpleform.com/messages?form_api_token=_yourtoken_" method="post">
-  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-  <input type='hidden' name='redirect_to' value='http://bloc.github.io/portfolio-iro/thank-you/' />
-  <input type='text' name='name' placeholder='Your Full Name' />
-  <input type='email' name='email' placeholder='Your E-mail Address' />
-  <textarea name='message' placeholder='Write your message ...'></textarea>
-  <input type='submit' value='Send Message' />
-</form>
+<div id="wufoo-z1rhkn9q14cgznu">
+Fill out my <a href="https://srhbinion.wufoo.com/forms/z1rhkn9q14cgznu">online form</a>.
+</div>
+<script type="text/javascript">var z1rhkn9q14cgznu;(function(d, t) {
+var s = d.createElement(t), options = {
+'userName':'srhbinion',
+'formHash':'z1rhkn9q14cgznu',
+'autoResize':true,
+'height':'497',
+'async':true,
+'host':'wufoo.com',
+'header':'show',
+'ssl':true};
+s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+s.onload = s.onreadystatechange = function() {
+var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+try { z1rhkn9q14cgznu = new WufooForm();z1rhkn9q14cgznu.initialize(options);z1rhkn9q14cgznu.display(); } catch (e) {}};
+var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');
+</script>
