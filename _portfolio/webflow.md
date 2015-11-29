@@ -1,13 +1,8 @@
 ---
 layout: post
 title: Jekyll & GitHub website
-<<<<<<< HEAD
-feature-img: "img/sample_feature_img.png"
-thumbnail-path: "https://d13yacurqjgara.cloudfront.net/users/3217/screenshots/1686132/webflow_landingpage_1x.jpg"
-=======
 feature-img: "/img/sample_feature_img.png"
 thumbnail-path: "/img/placeholder_1x.jpg"
->>>>>>> gh-pages
 short-description: Hosting and modifying template
 
 ---

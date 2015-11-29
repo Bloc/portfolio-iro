@@ -1,13 +1,8 @@
 ---
 layout: post
 title: BlocJams
-<<<<<<< HEAD
-feature-img: "img/sample_feature_code.png"
-thumbnail-path: "img/blocjams_1x.png"
-=======
 feature-img: "/img/sample_feature_code.png"
 thumbnail-path: "/img/blocjams_1x.png"
->>>>>>> gh-pages
 short-description: Music Streaming App
 
 ---

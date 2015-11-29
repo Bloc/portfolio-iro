@@ -14,24 +14,15 @@ layout: default
     <h2>Work Samples</h2>
     {% for project in site.portfolio limit:3 %}
         <li>
-<<<<<<< HEAD
-          <img src="{{ project.thumbnail-path }}" alt="{{ project.title }}"/>
-          <a href="{{ project.url }}">{{ project.title }}</a>
-=======
           <img src="{{ project.thumbnail-path | prepend: site.baseurl }}" alt="{{ project.title }}"/>
           <a href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
->>>>>>> gh-pages
           <p>{{ project.short-description }}</p>
         </li>
     {% endfor %}
   </div>
 
   <div class="posts">
-<<<<<<< HEAD
-    <h2>Commentary</h2>
-=======
     <h2>Commentary </h2>
->>>>>>> gh-pages
     {% for post in paginator.posts limit:3 %}
     <div class="post-teaser">
       <header>
