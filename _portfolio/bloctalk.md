@@ -1,8 +1,13 @@
 ---
 layout: post
 title: BlocChat
+<<<<<<< HEAD
 feature-img: "img/sample_feature_code_chat.png"
 thumbnail-path: "img/blocchat_1x.png"
+=======
+feature-img: "/img/sample_feature_code_chat.png"
+thumbnail-path: "/img/blocchat_1x.png"
+>>>>>>> gh-pages
 short-description: Real Time Chat App
 
 ---
