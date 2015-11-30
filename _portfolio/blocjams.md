@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BlocJams
-feature-img: "/img/sample_feature_code.png"
+feature-img: "img/sample_feature_code.png"
 thumbnail-path: "/img/blocjams_1x.png"
 short-description: Music Streaming App
 
