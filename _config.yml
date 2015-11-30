@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: "/portfolio-iro/" # the subpath of your site, e.g. /blog/
-url: "http://srhbinion.github.io/" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.obsidianpixel.com/" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
