@@ -16,6 +16,7 @@
 .posts {
   h2 {
     padding:5% 20% 0%;
+    text-align: center;
   }
   .post-teaser {
     @extend %padding-regular;
@@ -35,6 +36,9 @@
 
 // Work listing
 .work {
+  h2 {
+    text-align: center;
+  }
   @extend %padding-regular;
   background-size: $feature-image-size;
   border-bottom: 1px solid $border-color;
