@@ -17,6 +17,9 @@
 }
 // Post listing
 .posts {
+  h2 {
+    padding:5% 20% 0%;
+  }
   .post-teaser {
     @extend %padding-regular;
     width: 100%;
