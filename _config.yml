@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://obsidianpixel.com/" # the base hostname & protocol for your site
+url: "http://www.obsidianpixel.com/" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
@@ -25,7 +25,7 @@ theme:
   # instagram: srhbinion
   twitter: "srhbinion"
   rss: false
-  email_address: "srhbinion@gmail.com"
+  # email_address: "srhbinion@gmail.com"
   # behance: 
   # bitbucket:
   # facebook: 
