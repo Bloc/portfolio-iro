@@ -6,7 +6,7 @@
   background-color:$header-desc-background-color;
   background-size: cover;
   font-size: 1.2em;
-  text-align: center;
+  text-align: left;
   color: $header-desc-text-color;
 }
 .call-out p:last-child {
@@ -36,14 +36,16 @@
   @extend %padding-regular;
   background-size: $feature-image-size;
   border-bottom: 1px solid $border-color;
+  text-align: left;
   li {
-    width: 32%;
-    margin-right:0.5%;
-    margin-left:0.5%;
-    margin-bottom: 0;
+	width: 45%;
+    margin-right:.075%;
+    margin-left:.075%;
+    margin-bottom: .075%;
     display: inline-block;
     p a:hover {
       @extend %link-hover;
+		
     }
   }
   .excerpt {

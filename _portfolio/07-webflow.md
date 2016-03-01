@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jekyll & GitHub website
+title: Ask Zoltar
 feature-img: "img/sample_feature_code.png"
 thumbnail-path: "/img/placeholder_1x.jpg"
 short-description: Hosting and modifying template

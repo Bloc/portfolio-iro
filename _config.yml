@@ -6,14 +6,14 @@ url: "http://www.obsidianpixel.com/" # the base hostname & protocol for your sit
 theme:
   # Meta
   title: Sarah Binion 
-  avatar: 400x400.png
+  avatar: 
   gravatar: # Email MD5 hash
   description: "Designer and UI Developer Portfolio for Sarah Binion Portfolio" # used by search engines
 
   # Header and footer text
   header_text: >
-   <h1>Designer and UI Developer</h1>
-   <h3>Sarah Binion</h3>
+   <h1>Hi, I’m SARAH.</h1>
+   <p> I am a designer turning front-end / UI developer. I specialize in helping to communicate complex ideas more simply. </p>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
@@ -55,15 +55,16 @@ theme:
 
   # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+  # google_fonts: ""
 
 # PAGINATION
-paginate: 5
+paginate: 1
 paginate_path: "blog/page:num"
 gems: [jekyll-paginate]
 
 # COLLECTIONS
 collections:
+  design:
   portfolio:
     output: true
 
