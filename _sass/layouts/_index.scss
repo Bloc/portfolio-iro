@@ -38,10 +38,10 @@
   border-bottom: 1px solid $border-color;
   text-align: left;
   li {
-	width: 45%;
-    margin-right:.075%;
-    margin-left:.075%;
-    margin-bottom: .075%;
+	width: 30%;
+    margin-right:1%;
+    margin-left:1%;
+    margin-bottom: 5%;
     display: inline-block;
     p a:hover {
       @extend %link-hover;

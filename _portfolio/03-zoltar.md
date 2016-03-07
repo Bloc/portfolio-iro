@@ -2,7 +2,7 @@
 layout: post
 title: Ask Zoltar
 feature-img: "img/sample_feature_code.png"
-thumbnail-path: "/img/placeholder_1x.jpg"
+thumbnail-path: "/img/samples/ZoltarTb.png"
 short-description: CSS and Jquery Website
 
 ---
