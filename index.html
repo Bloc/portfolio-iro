@@ -6,7 +6,7 @@ layout: default
   {% if site.theme.header_text %}
   <div class="call-out" 
   style="background-image: url('{{ site.baseurl }}/{{ site.theme.header_text_feature_image }}')">
-    {{ site.theme.header_tesxt }}
+    {{ site.theme.header_text }}
   </div>
   {% endif %}
 
@@ -16,7 +16,7 @@ layout: default
         <li>
           <img src="{{ project.thumbnail-path | prepend: site.baseurl }}" alt="{{ project.title }}"/>
           <a href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
-          <p>{{ project.short-description }}</p>
+		  <!--<p>{{ project.short-description }}</p>-->
         </li>
     {% endfor %}
 	  
