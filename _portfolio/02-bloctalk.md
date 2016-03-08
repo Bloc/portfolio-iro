@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BlocChat
+title: Bloc Chat
 feature-img: "img/sample_feature_code_chat.png"
 thumbnail-path: "/img/samples/BlocchatTb.png"
 short-description: Real Time Chat App
