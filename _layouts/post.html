@@ -1,15 +1,34 @@
 ---
 layout: default
 ---
-<article {% if page.feature-img %}class="feature-image"{% endif %}>
-  <header style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
-    <h1 class="title">{{ page.title }}</h1>
-    <p class="meta">
-    {{ page.date | date: "%B %-d, %Y" }}
-    {% if page.author %} - {{ page.author }}{% endif %}
-    </p>
-  </header>
-  <section class="post-content">{{ content }}</section>
+<article>
+	<header >
+		<div class="project-info">
+			<p class="meta">
+			Keywords
+			</p>
+			<p>
+			{% if page.keywords %}
+				{{ page.keywords }}
+			{% endif %}
+			</p>
+			<p class="meta">Website</p> 
+			<a class="meta" href="http://github.com/srhbinion" style="font-size:1em"><i class="fa fa-fw fa-github"></i></a>
+			<p>Link</p>
+		</div>
+		<div class="project-description">
+			<h1 class="title">{{ page.title }}</h1>
+			<p>{% if page.description %}
+				{{ page.description }}
+			{% endif %}
+			</p>
+		</div>
+		
+	</header>
+	
+  	<section>
+		{{ content }}
+	</section>
 </article>
 
 <!-- Disqus -->

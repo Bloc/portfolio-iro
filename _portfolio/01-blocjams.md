@@ -1,22 +1,20 @@
 ---
 layout: post
 title: Bloc Jams
-feature-img: "img/sample_feature_code.png"
+keywords: Development, Design, HTML/CSS, AngularJS, JavaScript, Firebase
+feature-img: "img/sample_feature_code_chat.png"
+link-github: http://github.com/srhbinion/bloc-jams-angular
 thumbnail-path: "/img/samples/BlocJamsTb.png"
 short-description: Music Streaming App
 
+description: Bloc Chat is a website I created during my bloc.io boot camp using AngularJS and Real Time Chat (Firebase). It is a music player that uses an html5 audio element library, Buzz. Head over to get hub to see my code. During this project I learned the importance of developer tools and debugging.
+
 ---
 
-<h1>Bloc Jams in Angular</h1> 
-<em>**Key tools used:** AngularJS, JavaScript, JQuery, JQlite, HTML5 Buzz Audio, HTML, and CSS</em>
 
-![logo](../img/blocjamsC_1x.png)
-![logo](../img/blocjamsB_1x.png)
+![logo](../img/samples/Blocchat.png).
 
-<h2>Situation:</h2>
-How do people discover new music? Do you want to be the person who can say you knew them before they were famous? Bloc Jams wanted to create a product for new artist to connect with their audience and promote new material.
-
-<h2>Code & Visuals: <a href="http://github.com/srhbinion/bloc-jams-angular" style="font-size:.65em"><i class="fa fa-fw fa-github"></i></a></h2>
+<h3>Code & Visuals: <a href="http://github.com/srhbinion/bloc-jams-angular" style="font-size:.65em"><i class="fa fa-fw fa-github"></i></a></h3>
 This site is built originally in **JQuery** and vanilla **JavaScript** then I refactored it in **AngularJS**. A standout features of this site is that it is fully responsive and can play and display on any sized device. It utilizes bootstrap to maintain the grid system and [**JavaScript HTML5 Audio library**](http://buzz.jaysalvat.com/) facilitates the use of the best audio on any device and on any browser. 
 
 ---
@@ -57,6 +55,3 @@ bJams.factory("SongPlayer", function(albumService){
 ---
 
 Utilizing user scenarios and suggested CSS visuals were supplied by Bloc.io and refined by me.
-
-<h2>Final Product:</h2>
-Bloc Jams is a bulletin board approach to discovering new artists. After listening to a new artist, check out their pictures, upcoming shows, and videos. Stay connected and support new artists!
