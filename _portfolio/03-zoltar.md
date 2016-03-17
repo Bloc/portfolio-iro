@@ -1,9 +1,17 @@
 ---
 layout: post
 title: Ask Zoltar
-feature-img: "img/sample_feature_code.png"
 thumbnail-path: "/img/samples/ZoltarTb.png"
-short-description: CSS and Jquery Website
+
+link-github: "https://github.com/srhbinion/magic-eight"
+
+link: "http://magiceight.obsidianpixel.com/"
+link-name: magiceight.obsidianpixel.com
+
+keywords: Development, Design, HTML/CSS, Sass, Type kit & Jekyll
+
+description: |
+    Ask Zoltar was a random text generator website set up in Jekyll with JQuery and custom visuals. We created this project to work in a team environment having multiple coders working on the same project. I learned the importance of commits and team communication.
 
 ---
 Jekyll & GitHub website

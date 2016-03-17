@@ -1,9 +1,20 @@
 ---
+
 layout: post
 title: Bloc Chat
-feature-img: "img/sample_feature_code_chat.png"
 thumbnail-path: "/img/samples/BlocchatTb.png"
-short-description: Real Time Chat App
+
+link-github: "https://github.com/srhbinion/bloc-chat"
+
+link: "https://github.com/srhbinion/bloc-chat"
+link-name: github.com/bloc-chat
+
+keywords: Development, HTML/CSS, JQuery, JavaScript & Jekyll
+
+description: |
+    Bloc Chat is a website I created during my bloc.io boot camp using AngularJS and Real Time Chat (Firebase). It is a music player that uses an html5 audio element library, Buzz. Head over to github to see my code. 
+    
+    During this project I learned the importance of developer tools and debugging.
 
 ---
 

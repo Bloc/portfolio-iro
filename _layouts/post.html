@@ -12,12 +12,17 @@ layout: default
 				{{ page.keywords }}
 			{% endif %}
 			</p>
-			<p class="meta">Website</p> 
-			<a class="meta" href="http://github.com/srhbinion" style="font-size:1em"><i class="fa fa-fw fa-github"></i></a>
+			<p class="meta">Website</p>
+            {% if page.link-github %}
+			     <a class="meta" href="{{ page.link-github }}" style="font-size:1em"><i class="fa fa-fw fa-github"></i></a>
+           {% endif %}
 			<p>
 			{% if page.link %}
-				<a {{ page.link-github }}>{{ page.link }}</a>
-			{% endif %}
+                <a href="{{ page.link }}">
+            {% endif %}
+            {% if page.link-name %}
+                    {{ page.link-name }}</a>
+            {% endif %}
 			</p>
 		</div>
 		<div class="project-description">

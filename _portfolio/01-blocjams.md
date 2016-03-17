@@ -3,13 +3,17 @@ layout: post
 title: Bloc Jams
 thumbnail-path: "/img/samples/BlocJamsTb.png"
 
-link-github: (http://github.com/srhbinion/bloc-jams-angular)
+link-github: "https://github.com/srhbinion/bloc-jams"
 
-link: http://github.com/srhbinion/bloc-jams-angular
+link: "https://github.com/srhbinion/bloc-jams"
+link-name: github.com/bloc-jams
 
 keywords: Development, Design, HTML/CSS, AngularJS, JavaScript & Firebase
 
-description: Bloc Chat is a website I created during my bloc.io boot camp using AngularJS and Real Time Chat (Firebase). It is a music player that uses an html5 audio element library, Buzz. Head over to get hub to see my code. During this project I learned the importance of developer tools and debugging.
+description: |
+    Bloc Chat is a website I created during my bloc.io boot camp using AngularJS and Real Time Chat (Firebase). It is a music player that uses an html5 audio element library, Buzz. Head over to github to see my code. 
+    
+    During this project I learned the importance of developer tools and debugging.
 
 ---
 
