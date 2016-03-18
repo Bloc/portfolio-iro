@@ -14,7 +14,7 @@ theme:
   # Header and footer text
   header_text: >
    <h1>Hi, I’m SARAH.</h1>
-   <h3 class="element" id="typed-strings"> I am a designer turning front-end / UI developer.</h3>
+   <h3>I am a... <span class="element">designer turning front-end / UI developer.</span></h3>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>

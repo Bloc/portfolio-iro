@@ -35,13 +35,27 @@
     <!-- typed -->
     <script src="{{ "/js/typed.js" | prepend: site.baseurl }}" type="text/javascript"></script>
     
+    <!-- typed function-->
     <script>
       $(function(){
           $(".element").typed({
-            strings: ["First sentence.", "Second sentence.", "wipeOut"],
-            typeSpeed: 50,
-            loop: false,
-            loopCount: false
+            strings: ["front-end developer.", "designer.", "movie nerd.", "question asker.", "commander of robots.", "ui developer.", "biker.", "straight shooter.","team player.","gamer (pro-tip: cake is most-likely a lie).", "dog lover."],
+            // typing speed
+            typeSpeed: 100,
+            // time before typing starts
+            startDelay: 25,
+            // backspacing speed
+            backSpeed: 5,
+            // shuffle the strings
+            shuffle: true,
+            // time before backspacing
+            backDelay: 1500,
+            // loop
+            loop: true,
+            // false = infinite
+            loopCount: false,
+            // show cursor
+            showCursor: false,
           });
       });
     </script>

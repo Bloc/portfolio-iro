@@ -3,16 +3,12 @@ layout: default
 ---
 
 <div class="home">
-	<div class="call-out" style="background-image: url('{{ site.baseurl }}/{{ site.theme.header_text_feature_image }}')">
+	<div class="call-out" style="min-height: 400px; background-image: url('{{ site.baseurl }}/{{ site.theme.header_text_feature_image }}')">
   	{% if site.theme.header_text %}
-		{{ site.theme.header_text }}
-  	{% endif %}
-        <div class="element">
-            <h2>Sloppy</h2>
-        </div>
+		<p>{{ site.theme.header_text }}</p>
         
-	</div>
-
+  	{% endif %}
+    </div>
 	<div class="work">
 	<!--<h2>Development Samples</h2>-->
 	{% for project in site.portfolio limit:3 %}
