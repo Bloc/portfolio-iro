@@ -2,7 +2,7 @@
 
 layout: post
 title: Bloc Chat
-thumbnail-path: "/img/samples/BlocchatTb.png"
+thumbnail-path: "/img/thumb/BlocchatTb.png"
 
 link-github: "https://github.com/srhbinion/bloc-chat"
 
@@ -12,24 +12,20 @@ link-name: github.com/bloc-chat
 keywords: Development, HTML/CSS, JQuery, JavaScript & Jekyll
 
 description: |
-    Bloc Chat is a website I created during my bloc.io boot camp using AngularJS and Real Time Chat (Firebase). It is a music player that uses an html5 audio element library, Buzz. Head over to github to see my code. 
-    
-    During this project I learned the importance of developer tools and debugging.
+    Bloc Chat is a site I created during my bloc.io boot camp using AngularJS to control the views and Firebase to hold the Real Time Chat data. Head over to github to see my code. 
 
 ---
 
-<h1>Bloc Chat</h1> 
-<em>**Key tools used:** AngularJS, JavaScript, Firebase, Real Time Database, Sketch, HTML, and CSS</em>
-
-![logo](../img/blocchat_1x.png)
-
-<h2>Situation:</h2>
-People’s biggest hang-up with airlines is poor communication. Bloc Chat wanted to create an outlet for people to communicate with flight staff, chat with other people on the plane who wanted to chat, and be notified about plane status from their own devices.
-
-<h2>Code & Visuals: <a href="http://github.com/srhbinion/bloc-chat" style="font-size:.65em"><i class="fa fa-fw fa-github"></i></a></h2>
-This site is built in **AngularJS**. A standout features of this site is that it is fully responsive and utilites real time database. It utilizes bootstrap to maintain the modals and [**Firebase**](https://www.firebase.com) facilitates the ability to store & sync data with the NoSQL cloud database. Data is stored as JSON, synced to all connected users in realtime, and available when the app goes offline. Too keep my code organized in my controllers and services I maintained object prototype naming standards. 
+![logo](../img/BlocchatMain.png)
 
 ---
+
+### Sample Code
+While writing my code, I learned the importance of informative documentation and prototype naming standards to keep my code succinct.
+
+
+<div style="background-color:#757575;">
+<br>
 {% highlight javascript %}
 binChat.controller("LandingController", ["$scope", "$firebaseArray","Room", "Message", function($scope, $firebaseArray, Room, Message) {
     // "room" array features
@@ -62,16 +58,16 @@ binChat.controller("LandingController", ["$scope", "$firebaseArray","Room", "Mes
     }
 };
 {% endhighlight %}
-<h6><i>excerpt code: modification to the "rooms" array in the database with prototype naming standards</i></h6>
+<br>
+<br>
+</div>
 ---
 
-Utilizing user scenarios and suggested by Bloc.io. Prototype comps were created in the browser and the final visual design comps were revised in Sketch and implemented in CSS by me.
+### Early Prototyes
+While designing this application, I refactored the visuals with different treatments and styles to practice my CSS.
 
----
+
 ![logo](../img/blocchatC_1x.png)
 ![logo](../img/blocchatB_1x.png)
-<h6><i>prototype comps</i></h6>
----
 
-<h2>Final Product:</h2>
-Bloc Chat is a succinct app that gives users the power to be connected to their flights as soon as the crew knows.
+---

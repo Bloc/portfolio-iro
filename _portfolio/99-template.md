@@ -13,10 +13,10 @@ short-description: Email, App & Event Design
 ![logo](../img/blocchat_1x.png)
 
 <h2>Situation:</h2>
-People’s biggest hang-up with airlines is poor communication. Bloc Chat wanted to create an outlet for people to communicate with flight staff, chat with other people on the plane who wanted to chat, and be notified about plane status from their own devices.
+People’s 
 
 <h2>Code & Visuals: <a href="http://github.com/srhbinion/bloc-chat" style="font-size:.65em"><i class="fa fa-fw fa-github"></i></a></h2>
-This site is built in **AngularJS**. A standout features of this site is that it is fully responsive and utilites real time database. It utilizes bootstrap to maintain the modals and [**Firebase**](https://www.firebase.com) facilitates the ability to store & sync data with the NoSQL cloud database. Data is stored as JSON, synced to all connected users in realtime, and available when the app goes offline. Too keep my code organized in my controllers and services I maintained object prototype naming standards. 
+This site is built in **AngularJS**.  [**Firebase**](https://www.firebase.com) facilitates the backend.
 
 ---
 {% highlight javascript %}

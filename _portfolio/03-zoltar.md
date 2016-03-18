@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ask Zoltar
-thumbnail-path: "/img/samples/ZoltarTb.png"
+thumbnail-path: "/img/thumb/ZoltarTb.png"
 
 link-github: "https://github.com/srhbinion/magic-eight"
 
@@ -11,8 +11,17 @@ link-name: magiceight.obsidianpixel.com
 keywords: Development, Design, HTML/CSS, Sass, Type kit & Jekyll
 
 description: |
-    Ask Zoltar was a random text generator website set up in Jekyll with JQuery and custom visuals. We created this project to work in a team environment having multiple coders working on the same project. I learned the importance of commits and team communication.
+    Ask Zoltar is a random fortune generating website written in JQuery with custom visuals in Sass (inspired by the Ask Zoltar machine from the movie BIG). Additional note, this site is created by installing a Jekyll gem and hosted with gh-pages.
 
 ---
-Jekyll & GitHub website
-This is an example of a post which includes a feature image specified in the front matter of the post. The feature image spans the full-width of the page, and is shown with the title on permalink pages.
+
+![logo](../img/ZoltarMain.png)
+
+---
+
+### Team Work
+
+I partnered with a fellow junior developer to created this project during a self organized hackathon. Our goal was to practice working in an environment with multiple coders on the same project. I learned the importance of correctly documented commits and team communication.
+
+---
+
