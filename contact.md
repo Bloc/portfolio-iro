@@ -1,13 +1,24 @@
 ---
 layout: page
-title: Contact
+title: About/ Contact
 permalink: /contact/
-feature-img: "img/color.png"
+
 ---
+<div>
+    <p class="contact-page">
+    Hello, I am Sarah Binion and I am a designer / ui developer (amongst other things) living in Chicago. 
 
-When I am not working, you can find me on [twitter](https://twitter.com/SrhBinion), [ instagram](https://www.instagram.com/srhbinion/), at the dog park (my dog is probably the best dog ever), or listening to cool people speak about ideas they love. I believe in surrounding myself with stuff I enjoy, whether it’s friends, hobbies, or a job. Please send me a message or follow me on social media. I am always interested in connecting with new people.
+    Born and raised in Wisconsin, (yes, I love beer and cheese), I received a BS in Art with an emphasis in Visual Design from the University of Wisconsin-Madison. I am an active member of the AIGA, UX Book Club, ChiDuXX, Chicago HTML5, a <a href="http://www.starterleague.com/">Starter League</a> UX alumna, and a <a href="http://www.bloc.io/frontend-development-bootcamp">Bloc.io Front-End</a> alumna. 
 
-<div id="wufoo-z1rhkn9q14cgznu">
+    When I am not working, you can find me on [twitter](https://twitter.com/SrhBinion), [instagram](https://www.instagram.com/srhbinion/), or listening to cool people speak about ideas they love. I believe in surrounding myself with stuff I enjoy, whether it’s friends, hobbies, or a job. Please send me a message or follow me on social media. I am always interested in connecting with new people.
+    </p>
+    <p class="contact-page">
+        <img src="/img/claw.png">
+    </p>
+</div>
+<br>
+<br>
+<div id="wufoo-z1rhkn9q14cgznu"  style="background-color: #d5d5d5; padding: 30px;">
 Fill out my <a href="https://srhbinion.wufoo.com/forms/z1rhkn9q14cgznu">online form</a>.
 </div>
 <script type="text/javascript">var z1rhkn9q14cgznu;(function(d, t) {

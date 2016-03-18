@@ -2,5 +2,14 @@
 <footer class="site-footer">
 	<!--<p class="text">{{ site.theme.footer_text }}</p>-->
 	<p class="text">Thank you for checking out my work. If you would like to see what other people have to say about working with me please checkout some of my reviews on <a href="https://www.linkedin.com/in/sarahbinion">LinkedIn</a>. Send me a "Hello" and let's work together!</p>
+    <br>
+    <br>
+    {% for page in site.pages %}
+    {% if page.title and page.hide != true %}
+    <a class="contact-link" href="{{ page.url | prepend: site.baseurl }}">
+        {{ page.title }}
+    </a>
+    {% endif %}
+    {% endfor %}
 </footer>
 {% endif %}

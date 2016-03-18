@@ -6,15 +6,15 @@ url: "http://www.obsidianpixel.com/" # the base hostname & protocol for your sit
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: Sarah Binion 
+  title: SARAH
   avatar: 
   gravatar: # Email MD5 hash
   description: "Designer and UI Developer Portfolio for Sarah Binion Portfolio" # used by search engines
 
   # Header and footer text
   header_text: >
-   <h1>Hi, I’m SARAH.</h1>
-   <h3>I am a... <span class="element">designer turning front-end / UI developer.</span></h3>
+   <h1>Hi, I’m Sarah Binion.</h1>
+   <h3>I am a ... <span class="element">designer turning front-end / UI developer.</span></h3>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>

@@ -71,6 +71,35 @@ header {
 	margin-bottom: 10%;
 }
 
+.contact-page {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    float: left;
+    width: 50%;
+    background-color: $brand-color;
+    height: 700px;
+}
+
+.back-btn{
+    position: fixed;
+    right: 50px;
+    top:100px;
+    background-color: #64C3B2;
+    width: 100px;
+    height: 50px;
+    padding: 15px 0 0 25px;
+}
+
+.contact-link{
+    color: #fff;
+    background-color: #64C3B2;
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 15px;
+}
+
 /* code for animated blinking cursor */
 .typed-cursor{
     opacity: 1;
