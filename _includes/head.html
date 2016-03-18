@@ -27,7 +27,24 @@
 	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 	
 	<!-- Javascript -->
-	<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/main.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+    
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    <!-- typed -->
+    <script src="{{ "/js/typed.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+    
+    <script>
+      $(function(){
+          $(".element").typed({
+            strings: ["First sentence.", "Second sentence.", "wipeOut"],
+            typeSpeed: 50,
+            loop: false,
+            loopCount: false
+          });
+      });
+    </script>
 
 	<!-- KaTeX -->
 	{% if site.theme.katex %}
