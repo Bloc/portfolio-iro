@@ -2,7 +2,7 @@
 layout: post
 title: Blocipedia
 feature-img: "blocipediapic.png"
-thumbnail-path: "https://d13yacurqjgara.cloudfront.net/users/3217/screenshots/2030974/bloctalk_1x.png"
+thumbnail-path: "http://107.170.63.16/"
 short-description: Blocipedia, a Wikipedia Model!
 
 ---
