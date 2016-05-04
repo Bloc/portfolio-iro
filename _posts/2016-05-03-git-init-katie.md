@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Git Init Katie
+feature-img: "katielaughing.jpg"
 ---
 
 Hi! My name is Katelyn but my friends call me Katie. I went to school at Seton Hall University for History and Classical Studies. I became fluent in Latin and Ancient Greek and when I graduated I realized there weren’t many jobs for me without going back and getting my MA. I took a few months off to figure out if I really wanted to pursue a higher degree. In the meantime, I was living paycheck to paycheck, nannying for families I knew from college. I was definitely struggling. I was living in Hoboken, NJ where the cost of living is pretty high. I was paying $300 a month just to park my car! I knew I needed a more stable career especially because I had plans to move to NYC in a couple of months. I tried exploring different paths, like archeology. I found that there were small research jobs available but nothing that would lead me to a career. I was getting worried that I’d have to choose doing something I liked to do and being poor or having to do something I hated to just get by. I knew I had an affinity for solving puzzles so I decided to try to find a career path that could involve that.
