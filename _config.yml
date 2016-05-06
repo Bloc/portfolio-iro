@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://example.com" # the base hostname & protocol for your site
+baseurl: "/katelyn.github.io" # the subpath of your site, e.g. /blog/
+url: "http://katerspotaters.github.io/katelyn.github.io." # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
@@ -40,7 +40,7 @@ theme:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-77388439-1"
   disqus_shortname:
   katex: true # Enable if using math markup
 
