@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://example.com" # the base hostname & protocol for your site
+baseurl: "/katelyn.github.io" # the subpath of your site, e.g. /blog/
+url: "http://katerspotaters.github.io/katelyn.github.io" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
@@ -19,28 +19,28 @@ theme:
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: "katelyn.hertel19@gmail.com"
   behance:
   bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
+  dribbble:
+  facebook: "Katelyn Hertel"
   flickr:
   github: "madebymunsters/type-theme"
   google_plus:
-  instagram: "joeykirk"
-  linkedin:  # Full URL
+  instagram: "katers_potaters19"
+  linkedin:  https://www.linkedin.com/in/katelyn-katie-hertel-a6bb3a10a
   pinterest:
   reddit:
   soundcloud:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "joeykirk"
+  twitter: "Katers_Potaters"
   wordpress:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-77388439-1"
   disqus_shortname:
   katex: true # Enable if using math markup
 
