@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "/katelyn.github.io" # the subpath of your site, e.g. /blog/
-url: "http://katerspotaters.github.io/katelyn.github.io." # the base hostname & protocol for your site
+url: "http://katerspotaters.github.io/katelyn.github.io" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
