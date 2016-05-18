@@ -1,12 +1,14 @@
 ---
 layout: page
-title: About
+title: about
 permalink: /about/
-feature-img: "img/sample_feature_img_2.png"
+feature-img: "img/espotlight.jpg"
 ---
 
-Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+I was born in sunny Santa Monica, California six blocks from the beach. When I'm not coding, I love to be outside going on some adventure. It could be snowboarding back-country,
+rock climbing, or urban explortion. I'm always up for a good road trip and won't ever pass up a culinary adventure.
 
-Head over to the [theme's documentation](https://rohanchandra.github.io/project/type/) for much more information about Type Theme or to install this theme on your own Jekyll site.
+My adventure support team consists of my wife, daughter and our two yorkies (Roxy and Gibson).
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+This journal will document my journey down the rabbit hole of coding, and other adventures...
+
