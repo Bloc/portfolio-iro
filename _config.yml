@@ -5,38 +5,38 @@ url: "http://example.com" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: Joey Kirk
+  title: Greg Babb
   avatar: avatar.png
   gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  description: "Web developer portfolio of Greg Babb" # used by search engines
 
   # Header and footer text
   header_text: >
-     <h1>Designer, Developer, Writer, and Dad.</h1>
+     <h1>Web Developer and Technical Author.</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: "info@textlogic.ch"
   behance:
   bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
+  dribbble:
+  facebook:
   flickr:
-  github: "madebymunsters/type-theme"
-  google_plus:
-  instagram: "joeykirk"
-  linkedin:  # Full URL
+  github: "https://github.com/orlando21"
+  google_plus: "grbabb"
+  instagram:
+  linkedin: "https://ch.linkedin.com/in/gregbabb"
   pinterest:
   reddit:
   soundcloud:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "joeykirk"
-  wordpress:
+  twitter: "@grbabb"
+  wordpress: "http://www.textlogic.ch/en/company.html"
   youtube:
 
   # Scripts
@@ -67,7 +67,7 @@ collections:
 
 # BUILD SETTINGS
 markdown: kramdown
-highlighter: pygments
+highlighter: rb-pygments
 sass:
   sass_dir: _sass
   style: :compressed
