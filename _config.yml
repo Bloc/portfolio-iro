@@ -12,7 +12,7 @@ theme:
 
   # Header and footer text
   header_text: >
-     <h1>Web Developer and Technical Author.</h1>
+     <h1>Web Developer and Technical Author</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
@@ -25,8 +25,8 @@ theme:
   dribbble:
   facebook:
   flickr:
-  github: "https://github.com/orlando21"
-  google_plus: "grbabb"
+  github: "orlando21"
+  google_plus: "101823023517828311354"
   instagram:
   linkedin: "https://ch.linkedin.com/in/gregbabb"
   pinterest:
@@ -36,7 +36,7 @@ theme:
   steam:
   tumblr:
   twitter: "@grbabb"
-  wordpress: "http://www.textlogic.ch/en/company.html"
+  wordpress: # Full URL
   youtube:
 
   # Scripts
