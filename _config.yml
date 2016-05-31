@@ -12,7 +12,7 @@ theme:
 
   # Header and footer text
   header_text: >
-     <h1>Web Developer and Technical Author</h1>
+     <h1>Web Developer and </br>Technical Author</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
@@ -36,7 +36,7 @@ theme:
   steam:
   tumblr:
   twitter: "@grbabb"
-  wordpress: # Full URL
+  wordpress: "www.textlogic.ch/en/blog/"
   youtube:
 
   # Scripts
@@ -67,7 +67,7 @@ collections:
 
 # BUILD SETTINGS
 markdown: kramdown
-highlighter: rb-pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
