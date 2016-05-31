@@ -47,3 +47,18 @@ header {
     @extend %padding-regular;
   }
 }
+.access-buttons {
+    margin: 2em 14.5em;
+    margin-bottom: -2em;
+}
+// Pagination
+.pagination .button {
+    margin: 0 1.5em;
+    i {
+        vertical-align: middle;
+    }
+}
+.pagination {
+    padding: $padding-small $padding-large 0 $padding-large;
+    text-align: center;
+}
