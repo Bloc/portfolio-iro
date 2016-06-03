@@ -1,9 +1,11 @@
 ---
-layout: case_study_bloc-chat
+layout: case_study
 title: Bloc Chat
-feature-img: "img/ng-bloc-chat.jpg"
+feature-img: "img/ng-bloc-chat.png"
 thumbnail-path: "img/bloc-chat-thumbnail.jpg"
 short-description: Chat in real time.
+github-repository: orlando21/ng-bloc-chat
+demo-url: http://ng-bloc-chat.herokuapp.com
 
 ---
 The Bloc Chat app allows users from anywhere to create chat rooms and discuss in real time. After displaying the app, a user enters their name and can display any of the rooms on the left side to join a discussion. There's also an option to create new rooms.
@@ -12,7 +14,7 @@ The Bloc Chat app allows users from anywhere to create chat rooms and discuss in
 
 The project, an **AngularJS** application, was built from scratch from a set of user stories or requirements, with minimal guidance from Bloc.
 
-### Challenge 
+### Challenge
 
 This project was my first experience with using the cloud provider [Firebase](https://www.firebase.com/) to store and retrieve data in real time. At the end of the project I deployed the app on [Heroku](https://www.heroku.com/).
 
@@ -65,4 +67,4 @@ This project provided the opportunity to get into the mechanics of using a third
 
 As always in coursework there are time constraints. Had I had more time, I would have added user authentication (in Firebase) and made improvements to scrolling when the space taken by messages exceeds the length of the viewport.
 
-As it was, I could take the knowledge gained here and apply in my capstone project (ng-help-viewer).
+As it was, I could take the knowledge gained here and apply in my Capstone project (Help Viewer).

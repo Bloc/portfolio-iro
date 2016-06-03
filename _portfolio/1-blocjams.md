@@ -1,9 +1,11 @@
 ---
-layout: case_study_blocjams
+layout: case_study
 title: Bloc Jams
 feature-img: "img/blocjams.jpg"
 thumbnail-path: "img/blocjams_thumbnail.jpg"
 short-description: First Angular project. Yay!
+github-repository: orlando21/ng-bloc-jams
+demo-url: http://ng-bloc-jams.herokuapp.com
 
 ---
 The Foundation portion of Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp) teaches HTML5, CSS3, JavaScript, and jQuery by having students build a digital music player from the ground up. The app is built iteratively over many checkpoints starting with HTML/CSS and adding vanilla JavaScript before converting it to jQuery.
