@@ -10,12 +10,16 @@ layout: default
         </p>
     </header>
     <p class="access-buttons">
-        <a class="button" href="http://ng-bloc-jams.herokuapp.com/">
+        {% if page.demo-url %}
+        <a class="button" href="{{page.demo-url}}">
             Demo
         </a>
-        <a class="button" href="https://github.com/orlando21/ng-bloc-jams">
+        {% endif %}
+        {% if page.github-repository %}
+        <a class="button" href="https://github.com/{{page.github-repository}}">
             View on GitHub
         </a>
+        {% endif %}
     </p>
     <section class="post-content">{{ content }}</section>
 </article>
