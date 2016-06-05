@@ -28,12 +28,12 @@ The Help Viewer application displays help topics for a given product.
 
 1. Product dropdown: choosing a product displays the relevant topics in the left sidebar.
 2. Topic list: topics in the left sidebar are organized by **category**. When you click a category to select it, it's highlighted in blue and shows a - sign. Its topics are displayed beneath it (accordion menu).
-3. Topic & sections: each topic consists of at least one section (e.g., "Products" and "Who uses the system" as shown in the screenshot above). 
+3. Topic & sections: each topic consists of at least one section (e.g., "Products" and "Who uses the system" as shown in the screenshot above).
 
 
 #### 1. Requirements
 
-My mentor encouraged me to use GitHub Issues for user stories, bugs, etc. This is a user-friendly tool for collaboration and I fully embraced it.
+My Bloc mentor encouraged me to use GitHub Issues for user stories, bugs, etc. This is a user-friendly tool for collaboration and I fully embraced it.
 {:.center}
 ![]({{ site.baseurl }}/img/ng-help-viewer-issues.png)
 
@@ -55,11 +55,11 @@ One can pay a subscription to Moqups for extra features like exporting to PNG bu
 
 #### 3. Implementation
 
-During the implementation phase I coded user stories and tasks one after the other, closing them when done. Having already described the requirements and designed the UI in the previous phases, I found implementation work to be a little easier than otherwise. 
+During the implementation phase I coded user stories and tasks one after the other, closing them when done. Having already described the requirements and designed the UI in the previous phases, I found implementation work to be a little easier than otherwise.
 
 I was pleasantly surprised by how easily I could store help topics in all their HTML glory in Firebase, then retrieve them again in the app. I wrote separate Angular factories for each list in Firebase: `Product.js`, `Category.js`, `Topic.js`, and `Section.js` to provide the content to any controller.
 
-In the `home` template of the app, I use Angular directives like `ngShow` and `ngRepeat` to correctly display relevant help topic content stored in Firebase. 
+In the `home` template of the app, I use Angular directives like `ngShow` and `ngRepeat` to correctly display relevant help topic content stored in Firebase.
 
 Once enhancement that interested me was the possibility of printing topics. Implementing a print feature is apparently much easier on the server side so I would be challenged to write one for a client-side app like this one. My mentor recommended trying out [DocRaptor](https://docraptor.com/). I was looking forward to adding client-side printing but unfortunately had issues implementing the DocRaptor API in Angular. There is no guidance on the DocRaptor site for using their API with Angular (only with jQuery and other scripting languages).
 
