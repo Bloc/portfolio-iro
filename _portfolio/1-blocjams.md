@@ -16,7 +16,7 @@ After the Foundation I chose to convert or "port" the app to AngularJS (this pro
 
 Since I had just finished the jQuery version of Bloc Jams during the Foundation, I was of course already familiar with the app's features and structure.
 
-As in the Foundation, I built the app over a series of checkpoints that explained different aspects of developing single page applications. My mentor at Bloc provided guidance where needed.
+As in the Foundation, I built the app over a series of checkpoints that explained different aspects of developing single page applications. My Bloc mentor at Bloc provided guidance where needed.
 
 ### Challenge
 
