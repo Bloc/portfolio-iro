@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article {% if page.feature-img %}class="feature-image"{% endif %}>
+    <header style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
+        <h1 class="title">{{ page.title }}</h1>
+        <p class="meta">
+            {{ page.date | date: "%B %-d, %Y" }}
+            {% if page.author %} - {{ page.author }}{% endif %}
+        </p>
+    </header>
+    <p class="access-buttons">
+        {% if page.demo-url %}
+        <a class="button" href="{{page.demo-url}}">
+            Demo
+        </a>
+        {% endif %}
+        {% if page.github-repository %}
+        <a class="button" href="https://github.com/{{page.github-repository}}">
+            View on GitHub
+        </a>
+        {% endif %}
+    </p>
+    <section class="post-content">{{ content }}</section>
+</article>
+
+<!-- Disqus -->
+{% if site.theme.disqus_shortname %}
+<div class="comments">
+    {% include disqus.html %}
+</div>
+{% endif %}
