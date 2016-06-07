@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://ben-kline.com" # the base hostname & protocol for your site
+url: "http://resume.ben-kline.com" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
@@ -9,23 +9,20 @@ theme:
   avatar: #
   gravatar: 87e0e2b3077b933d8e7bfbc1bfff6e7e
   description: "Ben Kline Boise Bio-page Resume Contact http://next-step.tech 'Next Step Tech'" # used by search engines
-
   # Header and footer text
-  header_text: >
-     <h1>Development & Communications</h1>
+  header_text: <h1>Development & Communications</h1>
   header_text_feature_image:
-  footer_text: > Thanks for visiting!
-
+  footer_text: Thanks for visiting!
   # Icons
   rss: false
   email_address: ben.kline@gmail.com
   behance:
   bitbucket:
-  dribbble: 
+  dribbble:
   facebook: "next.step.tech.id"
   flickr:
   github: "benkline"
-  google_plus:"BenKline"
+  google_plus: "+BenKline"
   instagram: "bnkln"
   linkedin:  https://www.linkedin.com/in/boisebenkline
   pinterest:
@@ -40,7 +37,7 @@ theme:
 
   # Scripts
   google_analytics: "UA-74219264-1"
-  disqus_shortname:
+  disqus_shortname: boisebk
   katex: true # Enable if using math markup
 
   # Localization strings
@@ -66,7 +63,7 @@ collections:
 
 # BUILD SETTINGS
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
