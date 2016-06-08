@@ -1,8 +1,8 @@
 ---
 layout: post
 title: YAOAPI - Yet Another Open API
-feature-img: "https://dl.dropboxusercontent.com/sc/r9xjxopyc5cj3rl/AADSxoNFzTgoSyhMBW7-Ylgwa"
-thumbnail-path: "https://dl.dropboxusercontent.com/sc/r9xjxopyc5cj3rl/AADSxoNFzTgoSyhMBW7-Ylgwa"
+feature-img:
+thumbnail-path:
 short-description: An External API with Authentication
 
 ---

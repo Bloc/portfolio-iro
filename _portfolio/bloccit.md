@@ -2,7 +2,7 @@
 layout: post
 title: Bloccit
 feature-img: "img/sample_feature_img.png"
-thumbnail-path: "http://dl.dropboxusercontent.com/sc/bvgxwf9kzspl5zm/AAAkQnVXQokRBD28L2CZGULGa"
+thumbnail-path: 
 short-description: A Reddit Clone Where People can Post, Vote on, Share, and Save Links and Comments.
 
 ---

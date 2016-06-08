@@ -2,7 +2,7 @@
 layout: post
 title: Bloccipedia
 feature-img: "img/sample_feature_img.png"
-thumbnail-path: "https://dl.dropboxusercontent.com/sc/3apglucd04rotlq/AADnhvC_li81Wt2xxUJ5gBf9a"
+thumbnail-path: 
 short-description: A SaaS Wiki-Pages Collaboration Tool
 
 ---
