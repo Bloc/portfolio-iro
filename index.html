@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
   {% if site.theme.header_text %}
-  <div class="call-out" 
+  <div class="call-out"
   style="background-image: url('{{ site.baseurl }}/{{ site.theme.header_text_feature_image }}')">
     {{ site.theme.header_text }}
   </div>
@@ -14,7 +14,7 @@ layout: default
     <h2>My Work</h2>
     {% for project in site.portfolio limit:3 %}
         <li>
-          <img src="{{ project.thumbnail-path }}" alt="{{ project.title }}"/>
+          <!-- <img src="{{ project.thumbnail-path }}" alt="{{ project.title }}"/> -->
           <a href="{{ project.url }}">{{ project.title }}</a>
           <p>{{ project.short-description }}</p>
         </li>
@@ -23,6 +23,13 @@ layout: default
 
   <div class="posts">
     <h2>My Posts</h2>
+    <p>This is my blog. I have loads of ideas that I want to save in a safer place than the four different notebooks, countless scraps of paper and Google Keep <em>(Google?, y u no let me indent/nest my lists?)</em>.
+    <br>
+    This blog will document and share the ideas and projects that I do, as well as the ones I would really like to do... but don't have time because... well, because mortgages.
+    <br>
+    And like any blog - it's also somewhere to discuss those ideas, so please comment like crazy down there! Thanks!
+    </p>
+
     {% for post in paginator.posts %}
     <div class="post-teaser">
       <header>

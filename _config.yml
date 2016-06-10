@@ -1,47 +1,43 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://example.com" # the base hostname & protocol for your site
+url: "http://benkline.github.io" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: Joey Kirk
-  avatar: avatar.png
-  gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
-
+  title: Ben Kline
+  avatar: https://plus.google.com/photos/photo/113193416155932504643/6080495908023727122
+  gravatar:
+  description: "Ben Kline Boise Bio-page Resume Contact http://next-step.tech 'Next Step Tech'" # used by search engines
   # Header and footer text
-  header_text: >
-     <h1>Designer, Developer, Writer, and Dad.</h1>
+  header_text: <h1>Web Development & Communications</h1>
   header_text_feature_image:
-  footer_text: >
-   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
-
+  footer_text: Thanks for visiting!
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: ben.kline@gmail.com
   behance:
   bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
+  dribbble:
   flickr:
-  github: "madebymunsters/type-theme"
-  google_plus:
-  instagram: "joeykirk"
-  linkedin:  # Full URL
+  github: "benkline"
+  linkedin:  https://www.linkedin.com/in/boisebenkline
+  google_plus: "+BenKline"
+  twitter: "boisebenkline"
+  instagram: #"bnkln"
+  facebook: #"inkline.inc"
   pinterest:
   reddit:
   soundcloud:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "joeykirk"
   wordpress:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
+  google_analytics: "UA-74219264-1"
+  disqus_shortname: boisebk
   katex: true # Enable if using math markup
 
   # Localization strings
@@ -67,7 +63,7 @@ collections:
 
 # BUILD SETTINGS
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
