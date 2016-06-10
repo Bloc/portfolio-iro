@@ -6,11 +6,11 @@ url: "http://benkline.github.io" # the base hostname & protocol for your site
 theme:
   # Meta
   title: Ben Kline
-  avatar: #
-  gravatar: 87e0e2b3077b933d8e7bfbc1bfff6e7e
+  avatar: https://plus.google.com/photos/photo/113193416155932504643/6080495908023727122
+  gravatar:
   description: "Ben Kline Boise Bio-page Resume Contact http://next-step.tech 'Next Step Tech'" # used by search engines
   # Header and footer text
-  header_text: <h1>Development & Communications</h1>
+  header_text: <h1>Web Development & Communications</h1>
   header_text_feature_image:
   footer_text: Thanks for visiting!
   # Icons
@@ -19,19 +19,19 @@ theme:
   behance:
   bitbucket:
   dribbble:
-  facebook: "next.step.tech.id"
   flickr:
   github: "benkline"
-  google_plus: "+BenKline"
-  instagram: "bnkln"
   linkedin:  https://www.linkedin.com/in/boisebenkline
+  google_plus: "+BenKline"
+  twitter: "boisebenkline"
+  instagram: #"bnkln"
+  facebook: #"inkline.inc"
   pinterest:
   reddit:
   soundcloud:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "boisebenkline"
   wordpress:
   youtube:
 

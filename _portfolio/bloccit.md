@@ -2,13 +2,10 @@
 layout: post
 title: Bloccit
 feature-img: "img/sample_feature_img.png"
-thumbnail-path: 
+thumbnail-path:
 short-description: A Reddit Clone Where People can Post, Vote on, Share, and Save Links and Comments.
 
 ---
-<!-- {:.center}
-![](http://dl.dropboxusercontent.com/sc/bvgxwf9kzspl5zm/AAAkQnVXQokRBD28L2CZGULGa) -->
-
 ## Summary
 This web application was built as part of my Bloc.io foundation course in Ruby on Rails and contains multiple examples the features offered by Rails in order to demonstrate different methods of implementation for these features. It was built using a workflow based in Git and Heroku.
 

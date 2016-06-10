@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Retro Alexa
-feature-img: "http://cdn3.whatculture.com/images/2013/01/2001-A-Space-Odyssey.jpg"
+#<--feature-img: "http://cdn3.whatculture.com/images/2013/01/2001-A-Space-Odyssey.jpg" -->
 ---
-
 >Dave Bowman: Hello, HAL. Do you read me, HAL?<br>
 >HAL: Affirmative, Dave. I read you.<br>
 >Dave Bowman: Open the pod bay doors, HAL.<br>

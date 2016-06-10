@@ -2,11 +2,10 @@
 layout: post
 title: Bloccipedia
 feature-img: "img/sample_feature_img.png"
-thumbnail-path: 
+thumbnail-path:
 short-description: A SaaS Wiki-Pages Collaboration Tool
 
 ---
-
 ## Summary
 Bloccipedia is inspired by Wikipedia, in that the pages are collaboratively edited, but in addition to enabling collaboratively generating the content, Bloccipedia allows users to choose and editing a theme, and then publishing the results to a low-cost web-server.
 

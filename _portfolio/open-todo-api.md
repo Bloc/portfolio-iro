@@ -6,7 +6,6 @@ thumbnail-path:
 short-description: An External API with Authentication
 
 ---
-
 ## Summary
 This was the third project for the Ruby on Rails portion while a student at Bloc. It is a to-do list API. It has no way of viewing the lists and items but rather is intended to serve as a back-end to serve any number of different views. A mobile to-do list application, a trello-like web application, or another part of a larger web-app for example.   
 
