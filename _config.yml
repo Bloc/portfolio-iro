@@ -1,9 +1,9 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://example.com" # the base hostname & protocol for your site
+url: "0.0.0.0" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
-theme:
+theme_settings:
   # Meta
   title: Joey Kirk
   avatar: avatar.png
@@ -67,7 +67,6 @@ collections:
 
 # BUILD SETTINGS
 markdown: kramdown
-highlighter: pygments
 sass:
   sass_dir: _sass
   style: :compressed
