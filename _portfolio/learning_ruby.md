@@ -14,7 +14,7 @@ Learning Ruby was the fun and easy part of [Bloc's Ruby on Rails Web Developer](
 [Ruby on Rails](http://rubyonrails.org/) is a web application framework designed to make creating functional websites easier and somewhat standardized. Ruby is a dynamic, and dynamically typed, object-oriented programming language. The introductory portion of Bloc, after setting up the programming environment, includes the basics of Ruby such as variables, arrays and hashes, classes and methods, flow control, and blocks.
 
 {:.center} 
-![The Bloc interface for assignments during the Ruby Language part of the course.]({{ site.baseurl }}/img/learning_ruby/learning_ruby_001.jpg)
+![The Bloc interface for assignments during the Ruby Language part of the course.](/img/learning_ruby/learning_ruby_001.jpg)
 
 [Rspec](http://rspec.info/), a Domain Specific Language for testing Ruby, is briefly introduced and used throughout the Ruby learning to verify submitted code in the assignments editor.
 
