@@ -5,9 +5,9 @@ url: "0.0.0.0" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Joey Kirk
+  title: Steve Meads
   avatar: avatar.png
-  gravatar: # Email MD5 hash
+  gravatar: "sbmeads@gmail.com"
   description: "A website with blog posts and pages" # used by search engines
 
   # Header and footer text
@@ -19,23 +19,23 @@ theme_settings:
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: "sbmeads@gmail.com"
   behance:
   bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
+  dribbble:
+  facebook:
   flickr:
-  github: "madebymunsters/type-theme"
+  github: "smeads"
   google_plus:
-  instagram: "joeykirk"
-  linkedin:  # Full URL
+  instagram: "stevenmeads"
+  linkedin:  "https://www.linkedin.com/in/smeads"
   pinterest:
   reddit:
   soundcloud:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "joeykirk"
+  twitter: "sbmeads"
   wordpress:
   youtube:
 
