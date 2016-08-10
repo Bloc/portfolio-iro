@@ -5,8 +5,12 @@ permalink: /about/
 feature-img: "img/sample_feature_img_2.png"
 ---
 
-Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+Hi! I'm Steve and thanks for visiting the About page.
 
-Head over to the [theme's documentation](https://rohanchandra.github.io/project/type/) for much more information about Type Theme or to install this theme on your own Jekyll site.
+I'm currently enrolled in an online [Software Engineering](https://www.bloc.io/software-developer-track) program through [Bloc.io](https://www.bloc.io/about). I have no prior programming experience, and would not consider myself to be technologically sophisticated one iota. However, I'm on a fast track to change that, and I mean fast.
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+This website is a place for me to showcase my portfolio, current projects, and anything else I want to share with others. My hope is it will also provide to be a source of inspiration for anyone interested or currently in related fields.
+
+Aside from all that, I'm happily married with a wild and crazy one year old. If I'm not sitting in front of a computer trying to figure out some broken code or mind blowing programming concept, I'm usually outside running, surfing, biking, climbing, or chilling with my fam.
+
+Hope you enjoy and happy hacking!
