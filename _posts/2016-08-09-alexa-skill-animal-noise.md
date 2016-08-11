@@ -8,12 +8,12 @@ Today I submitted my first Alexa skill for certification/approval from Amazon. I
 
 About the project. I created a simple skill that plays multiple choice questions using an [Alexa Skills Kit Sample](https://github.com/amzn/alexa-skills-kit-js). I customized the skill to play questions about what noises animals make. I have a one year old daughter who is starting to recognize animal noises and thought this would be a fun way to learn them. Basically, a user is given four possible noises to choose from, and the user then answers by responding with the correct number (1-4).
 
-> Alexa "What sound does a dog make?"
-  * "Woof"
-  * "Meow"
-  * "Ribbit"
-  * "Neigh"
-  User "One"
-  Alexa "One is the correct answer. Your score is one."
+Alexa: "What sound does a dog make?"
+  "Woof"
+  "Meow"
+  "Ribbit"
+  "Neigh"
+User: "One"
+Alexa: "One is the correct answer. Your score is one."
 
 One thing that stood out to me while completing this project was thinking about the User Interface. Thinking about the user's flow through voice commands is much different than a flow a user might experience on a web application. The short of it is, simple is better when developing an AVS. I'm excited to complete more skills with more capability than just multiple choice questions for animal noises.
