@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Blocmetrics: API Tracking Service and Reporting
+title: Blocmetrics _API Tracking Service and Reporting_
 ---
 
 The past week I have been working on another [Bloc](https://www.bloc.io/software-developer-track) project called Blocmetrics. Blocmetrics is to serve as an API tracking service for reporting purposes. Specifically, it's an analytics service and reporting tool that you can use with web apps to track user activity. If your interested in viewing the GitHub Repository feel free to [click here](https://github.com/smeads/Blocmetrics).
 
-To date, this was the most difficult project I've worked on, but with greater difficulty comes more failures and more lessons learned. I feel my capabilities were stretched and some skills were honed in on. The biggest takeaways from this project is a better ability to read and debug coding errors. I really had to trust and use error messages to uncover many issues. When error messages didn't seem to help out, I learned how to "bread crumb" debug by using `puts 'hello'`. This debugging approach literally allowed me to follow bread crumbs and find exactly at which part of my code was broken. The ultimately lead me to solve an issue I was trying to resolve for 3 days. Good skill to learn. You can see a code snippet below of how I used `puts` to debug:
+To date, this was the most difficult project I've worked on, but with greater difficulty comes more failures and more lessons learned. I feel my capabilities were stretched and some skills were honed in on. The biggest takeaways from this project is a better ability to read and debug coding errors. I really had to trust and use error messages to uncover many issues. When error messages didn't seem to help out, I learned how to "bread crumb" debug by using `puts hello`. This debugging approach literally allowed me to follow bread crumbs and find exactly at which part of my code was broken. The ultimately lead me to solve an issue I was trying to resolve for 3 days. Good skill to learn. You can see a code snippet below of how I used `puts` to debug:
 
 ```ruby
 def create
