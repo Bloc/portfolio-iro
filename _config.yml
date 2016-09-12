@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://raycewiggins.github.io" # the base hostname & protocol for your site
+url: "www.raycew.xyz" # the base hostname & protocol for your site
 
  # THEME-SPECIFIC CONFIGURATION
  theme:
