@@ -5,14 +5,14 @@ url: "0.0.0.0" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Joey Kirk
+  title: Jocelyn Hsu
   avatar: avatar.png
-  gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  gravatar: jocelyn@unaccomplishedlady.com # Email MD5 hash
+  description: "A portfolio for Jocelyn Hsu" # used by search engines
 
   # Header and footer text
   header_text: >
-     <h1>Designer, Developer, Writer, and Dad.</h1>
+     <h1>Developer, Digital Producer, and Filmmaker.</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
@@ -22,20 +22,20 @@ theme_settings:
   email_address: # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
-  flickr:
-  github: "madebymunsters/type-theme"
-  google_plus:
-  instagram: "joeykirk"
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
+  dribbble:
+  facebook: "jocelyn.hsu"
+  flickr: "jocelynhsu"
+  github: "unaccomplished"
+  google_plus: "+JocelynHsu19"
+  instagram: "unaccomplished"
+  linkedin:  https://www.linkedin.com/in/jocelynh # Full URL
+  pinterest: "unaccomplished"
+  reddit: "unaccomplishedlady"
+  soundcloud: "jocelyn-hsu"
+  stack_exchange: http://stackexchange.com/users/8387494/jocelyn-hsu # Full URL
   steam:
   tumblr:
-  twitter: "joeykirk"
+  twitter: "unaccomplished"
   wordpress:
   youtube:
 
