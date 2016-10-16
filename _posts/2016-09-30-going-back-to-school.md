@@ -1,0 +1,5 @@
+---
+layout: post
+title: Going Back to School in my Thirties
+---
+I grew up in the Silicon Valley to engineer parents, and engineering was heavily pushed on me as a career path.  However, I was more drawn to film and television and decided to pursue my undergrad studies to the arts field.  Little did I know that I would later move to Los Angeles and be offered many digital jobs because I knew my way around a computer so well.  Before I knew it, I was project managing apps and websites for big Hollywood brands, and I realized if I had some development skills, I could be making a lot more money as a web or app developer on the same projects.  And so, in my early 30s, I've decided to go back to school (part time) and learn to code.   After a lot of research in late 2015, I decided to study with [Bloc](http://bloc.io) because it is a remote program and would allow me to study part time while keeping a part time/full time job.  I started in April 2016, and hope to graduate from the Software Engineering Track in 2017 or 2018.
