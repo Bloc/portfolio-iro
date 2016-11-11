@@ -3,14 +3,15 @@ layout: post
 
 title: PTO 
 feature-img: "img/calendar_controller.png"
-thumbnail-path: "calendar_controller.png"
-short-description: Paid Time Off  Calendar for iOS !
+thumbnail-path: "img/PTO_open_page.png"
+short-description: Paid Time Off  Calendar!
 
 ---
-
+ The PTO project was designed to track and schedule an employees paid time off. It allows employees to look at a calendar and request Paid Time Off from the calendar, that employees manager can then approve or disapprove a request. From the managers calendar they can see all scheduled PTO on a given calendar. Thus, schedule around those requests.
+ 
+ ___
 
 *Here is the index page that includes a register menu; listing current user, their role, and options such Editing and Upgrading the users role. It also provides a menu bar that currently has two primary links: Calendar and Change Events.*
-
 {:.center}
 ![]({{ site.baseurl }}/img/Frontpage.png)
 
@@ -18,8 +19,6 @@ short-description: Paid Time Off  Calendar for iOS !
 
 
 The calendar
-
-*Click on a date you will be redirected to the event menu. See the next image below.*
 {:.center}
 ![]({{ site.baseurl }}/img/employee_calendar
 .png)
@@ -42,4 +41,16 @@ Manager's calendar.
 
 ___
 
+Events page
+{:.center}
+![]({{ site.baseurl }}/img/Allevents.png)
+
+___
+
+___
+Benefit chart
+{:.center}
+![]({{ site.baseurl }}/img/TaskUARB.png)
+
+___
 
