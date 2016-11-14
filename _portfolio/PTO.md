@@ -2,8 +2,9 @@
 layout: post
 
 title: PTO 
-feature-img: "img/calendar_controller.png"
-thumbnail-path: "img/PTO_open_page.png"
+
+feature-img: "img/events_controller.png"
+thumbnail-path: "img/calendar_controller.png"
 short-description: Paid Time Off  Calendar!
 
 ---
@@ -46,6 +47,7 @@ Events page
 ![]({{ site.baseurl }}/img/Allevents.png)
 
 ___
+Company “W” currently employs 12,000 employees, within 32 departments, with multi-managers, running three shifts 24-7-365. Today, their use a paper Paid Time Off. The forms consist of a request form and attached calendar. There are three copies made; employee’s, supervisor manager’s, and department head’s. Per interoffice mail (snail mail) another copy is send to Human Relations, There an employee manually enters information into ERP software. Checking the status of PTO hours (or days) available for that employee. Two more copies are made; one heading to accounting/payroll and the other back to the department head.  Usually, takes seven to ten days to filter thru the system and between twenty to thirty sheets of paper, and the labor involves seven or eight people touching each “Request for PTO” form.  The currently system is a mess. 
 
 ___
 Benefit chart
@@ -54,3 +56,24 @@ Benefit chart
 
 ___
 
+
+Code for the calendar structure.
+{% highlight javascript %}
+class Calendar
+  def initialize(date=Date.today)
+    @date = date
+
+  end
+
+  def to_a
+    CalendarWeeks.new(@date).to_a.map do |week|
+      week.map do |date|
+        [date, CalendarStyles.new(date).to_s]
+      end
+    end
+  end
+end
+{% endhighlight %}
+ Have an employee login to their personal company account. From there provide a web page base interface. Thru an calendar form that displays current status of PTO available. Here, once a manager approves the request all parties have access to the data. The employee, Human relations, accounting/payrolls. Each event has an ID. And that data can be migrated into a given database. 
+ 
+With Ruby on rails, I created an application that along with a bit of CSS register page, an calendar, a short option menu. Giving all parties access of their data. This project could be developed farther. depending on the organization and data needed.   This project was developed over a three week period. 
