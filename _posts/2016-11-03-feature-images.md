@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Feature images
-feature-img: "img/sample_feature_img.png"
+title: World of Bloc
+feature-img: "img/HackingWithCoffee.png"
 ---
-This would be a good place to add a photo as an example of a post which includes a feature image specified in the front matter of the post. The feature image spans the full-width of the page, and is shown with the title on permalink pages.
+When I started the bloc Full Stack Web Developer software program I had one primary goal... learn as much as I could from this experience. 
+
+My programming experience prior to Bloc was and ancient language known as fanuc. I had some exposure to the Java, that kinda of ended after some simple tutorials. So, what was Ruby and how was it on Rails. Front-End, Back-End. I soon found that this world of programming languages had evolutes quite fast. Why Ruby and not Java, or Python, or C++, even Swift.  
