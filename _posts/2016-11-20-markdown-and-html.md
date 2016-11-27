@@ -7,17 +7,18 @@ title: Markdown is not a sale
 
 Tables have also been extended from Markdown:
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+<B>2016 Presidential Election Results</B>
+
+Clinton              | √  Trump 
+-------------------- | -------------
+232 Electoral Votes  | 290 Electoral Votes
+62,523,126 Votes     | 61,201,031 Votes
 
 Here's an example of an image, which is included using Markdown:
 
 ![The Ruby schema file](/img/schema.png)
 
-Highlighting for code in Jekyll is done using Pygments or Rouge. This theme makes use of Pygments by default.
-Here server.js file from BlocChat.
+Highlighting for code here from server.js file for BlocChat.
 
 {% highlight js %}
 var Hapi = require('hapi'),
@@ -56,5 +57,5 @@ var Hapi = require('hapi'),
 
 {% endhighlight %}
 
-Code Wars $$var i=arr.length-1;i>=0;i--)
-   $$ can be displayed inline.
+Code Wars code line 
+$$var i=arr.length-1;i>=0;i--) $$ can be displayed inline.

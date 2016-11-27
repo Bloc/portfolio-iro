@@ -8,7 +8,7 @@ thumbnail-path: "img/calendar_controller.png"
 short-description: Paid Time Off  Calendar!
 
 ---
- The PTO project was designed to track and schedule an employees paid time off. It allows employees to look at a calendar and request Paid Time Off from the calendar, that employees manager can then approve or disapprove a request. From the managers calendar they can see all scheduled PTO on a given calendar. Thus, schedule around those requests.
+ The PTO project was designed to track and schedule an employees paid time off.  This was not a preset bloc project . It allows employees to look at a calendar and request Paid Time Off from the calendar, that employees manager can then approve or disapprove a request. From the managers calendar they can see all scheduled PTO on a given calendar. Thus, schedule around those requests.
  
  ___
 

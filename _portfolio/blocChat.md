@@ -6,7 +6,7 @@ thumbnail-path: "img/ChatGruntBrackets.png"
 short-description: BlocJams for iOS is awesome!
 
 ---
-The BlocChat project was a fun. Impliciting firebase (google).
+The BlocChat project was a fun. Implementing the Firebase tools and intrastructure (google).
 
 ---
 

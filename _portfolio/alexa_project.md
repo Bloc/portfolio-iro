@@ -7,20 +7,19 @@ short-description: Amazon Echo Alexa project
 
 ---
 Amazon's Echo Alexa project is a speech recognition app for the stand-alone device. 
-
+By creating a Lambda function code can be uploaded to the AWS console.
 
 {:.center}
 ![]({{ site.baseurl }}/img/lambda_function.png)
 
 ---
-The developer console
+The developer console sets several testing and configurations. The Compliance timeframe is quick and informative. 
 
 {:.center}
 ![]({{ site.baseurl }}/img/developerAmazon.png)
 
 ---
-
-Code to randomly pick a fact the database of facts.
+From one of my skills for Alexa. Code to randomly pick a fact the database of facts.
 
 {% highlight javascript %}
 /**
