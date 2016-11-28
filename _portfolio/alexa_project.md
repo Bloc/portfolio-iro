@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Alexa Project
-feature-img: "img/echo.png"
-thumbnail-path: "img/echo.png"
+feature-img: "img/amazon-echo.png"
+thumbnail-path: "img/amazon-echo.png"
 short-description: Amazon Echo Alexa project
 
 ---
