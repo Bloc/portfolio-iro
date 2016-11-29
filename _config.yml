@@ -5,29 +5,29 @@ url: "0.0.0.0" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Joey Kirk
+  title: ericCStephens
   avatar: avatar.png
   gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  description: "A coding adventure blog with posts and pictures" # used by search engines
 
   # Header and footer text
-  header_text: >
-     <h1>Designer, Developer, Writer, and Dad.</h1>
-  header_text_feature_image:
+  header_text: 
+     <h1><font color = "white">Eric C Stephens</font> <font color = "orange">developer</font><font color = "white">Adventurer</font></h1>
+  header_text_feature_image: "img/hktemple.JPG"
   footer_text: >
-   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+   Powered by <a href="http://ericcstephens.com">ericCStephens</a>
 
   # Icons
   rss: false
   email_address: # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
+  dribbble: 
+  facebook: "cire.snehpets"
   flickr:
-  github: "madebymunsters/type-theme"
+  github: "estephens6"
   google_plus:
-  instagram: "joeykirk"
+  instagram: "ericcstephens"
   linkedin:  # Full URL
   pinterest:
   reddit:
@@ -35,7 +35,7 @@ theme_settings:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "joeykirk"
+  twitter: "cirecode"
   wordpress:
   youtube:
 

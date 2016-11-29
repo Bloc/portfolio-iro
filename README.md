@@ -1,3 +1,5 @@
+# $ jekyll serve --host $IP --port $PORT
+
 # Portfolio Iro Theme
 ## Based on Type Theme
 
