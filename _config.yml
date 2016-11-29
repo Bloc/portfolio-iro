@@ -7,7 +7,7 @@ url: "http://robbee.github.io"
 theme_settings:
   # Meta
   title: Keith Robinson
-  avatar: /img/krobnson.png
+  avatar: krobinson.png
   gravatar: # Email MD5 hash
   description: "A website with blog posts and pages" # used by search engines
 
@@ -26,7 +26,7 @@ theme_settings:
   dribbble: 
   facebook: profile.php?id=100009547817420
   flickr:
-  github: robbee72/portfolioKLR
+  github: robbee72/robbee.github.io
   google_plus:
   instagram: 
   linkedin:  # Full URL
