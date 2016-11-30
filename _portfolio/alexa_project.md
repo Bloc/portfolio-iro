@@ -10,7 +10,7 @@ Amazon's Echo Alexa project is a speech recognition app for the stand-alone devi
 By creating a Lambda function code can be uploaded to the AWS console.
 
 {:.center}
-![]({{ site.baseurl }}/img/lambda_function.png)
+![]({{ site.baseurl  }}/img/lambda_function.png)
 
 ---
 The developer console sets several testing and configurations. The Compliance timeframe is quick and informative. 

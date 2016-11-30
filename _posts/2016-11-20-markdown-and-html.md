@@ -15,7 +15,9 @@ Clinton              | √  Trump
 
 Here's an example of an image, which is included using Markdown:
 
-![The Ruby schema file](/img/schema.png)
+
+{:.center}
+![]({{ site.baseurl }}/img/schema.png)
 
 Highlighting for code here from server.js file for BlocChat.
 

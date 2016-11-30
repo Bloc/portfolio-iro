@@ -11,7 +11,7 @@ short-description: Blocipedia!
  
  ___
 
-*Here is the index page that includes a register menu; listing current user, their role, and options such Editing and Upgrading the users role. It also provides a menu bar that currently has two primary links: Calendar and Change Events.*
+Here is the index page that includes a register menu; listing current user, their role, and options such Editing and Upgrading the users role. It also provides a menu bar that currently has two primary links: 
 {:.center}
 ![]({{ site.baseurl }}/img/blog_entry.png)
 
