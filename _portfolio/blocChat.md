@@ -55,4 +55,4 @@ The code also, ran a cookies service.
 ___
 
 
-Interesting real world note:  AngularFire's Authentication API documentation and the Google Angular Firebase was not consisted, updated, and or complete at the time of this exercise. Recently, Google purchased Firebase. 
+Interesting real world note:  AngularFire's Authentication API documentation and the Google Angular Firebase was not consistent, updated, and or complete at the time of this exercise. Recently, Google purchased Firebase. 
