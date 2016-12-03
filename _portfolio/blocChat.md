@@ -3,7 +3,7 @@ layout: post
 title: BlocChat
 feature-img: "img/sample_feature_img.png"
 thumbnail-path: "img/ChatGruntBrackets.png"
-short-description: Blog page with Firebase.
+short-description: Chat page with Firebase.
 ---
 The BlocChat project was a fun. Implementing the Firebase tools and intrastructure (google).
 
