@@ -1,7 +1,7 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
 #url: "0.0.0.0" # the base hostname & protocol for your site
-url: "http://madhattercreek.com"
+url: "http://robbee72.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
