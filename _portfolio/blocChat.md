@@ -4,7 +4,10 @@ title: BlocChat
 feature-img: "img/sample_feature_img.png"
 thumbnail-path: "img/ChatGruntBrackets.png"
 short-description: Chat page with Firebase.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 21a21212c0ddcd8d10210a7bdd657de37a9f57df
 ---
 The BlocChat project was fun. Implementing the Firebase tools and intrastructure (google).
 
