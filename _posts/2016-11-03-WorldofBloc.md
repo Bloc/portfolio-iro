@@ -104,7 +104,7 @@ end
 ___
 
 
-This give the calendar order. But not structure. That would have to come with some CSS. 
+This gave the calendar order. But not structure. That would have to come with some CSS. 
 
 Once this file was written, I could see the components necessary to construct the database. Then thru the terminal command, I started seeing outcomes such as:
 
@@ -143,7 +143,7 @@ I stopped the project at a pre-plan point. It’s kind of like editing a movie.
 You have to at some point just publish your movie.  
 
 The opportunity of building more layers or applications to a project (I think) is the 
-future of software development. Thru expansion and or innovation.  Different programming or possible  new languages of programming software.  Form maybe mobile to the cloud to whatever is next.
+future of software development. Thru expansion and or innovation.  Different programming or possible  new languages of programming software.  From maybe mobile to the cloud to whatever is next.
 I want to be part of what is next.
 
 

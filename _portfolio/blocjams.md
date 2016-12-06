@@ -6,7 +6,7 @@ thumbnail-path: "img/cheeseHead.png"
 short-description: BlocJams for iOS is awesome!
 
 ---
-Yes, there are many audio players already out there! But the BlocJams-Angular was a great project for  with migrating css, assets, and angular.js development.  The project utilized Grunt (Node.js package). 
+Yes, there are many audio players already out there! But the BlocJams-Angular was a great project for   migrating css, assets, and angular.js development.  The project utilized Grunt (Node.js package). 
 
 The Audio player with Angular. Here I uses Bootstrap front-end framework for this Application.
 
