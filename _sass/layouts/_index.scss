@@ -3,11 +3,11 @@
   @extend %padding-regular;
   display: inline-block;
   width: 100%;
-  background-color:$header-desc-background-color;
+  background-color:rgba (0, 128, 128);
   background-size: cover;
   font-size: 1.2em;
   text-align: center;
-  color: $header-desc-text-color;
+  color: rgba(0,128, 128);
 }
 .call-out p:last-child {
   margin-bottom: 0;
