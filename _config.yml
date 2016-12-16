@@ -5,7 +5,7 @@ url: "0.0.0.0" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Type Theme
+  title: Xavier Ortiz
   avatar: assets/img/avatar.png
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
@@ -20,21 +20,21 @@ theme_settings:
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: # Full email address, e.g. "xavier.ortiz.ch@gmail.com"
   behance:
-  bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
+  bitbucket: "XavierOrtiz"
+  dribbble: 
+  facebook:
   flickr:
-  gitlab:
-  github: "rohanchandra/type-theme"
-  instagram: "joeykirk"
-  linkedin:  # Full URL
+  github: "Xavier-J-Ortiz"
+  google_plus: "cuchumino"
+  instagram:
+  linkedin: "https://www.linkedin.com/in/xavierortiz"
   pinterest:
-  reddit:
+  reddit: "cuchumino"
   soundcloud:
   stack_exchange:  # Full URL
-  steam:
+  steam: "x_man81"
   tumblr:
   twitter: "joeykirk"
   wordpress:
