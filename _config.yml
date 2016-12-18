@@ -5,42 +5,43 @@ url: "0.0.0.0" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Joey Kirk
+  title: Stephen Wentling
   avatar: avatar.png
-  gravatar: # Email MD5 hash
+  gravatar: 95add28d8792fa4af0f190344db456ac # Email MD5 hash
   description: "A website with blog posts and pages" # used by search engines
 
   # Header and footer text
   header_text: >
-     <h1>Designer, Developer, Writer, and Dad.</h1>
+     <h1>Developer who?</h1>
+     <h5>I am a motivated developer with a background in Ruby on Rails, HTML, & CSS.</h5>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: "swentling87@gmail.com"
   behance:
   bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
+  dribbble:
+  facebook: "stephen.wentling"
   flickr:
-  github: "madebymunsters/type-theme"
+  github: "swentling87"
   google_plus:
-  instagram: "joeykirk"
-  linkedin:  # Full URL
+  instagram:
+  linkedin: "https://www.linkedin.com/in/stephen-wentling-b3900329" # Full URL
   pinterest:
   reddit:
   soundcloud:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "joeykirk"
+  twitter: "swentling87"
   wordpress:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-77575333-1"
   disqus_shortname:
   katex: true # Enable if using math markup
 
