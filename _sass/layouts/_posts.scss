@@ -9,6 +9,7 @@ article {
   header {
     margin-bottom: 6%;
     text-align: center;
+    
   }
   a:hover {
     @extend %link-hover;
@@ -19,8 +20,9 @@ article {
 }
 header {
   h1 {
-      color: darkorange;
+    color: darkorange;
     margin: 0;
+    
   }
   .meta {
     color: rgba($text-color, .5);

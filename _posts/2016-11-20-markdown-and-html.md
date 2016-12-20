@@ -13,7 +13,7 @@ Clinton              | √  Trump
 232 Electoral Votes  | 290 Electoral Votes
 62,523,126 Votes     | 61,201,031 Votes
 
-Here's an example of an image, which is included using Markdown:
+Here's an example of an image, which is from ruby file schema.rb :
 
 
 {:.center}

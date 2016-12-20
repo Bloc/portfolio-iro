@@ -20,6 +20,9 @@ body {
   font-size: $font-size;
   word-wrap: break-word;
 }
+h2 {
+    text-shadow: 2px 2px #c65b5b;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-headings;
   line-height: 1.3;
