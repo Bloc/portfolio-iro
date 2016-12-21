@@ -40,6 +40,6 @@ Upgrading account with Stripe. A plug and play recurring billing solution for me
 
 ___
 
-This was a good exercise for using CRUD. Also, incorpated the Pundit gem for authorization of roles.
+This was a good exercise for using CRUD. Also, incorporated the Pundit gem for authorization of roles.
 Used the Faker gem to generate random fake data for both users and wikis. Redcarpet gem to parse Markdown syntax. Replicated the code in HAML. A shorter, simpler form.   
 
