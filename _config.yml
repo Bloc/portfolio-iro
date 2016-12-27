@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: "https://xavierjortiz.com" # the subpath of your site, e.g. /blog/
-url: "https://Xavier-J-Ortiz.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://xavierjortiz.com" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
