@@ -2,7 +2,7 @@
 layout: post
 title: AnalysisRTT
 feature-img: "img/sample_feature_img.png"
-thumbnail-path: "https://d13yacurqjgara.cloudfront.net/users/3217/screenshots/2030966/blocjams_1x.png"
+thumbnail-path: "img/RTT_12_1_2016_24_hour_10min_chunk.png"
 short-description: Python code that collects JSON encoded info, and plots relevant data
 
 ---
