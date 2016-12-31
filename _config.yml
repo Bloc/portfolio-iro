@@ -5,37 +5,37 @@ url: "0.0.0.0" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Joey Kirk
+  title: Brandon Caples
   avatar: avatar.png
   gravatar: # Email MD5 hash
   description: "A website with blog posts and pages" # used by search engines
 
   # Header and footer text
   header_text: >
-     <h1>Designer, Developer, Writer, and Dad.</h1>
+     <h1>Designer & Developer</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
-  behance:
+  email_address: "brandoncaples@gmail.com"
+  behance: "brandon4abd"
   bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
+  dribbble: "brandoncaples"
+  facebook: "bcaples"
   flickr:
-  github: "madebymunsters/type-theme"
-  google_plus:
-  instagram: "joeykirk"
-  linkedin:  # Full URL
+  github: "capncapes"
+  google_plus: "+brandoncaples"
+  instagram:
+  linkedin: "https://www.linkedin.com/in/brandoncaples"
   pinterest:
   reddit:
   soundcloud:
-  stack_exchange:  # Full URL
+  stack_exchange: "http://stackexchange.com/users/9627195/brandon"
   steam:
   tumblr:
-  twitter: "joeykirk"
+  twitter: "capncapes"
   wordpress:
   youtube:
 

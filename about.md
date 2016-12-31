@@ -5,8 +5,8 @@ permalink: /about/
 feature-img: "img/sample_feature_img_2.png"
 ---
 
-Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+I'm a marketing assistant in the financial services sector and a student of web development working toward a rewarding career building web applications.
 
-Head over to the [theme's documentation](https://rohanchandra.github.io/project/type/) for much more information about Type Theme or to install this theme on your own Jekyll site.
+The verticals that have piqued my interest are education, finance, and health care, but I'm open to new opportunites, wherever they may place me. Check out my [pre-development r&#233;sum&#233;](http://127.0.0.1:4000/resume/) for a better understanding of where I've been, and read my posts to get a feel for where I'm going.
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+Be sure to check back here often. I'm working hard to build my portfolio and carve out a career in web development. I look forward to impressing you.
