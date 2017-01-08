@@ -2,7 +2,7 @@
 layout: post
 title: A Love/Hate Relationship with Internet Explorer
 author: Brandon Caples
-feature-img: "img/sample_feature_img.png"
+feature-img: "img/a_love_hate_relationship_with_internet_explorer.jpg"
 ---
 
 Okay, maybe <em>love</em> is a strong word here, at least for me. Every web developer knows that Internet Explorer (IE) does things differently than other browsers, and I try to avoid it when I can, but how avoidable is it really?

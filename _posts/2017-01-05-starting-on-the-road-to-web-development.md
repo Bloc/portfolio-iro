@@ -2,7 +2,7 @@
 layout: post
 title: Starting on the Road to Web Development
 author: Brandon Caples
-feature-img: "img/sample_feature_img.png"
+feature-img: "img/starting_on_the_road_to_web_development.jpg"
 ---
 
 My road to web development has just begun. I've learned so much already, and I'm excited about what I have yet to learn. Discover my journey!

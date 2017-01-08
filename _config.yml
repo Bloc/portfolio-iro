@@ -8,7 +8,7 @@ theme_settings:
   title: Brandon Caples
   avatar: avatar.png
   gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  description: "A web designer and developer" # used by search engines
 
   # Header and footer text
   header_text: >
@@ -40,7 +40,7 @@ theme_settings:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-90007104-1"
   disqus_shortname:
   katex: true # Enable if using math markup
 

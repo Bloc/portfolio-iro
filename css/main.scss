@@ -33,6 +33,10 @@ code {
     border-left: 0.5rem solid;
 }
 
+h1.title {
+    text-shadow: 0 0 15px rgb(56, 56, 56);
+}
+
 .html {
     border-left-color: orange;
 }
@@ -43,4 +47,8 @@ code {
 
 .javascript {
     border-left-color: limegreen;
+}
+
+.feature-image header {
+    background-position: center;
 }
