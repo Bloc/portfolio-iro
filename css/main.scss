@@ -52,3 +52,49 @@ h1.title {
 .feature-image header {
     background-position: center;
 }
+
+.contact-form {
+    display: inline-block;
+    width: 100%;
+}
+
+.form-name, .form-email {
+    width: 47.75%;
+    height: 3rem;
+    border: 2px solid #f98752;
+}
+
+.form-name {
+    float: left;
+    margin: 1% 0.75% 1% 1.5%;
+}
+
+.form-email {
+    float: right;
+    margin: 1% 1.5% 1% 0.75%;
+}
+
+.form-message {
+    clear: both;
+    width: 97%;
+    height: 6rem;
+    margin: 1% 1.5%;
+    border: 2px solid #f98752;
+}
+
+.submit {
+    clear: both;
+    width: auto;
+    height: 3rem;
+    margin: 1% 1.5%;
+    padding: 0.5% 1%;
+    color: rgb(56, 56, 56);
+    background-color: white;
+    border: 2px solid #f98752;
+    font-weight: 600;
+}
+
+.submit:hover {
+    background-color: #f98752;
+    color: white;
+}
