@@ -1,0 +1,15 @@
+<svg id="about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560">
+    <defs>
+        <style>
+            .rect, .head, .body { fill: none; }
+            .head, .body { stroke-miterlimit: 10; stroke-width: 20px; }
+            .head { stroke: red; }
+            .body { stroke: green; }
+        </style>
+    </defs>
+    <title>About Brandon</title>
+    <rect class="rect" width="560" height="560"/>
+    <path class="head" d="M380,200c0,55.23-44.77,125-100,125S180,255.23,180,200A100,100,0,0,1,380,200Z"/>
+    <path class="body" d="M180,360H380a75,75,0,0,1,75,75v25a0,0,0,0,1,0,0H105a0,0,0,0,1,0,0V435A75,75,0,0,1,180,360Z"/>
+    <path class="body" d="M263,360l12.67,21.94a5,5,0,0,0,8.66,0L297,360H263Z"/><polygon class="body" points="280 397.05 292 449.15 268 449.15 280 397.05"/>
+</svg>
