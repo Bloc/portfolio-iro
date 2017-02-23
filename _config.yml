@@ -12,7 +12,7 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <h1>A developer and a teacher,\br fluent in Chinese with extensive international experience,\br ready for new challenges!</h1>
+     <h1>A developer and a teacher, fluent in Chinese with extensive international experience, ready for new challenges!</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
