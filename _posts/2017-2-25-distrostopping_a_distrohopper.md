@@ -1,6 +1,6 @@
 ---
 layout: post
-title: distrostopping a distrohopper
+title: Distrostopping a Distrohopper
 ---
 
 To the uninitiated, a distrohopper is someone who hops from Linux distribution to Linux distribution, trying out the different flavors that this marvelous OS provides.
