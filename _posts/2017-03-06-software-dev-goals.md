@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My goals as a software developer
+title: My Goals as a Software Developer
 ---
 
 For my first blog post, I would like to lay out the goals I have as a software developer.
