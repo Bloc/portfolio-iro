@@ -28,7 +28,7 @@ theme_settings:
   github: SJl149
   google_plus:
   instagram:
-  linkedin:
+  linkedin: "https://linkedin.com/in/scott-lenander-b43556138"
   pinterest:
   reddit:
   soundcloud:
@@ -40,7 +40,7 @@ theme_settings:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-93486943-1"
   disqus_shortname:
   katex: true # Enable if using math markup
 
