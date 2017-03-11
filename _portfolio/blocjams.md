@@ -3,7 +3,7 @@ layout: post
 title: BlocJams
 feature-img: "img/sample_feature_img.png"
 thumbnail-path: "img/BlocJams/BlocJams_landing.png"
-short-description: BlocJams is a music player that plays a collection of albums.
+short-description: BlocJams is a music player app.
 
 ---
 For our first project in the Bloc Software Developer course, we created a music player to play songs from a collection of albums. BlocJams takes a collection of albums and allows the user to choose an album and play songs.
