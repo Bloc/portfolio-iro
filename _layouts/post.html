@@ -5,8 +5,9 @@ layout: default
   <header style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
     <h1 class="title">{{ page.title }}</h1>
     <p class="meta">
-    {{ page.date | date: "%B %-d, %Y" }}
-    {% if page.author %} - {{ page.author }}{% endif %}
+    <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+    <span>{% if page.author %} by {{ page.author }}{% endif %}</span>
+    <span>{{ page.content | number_of_words }} words</span>
     </p>
   </header>
   <section class="post-content">{{ content }}</section>

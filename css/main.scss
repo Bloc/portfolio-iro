@@ -16,3 +16,85 @@
 // Partials
 @import 'includes/header';
 @import 'includes/footer';
+
+header > p > span {
+    margin: 0 1rem;
+}
+
+code {
+    color: rgba(56, 56, 56, 0.75);
+}
+
+.code {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    margin: 1.5rem 0 1.5rem -1.5rem;
+    border-left: 0.5rem solid;
+}
+
+h1.title {
+    text-shadow: 0 0 15px rgb(56, 56, 56);
+}
+
+.html {
+    border-left-color: orange;
+}
+
+.css {
+    border-left-color: deepskyblue;
+}
+
+.javascript {
+    border-left-color: limegreen;
+}
+
+.feature-image header {
+    background-position: center;
+}
+
+.contact-form {
+    display: inline-block;
+    width: 100%;
+}
+
+.form-name, .form-email {
+    width: 47.75%;
+    height: 3rem;
+    border: 2px solid #f98752;
+}
+
+.form-name {
+    float: left;
+    margin: 1% 0.75% 1% 1.5%;
+}
+
+.form-email {
+    float: right;
+    margin: 1% 1.5% 1% 0.75%;
+}
+
+.form-message {
+    clear: both;
+    width: 97%;
+    height: 6rem;
+    margin: 1% 1.5%;
+    border: 2px solid #f98752;
+}
+
+.submit {
+    clear: both;
+    width: auto;
+    height: 3rem;
+    margin: 1% 1.5%;
+    padding: 0.5% 1%;
+    color: rgb(56, 56, 56);
+    background-color: white;
+    border: 2px solid #f98752;
+    font-weight: 600;
+}
+
+.submit:hover {
+    background-color: #f98752;
+    color: white;
+}
