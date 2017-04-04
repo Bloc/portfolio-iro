@@ -20,9 +20,9 @@ theme_settings:
   # Icons
   rss: false
   email_address: "brandoncaples@gmail.com"
-  behance: "brandon4abd"
+  behance: # "brandon4abd"
   bitbucket:
-  dribbble: "brandoncaples"
+  dribbble: # "brandoncaples"
   facebook: "bcaples"
   flickr:
   github: "capncapes"
@@ -32,7 +32,7 @@ theme_settings:
   pinterest:
   reddit:
   soundcloud:
-  stack_exchange: "http://stackexchange.com/users/9627195/brandon"
+  stack_exchange: # "http://stackexchange.com/users/9627195/brandon"
   steam:
   tumblr:
   twitter: "capncapes"

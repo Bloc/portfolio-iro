@@ -11,6 +11,8 @@ Music is a very personal expression of identity for many people. BlocJams was bu
 
 BlocJams is my first deployed web application, built in the fall of 2016 to showcase my knowledge of JavaScript as I work my way through the Bloc curriculum. The overall design of the site was determined by Bloc for me to implement.
 
+See the deployed application <a href="http://brandon-caples-bloc-jams.netlify.com/" target="_blank">HERE</a>!
+
 ***
 
 ### Requirements
