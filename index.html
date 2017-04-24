@@ -5,14 +5,15 @@ layout: default
 <div class="home">
   {% if site.theme_settings.header_text %}
   <div class="call-out" 
-  style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
+  style="background-image: url('{{ site.baseurl }}/img/carbon_pattern13.png{{ site.theme_settings.header_text_feature_image }}')">
     {{ site.theme_settings.header_text }}
   </div>
   {% endif %}
 
   <div class="work">
+      
     <h2>My Work</h2>
-    {% for project in site.portfolio limit:3 %}
+    {% for project in site.portfolio limit:5 %}
         <li>
           <img src="{{ project.thumbnail-path }}" alt="{{ project.title }}"/>
           <a href="{{ project.url }}">{{ project.title }}</a>
@@ -22,7 +23,7 @@ layout: default
   </div>
 
   <div class="posts">
-    <h2>My Posts</h2>
+    <h2>Post a thought</h2>
     {% for post in paginator.posts %}
     <div class="post-teaser">
       <header>
