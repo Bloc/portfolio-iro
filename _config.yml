@@ -13,7 +13,7 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <h1>Developer, Linux Enthusiast, Husband, Climbing Gym Member :D</h1>
+     <h1>Developer, Linux Enthusiast, Husband, Cycling Enthusiast :D</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
@@ -33,7 +33,7 @@ theme_settings:
   pinterest:
   reddit: "cuchumino"
   soundcloud:
-  stack_exchange:  # Full URL
+  stack_exchange:  
   steam: "x_man81"
   tumblr:
   twitter: 
