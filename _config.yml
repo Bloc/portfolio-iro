@@ -5,37 +5,37 @@ url: "0.0.0.0" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Joey Kirk
+  title: Tyler BoddySpargo
   avatar: avatar.png
-  gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  gravatar: e6191afa959c270e9e593538141dd011
+  description: "A portfolio of web development case studies." # used by search engines
 
   # Header and footer text
   header_text: >
-     <h1>Designer, Developer, Writer, and Dad.</h1>
-  header_text_feature_image:
+     <h1>Developing a way to live.</h1>
+  header_text_feature_image: 
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: boddyspargo.tyler@gmail.com # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
-  dribbble: "joeykirk"
-  facebook: "joeykirk"
+  dribbble:
+  facebook:
   flickr:
-  github: "madebymunsters/type-theme"
+  github: "tboddyspargo"
   google_plus:
-  instagram: "joeykirk"
-  linkedin:  # Full URL
+  instagram:
+  linkedin: https://www.linkedin.com/in/tylerboddyspargo/ # Full URL
   pinterest:
   reddit:
   soundcloud:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "joeykirk"
+  twitter:
   wordpress:
   youtube:
 
@@ -71,4 +71,4 @@ sass:
   sass_dir: _sass
   style: :compressed
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
