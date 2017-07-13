@@ -40,3 +40,15 @@ I was able to move through the project fairly quickly, which gave me the opportu
 ## Functional and Beautiful
 
 My past experience with CSS allowed me to add several minor aesthetic enhancements and make the site feel a bit more 'alive'. I added equalizer sound bars to the currently 'playing' track as well as a 'floating' arrow on the home page, indicating there was more content below the fold. These subtle visual additions, rather than detract from the content, actually enhance the user experience (though perhaps in ways that become more clear when there is actually music playing).
+
+
+{:.left}
+![URL query language for album pages]({{ site.baseurl }}/img/Screenshot 2017-07-12 23.17.38.png)
+{:.right}
+![URL query language for album pages]({{ site.baseurl }}/img/Screenshot 2017-07-12 23.19.52.png)
+
+---
+
+## That's a Wrap!
+
+Developing this simple 'mock-up' of a music streaming app provide the opportunity to revisit some of the cornerstones of web development. Any real-world project will involve many of the individual pieces that went into this site: responsive design, DOM navigation, HTML5 tags, block and inline elements, and more. I enjoyed being able to build something fun like BlocJams while reviewing the fundamentals that will continue serve me throughout my career.
