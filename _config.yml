@@ -23,11 +23,11 @@ theme_settings:
   behance:
   bitbucket:
   dribbble: 
-  facebook: "dannyvilailath"
+  facebook: # "dannyvilailath"
   flickr:
   github: "dvilailath"
   google_plus:
-  instagram: "dvilailath"
+  instagram: # "dvilailath"
   linkedin:  # Full URL
   pinterest:
   reddit:
@@ -35,9 +35,9 @@ theme_settings:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "dvilailath"
+  twitter: # "dvilailath"
   wordpress:
-  youtube: "dvilailath"
+  youtube:  "UCIRIND_hqd3CeCBcZV-5rnA"
 
   # Scripts
   google_analytics: "UA-102087271-1"
