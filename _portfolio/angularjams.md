@@ -8,7 +8,7 @@ short-description: Creating an Angular version of BlocJams proved a fascinating 
 
 ---
 
-<Overview here>
+Having worked with Angular in the past, using it to re-write BlocJams felt somewhat like coming home. Though this homecoming was more like returning after an extended vacation! Everything was familiar, but I had just been immersed in the world of React. Angular was quite a contrast despite its familiarity and, admittedly, my previous exposure to Angular was far from 'extensive'. Revisiting this well-known JavaScript framework helped me grasp concepts that I had overlooked before and which I could now compare with another popular Front-End development library.
 
 ---
 
