@@ -59,7 +59,6 @@ class AudioService {
 
 When the Angular version of BlocJams had reached the same level of functionality as the React version, I had an opportunity to have some fun with the Angular I had learned by adding some additional functionality. I loved the idea of being able to search the available songs and work with filtered arrays to provide a search field with 'autocomplete' functionality. While there was still no back-end to search through, nor a helpful organization of songs, I made do with what I had, extending the functionality of the `AlbumService` I had created previously to compile a list of all the songs. Then, I made a new directive for the search field and autocomplete results (complete with custom filter!).
 
-{:.center}
 ![Navigation bar with search field](/img/Screenshot 2017-07-20 19.28.19.png)
 
 The hardest part about the directive was binding the event listeners in such a way that the user interactions had the intended effect. This was made more difficult by the fact that I had to bind listeners differently on the `<input/>` field (where the keyboard would be used and `event.target` would represent the `<input/>` field rather than the desired item) than on the search results dropdown (where the mouse would be used to select the desired item).
