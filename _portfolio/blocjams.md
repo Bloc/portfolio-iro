@@ -4,8 +4,8 @@ title: BlocJams
 date: April 4, 2017
 feature-img: "img/Screenshot 2017-07-09 17.57.33.png"
 thumbnail-path: "img/Screenshot 2017-07-09 18.00.59.png"
-short-description: BlocJams is a website that helps lay the groundwork for an audio-streaming service using only JavaScript, HTML5, and CSS.
-
+short-description: BlocJams is a simple audio-streaming web application (à la Spotify) built only on JavaScript, HTML5, and CSS.
+published: true
 ---
 This HTML5/CSS/JavaScript project involved building a simple static content webpage that provides the skeleton for a more complex web application (a music streaming site). I knew, starting out, that much of the content was going to be review for me, but I also knew that it was going to be helpful to revisit and explore the fundamentals of JavaScript, HTML, and CSS and I was looking forward to it; And, although Bloc provides guides for most of the content, there were small ways that I was able to add some personal flare to BlocJams.
 

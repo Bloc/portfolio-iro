@@ -5,7 +5,7 @@ date: May 14, 2017
 feature-img: "img/Screenshot 2017-07-09 17.57.33.png"
 thumbnail-path: "img/Screenshot 2017-07-09 18.00.59_2.png"
 short-description: This re-write of BlocJams uses React and the plyr audio plugin to create a fully functional audio-streaming app.
-
+published: true
 ---
 
 The React paradigm allowed me to think in very different ways about how BlocJams was constructed and the ways in which the constituent parts interacted. Its 'component' model involved less separation between HTML and JavaScript and allows one to consider sections of a page as self-contained units with very explicit and intentional communication between them. This was exciting, but it also introduced significant challenges.
