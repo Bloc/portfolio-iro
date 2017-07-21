@@ -1,0 +1,52 @@
+form.email-me-form {
+  input[type='text'],
+  input[type='email'] {
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 3px 5px;
+    display: block;
+    margin-bottom: 10px;
+    &:focus {
+      border-radius: 3px;
+      border-bottom-color: transparent;
+    }
+  }
+  textarea[name='message'] {
+    display: block;
+    padding: 3px 8px;
+    width: 100%;
+  }
+  input[type='submit'] {
+    background-color: rgb(65, 105, 225);
+    background: linear-gradient(rgb(65, 105, 225), rgb(60, 93, 210));
+    border-radius: 3px;
+    color: white;
+    font-weight: normal;
+    border: none;
+    padding: 4px 8px;
+    margin-top: 10px;
+    &:focus,
+    &:active,
+    &:visited {
+      border: none;
+    }
+    &:hover,
+    &:focus {
+      background-color: rgb(80, 125, 247);
+      background: linear-gradient(rgb(80, 125, 247), rgb(75, 110, 235));
+    }
+  }
+
+  .input-table td {
+    padding: 3px 5px;
+    border: none;
+    border-collapse: collapse;
+    &.from {
+      vertical-align: top;
+      width: 300px;
+    }
+    &.message {
+      text-align: right;
+    }
+  }
+}

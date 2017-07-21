@@ -2,16 +2,29 @@
 layout: page
 title: Contact
 permalink: /contact/
-feature-img: "img/color.png"
+feature-img: "img/sample_feature_img_2.png"
 ---
 
-Bacon ipsum dolor amet filet mignon meatball spare ribs fatback bacon shankle. Kielbasa andouille fatback salami, boudin bresaola pig alcatra turkey spare ribs jerky. Corned beef bresaola leberkas salami alcatra beef landjaeger venison shank bacon meatloaf beef ribs picanha. Leberkas sausage brisket porchetta shankle prosciutto chicken picanha kielbasa pig kevin t-bone turducken filet mignon jowl.
+If you would like to learn more about me, feel free to get in touch via the email form below. I would be happy to start a conversation, provide my resume, or listen to your feedback!
 
-<form action="https://getsimpleform.com/messages?form_api_token=_yourtoken_" method="post">
+---
+
+<form class="email-me-form" action="https://getsimpleform.com/messages?form_api_token=b99b2bd1e88c67642c7f7d904066ac33" method="post">
   <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-  <input type='hidden' name='redirect_to' value='http://bloc.github.io/portfolio-iro/thank-you/' />
-  <input type='text' name='name' placeholder='Your Full Name' />
-  <input type='email' name='email' placeholder='Your E-mail Address' />
-  <textarea name='message' placeholder='Write your message ...'></textarea>
-  <input type='submit' value='Send Message' />
+  <input type='hidden' name='redirect_to' value='http://tboddyspargo.github.io/thank-you' />
+  <!-- all your input fields here.... -->
+  <table class="input-table">
+    <tbody>
+      <tr>
+        <td class="from">
+          <input type='text' name='name' placeholder='Your Full Name' />
+            <input type='email' name='email' placeholder='Your E-mail Address' />
+        </td>
+        <td class="message">
+          <textarea name='message' rows="5" placeholder='Write your message ...'></textarea>
+          <input type='submit' value='Send Message' />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </form>
