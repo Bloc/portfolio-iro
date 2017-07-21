@@ -30,10 +30,29 @@ function numberPad(number, digits = 0) {
 
 ## Branch Out
 
-I was able to move through the project fairly quickly, which gave me the opportunity to get a bit creative with the code. I'm very interested in code optimization, so I worked to refactor certain things, and make it appear as though the app had more 'dynamic' content. This included adding the ability to specify an 'album id' in the album URL so that clicking on a thumbnail in the collections page sent you to the appropriate album page. This is a minor enhancement, but it laid the groundwork for a web application that could be fueled by a robust backend database.
+I was able to move through the project fairly quickly, which gave me the opportunity to get a bit creative with the code. I'm very interested in code optimization, so I worked to refactor certain things, and make it appear as though the app had more 'dynamic' content. This included adding the ability to specify an 'album id' in the album URL so that clicking on a thumbnail in the collections page sent you to the appropriate album page.
 
-{:.center}
+Adding this functionality required a bit of research to understand how URL query parameters worked and how to leverage them for my particular use. I wrote a `getHtmlQueryAsJson()` function to parse the URL query (a string) and return an object with properties that I could reference as indeces in the array of albums.
+
+
+```javascript
+function getHtmlQueryAsJson () {
+  var params = location.search.substring(1).split('&'),
+      param,
+      result = {};
+  for (param of params) {
+    param = param.split('=');
+    result[param[0]] = param[1];
+  }
+  return result;
+}
+```
+
+This was a minor enhancement, but it laid the groundwork for a web application that could be fueled by a robust backend database. Additionally, it made what was a static web page, look and feel as though it was more.
+
+
 ![URL query language for album pages]({{ site.baseurl }}/img/Screenshot 2017-07-09 18.38.16.png)
+
 
 ---
 
@@ -42,10 +61,7 @@ I was able to move through the project fairly quickly, which gave me the opportu
 My past experience with CSS allowed me to add several minor aesthetic enhancements and make the site feel a bit more 'alive'. I added equalizer sound bars to the currently 'playing' track as well as a 'floating' arrow on the home page, indicating there was more content below the fold. These subtle visual additions, rather than detract from the content, actually enhance the user experience (though perhaps in ways that become more clear when there is actually music playing).
 
 
-{:.left}
-![URL query language for album pages]({{ site.baseurl }}/img/Screenshot 2017-07-12 23.17.38.png)
-{:.right}
-![URL query language for album pages]({{ site.baseurl }}/img/Screenshot 2017-07-12 23.19.52.png)
+|![URL query language for album pages]({{ site.baseurl }}/img/Screenshot 2017-07-12 23.17.38.png)|![URL query language for album pages]({{ site.baseurl }}/img/Screenshot 2017-07-12 23.19.52.png)|
 
 ---
 
