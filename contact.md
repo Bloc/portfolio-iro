@@ -11,7 +11,7 @@ If you would like to learn more about me, feel free to get in touch via the emai
 
 <form class="email-me-form" action="https://getsimpleform.com/messages?form_api_token=b99b2bd1e88c67642c7f7d904066ac33" method="post">
   <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-  <input type='hidden' name='redirect_to' value='http://tboddyspargo.github.io/thank-you' />
+  <input type='hidden' name='redirect_to' value='http://tyler.boddyspargo.com/portfolio/thank-you' />
   <!-- all your input fields here.... -->
   <table class="input-table">
     <tbody>
