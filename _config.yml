@@ -32,10 +32,10 @@ theme_settings:
   pinterest:
   reddit:
   soundcloud:
-  stack_exchange:  # Full URL
+  stack_exchange:  # https://stackexchange.com/users/11291848/tyler-boddyspargo # Full URL
   steam:
   tumblr:
-  twitter:
+  twitter: # @tyler_bodd
   wordpress:
   youtube:
 
