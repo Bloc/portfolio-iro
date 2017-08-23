@@ -33,7 +33,7 @@ distinct([1,1,2,3,4,5,5,5,6,7,7]);
 //function I built to remove duplicate numbers in an array
 {% endhighlight %}
 
-### <center>Houston we have problem!</center>
+### <center>Houston we have a problem!</center>
 My biggest issue was building functions to generate web content and building functions on top of functions to create a bigger function then calling that function(that's a lot huh?, but that's how they work <a href="https://www.w3schools.com/js/js_functions.asp">*here's a basic function*</a>)! Even with all the lessons and help with my mentor I felt like I wasn't grasping the knowledge down yet. Yes, I was using them to build a project called **Bloc Jams**(in my projects section), but I really wasn't building them on my own until... <a href="https://www.codewars.com/">CodeWars!!!</a> Yes, you're reading that correctly(sounds a little dramatic to me) a site made for you to practice coding building functions with the language of your choice!
 
 ### <center>CodeWars</center>
