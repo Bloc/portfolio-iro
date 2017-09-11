@@ -2,7 +2,7 @@
 layout: post
 title: BlocChat
 feature-img: "BlocChatScreenShot.png"
-thumbnail-path: "https://d13yacurqjgara.cloudfront.net/users/3217/screenshots/2030966/blocjams_1x.png"
+thumbnail-path: "portfolio-iro/img/BlocChatScreenShot.png"
 short-description: BlocChat is a Firebase powered chat room!
 
 ---

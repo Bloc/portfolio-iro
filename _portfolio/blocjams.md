@@ -2,7 +2,7 @@
 layout: post
 title: BlocJams
 feature-img: "img/blocjamsangularlanding.png"
-thumbnail-path: "https://d13yacurqjgara.cloudfront.net/users/3217/screenshots/2030966/blocjams_1x.png"
+thumbnail-path: "portfolio-iro/img/BlocChatScreenShot.png"
 short-description: BlocJams plays music using jQuery!
 
 ---
@@ -70,7 +70,7 @@ $seekBars.find('.thumb').mousedown(function(event) {
         });
     });
 {% endhighlight %}
-So this code block actually works on both the seek and volume bars. The conditional statement in the middle distinguishes which bar is being manipulated by checking the *class* of the elements *parent* using the jQuery *.attr()* method. Maybe a bit humorously, the *.bind* listener at the bottom of the block needs to be *unbinded* in it's own code. 
+So this code block actually works on both the seek and volume bars. The conditional statement in the middle distinguishes which bar is being manipulated by checking the *class* of the elements *parent* using the jQuery *.attr()* method. Maybe a bit humorously, the *.bind* listener at the bottom of the block needs to be *unbinded* in it's own code.
 # Results
 I mostly used the jQuery documentation and searched around on Stack Overflow when I ran into errors.
 
