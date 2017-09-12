@@ -1,0 +1,15 @@
+--
+layout: post
+title: Me outside of coding
+--
+So, I thought it might be cool to write some about myself in general. Hobbies, interests, etc..
+
+2016 was a great year for me. I'm pretty confident that I learned more last year than at any other time. I read more books than I'd read, probably in my whole life combined. And started using my drive time to listen to audio books and podcasts. It's like a sleeping desire for growth and understanding was awakened.
+
+I spent a lot of time studying up on personal finance and investing. I actually gave day trading a go for several months, but it just wasn't the right time. I didn't have enough saved up to be comfortable with it being my only source of income and trading is definitely difficult. I'm still glad I tried it out because it taught me about investing and money management which will serve me well in the future. I learned all about reading charts and finding trends. But maybe the more interesting part was what I learned about psychology, both my own psychology as well as how sociology relates to financial markets. There are so many cognitive biases and flawed perceptions that show up with trading. The way emotions effect decision making and risk management. Looking at the charts I started thinking about them as visuals for how much greed and how much fear was generating around any specific stock. Greed pushes prices up quickly and fear pushes them down quickly.
+
+I've also been getting really into health, fitness, nutrition, and all that. It's awesome that you can change the way you feel just by changing the way you eat. But there is also a thousand different opinions out there on what's best, so I have just been experimenting with different things. Up until recently, I spent about 8 months on a frugavore diet. So I was just eating fruit, and I actually really liked it. But as I've continued exploring I've decided that a fruit only diet is probably not the most healthy thing. However I did a grape only diet for two months straight and it was awesome, I think everyone should try it. I do fell like I understand nutrition well enough that I could help people out and I'm working on helping my dad to get off of a blood-thinner right now.
+
+Staying active is really important for me. I've gone through different phases, krav-maga for several months, then rock climbing.. Now I'm big on kick boxing and I go to The Void in South Austin a couple of times a week for training and sparring. Sparring is so good! It's a great workout for one thing. But it's an awesome practice for mental discipline as well. The first couple of sparring sessions I attended, I'd find myself automatically curling up into a ball like a rolly-polly. But now, that fear is starting to disappear and I'm getting more confident with holding my own. I don't think I'll get into competing with it, but I am looking at getting a black belt some day.
+
+There are so many interesting topics that I could keep going on about. I love history now as well.. I'm not sure why it's only been in the last couple of years my curiosity has really been running, but it is definitely running now.
