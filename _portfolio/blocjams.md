@@ -2,7 +2,7 @@
 layout: post
 title: BlocJams
 feature-img: "img/blocjamsangularlanding.png"
-thumbnail-path: "/img/BlocChatScreenShot.png"
+thumbnail-path: "/img/blocjamsangularlanding.png"
 short-description: BlocJams plays music using jQuery!
 
 ---
@@ -22,7 +22,6 @@ This was my introduction to jQuery.
 The most notable part of the landing page for me is how the icons pop up, adding a bit of user interaction.
 In the album playing page, I needed several functions so that the play icons would toggle as the user moved over them.
 The seek bars actually took a bit of work to create.
-
 # Solution
 {% highlight javascript %}
 var scrollDistance = $('.selling-points').offset().top - $(window).height() + 200;
