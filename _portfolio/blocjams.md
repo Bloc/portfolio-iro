@@ -2,7 +2,7 @@
 layout: post
 title: BlocJams
 feature-img: "img/blocjamsangularlanding.png"
-thumbnail-path: "portfolio-iro/img/BlocChatScreenShot.png"
+thumbnail-path: "/img/BlocChatScreenShot.png"
 short-description: BlocJams plays music using jQuery!
 
 ---

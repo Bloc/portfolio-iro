@@ -2,7 +2,7 @@
 layout: post
 title: BlocChat
 feature-img: "BlocChatScreenShot.png"
-thumbnail-path: "portfolio-iro/img/BlocChatScreenShot.png"
+thumbnail-path: "/img/BlocChatScreenShot.png"
 short-description: BlocChat is a Firebase powered chat room!
 
 ---
@@ -21,7 +21,6 @@ Building a chatroom was a fun way to get to know AngularJS and the benefits of u
 # Problem
 The main part of this project was to write code that could access the Firebase database. The first reason was for saving newly created chat rooms. The second was for saving newly created user messages. The third was for retrieving those messages.
 # Solution
-In order to save new rooms:
 {% highlight javascript %}
 (function() {
     function Room($firebaseArray) {
@@ -60,7 +59,7 @@ This is a snippet from a Controller file, used for sending new messages to the d
           </tr>
       </table>
 {% endhighlight %}
-This is a snippet from the home template (the only View file in this project except for the pop-up modals). AngularJS uses **{{ x.y.z }}** to pass data into the View so users can see it. All three times that same *Message* Model file is referenced. *username, message,* and *datetime* are the property names for each message saved in Firebase. *timeStampz* is a function I had to make to convert the UNIX TIMESTAMP into actual human readable format.
+This is a snippet from the home template (the only View file in this project except for the pop-up modals). AngularJS uses double curly brackets to pass data into the View so users can see it. All three times that same *Message* Model file is referenced. *username, message,* and *datetime* are the property names for each message saved in Firebase. *timeStampz* is a function I had to make to convert the UNIX TIMESTAMP into actual human readable format.
 # Results
 Testing was a step by step process. I was continuously checking the documentation for AngularJS, Firebase, as well CSS bootstrap. Once I had all my code right so that data could push and pull from the database, I went back through and redid all of my CSS which had been giving me a headache:)
 # Conclusion

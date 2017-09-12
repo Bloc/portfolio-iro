@@ -2,7 +2,7 @@
 layout: post
 title: BlocJamsAngular
 feature-img: "img/blocjamsangularlanding.png"
-thumbnail-path: "portfolio-iro/img/blocjamsangularlanding.png"
+thumbnail-path: "/img/blocjamsangularlanding.png"
 short-description: BlocJams refactored with angularJS!
 
 ---
