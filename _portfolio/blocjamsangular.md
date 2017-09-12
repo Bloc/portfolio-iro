@@ -16,9 +16,9 @@ short-description: BlocJams refactored with angularJS!
 ![]({{ site.baseurl }}/img/blocjamsangularmobileview.png)
 
 # Summary
-BlocJamsAngular is a music library/player, originally developed using JQuery, now refactored with AngularJS. It has a smooth transition into mobile view and a nice player bar with track-time and volume controls.
+BlocJamsAngular is a music library/player, originally developed using jQuery, now refactored with AngularJS. It has a smooth transition into mobile view and a nice player bar with track-time and volume controls.
 # Explanation
-This was my first experience with AngularJS. Using it's M.V.C. model turned all the lengthy JQuery from the original BlocJam into a better organized and more easily maintained code base. It also improved loading times and data use.
+This was my first experience with AngularJS. Using it's M.V.C. model turned all the lengthy jQuery from the original BlocJam into a better organized and more easily maintained code base. It also improved loading times and data use.
 # Problem
 Instead of having to load a new page each time the user switched, I wanted to use an Angular config module to switch between states, staying on the same page.
 
