@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BlocJams
-feature-img: "img/sample_feature_img.png"
+feature-img: "img/hubble_img.jpg"
 thumbnail-path: "img/BlocJams/BlocJams_landing.png"
 short-description: BlocJams is a music player app.
 

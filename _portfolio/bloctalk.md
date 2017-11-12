@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BlocChat
-feature-img: "img/sample_feature_img.png"
+feature-img: "img/hubble_img.jpg"
 thumbnail-path: "https://d13yacurqjgara.cloudfront.net/users/3217/screenshots/2030974/bloctalk_1x.png"
 short-description: Coming soon, project not yet posted.
 
