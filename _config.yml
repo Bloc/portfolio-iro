@@ -1,6 +1,7 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "0.0.0.0" # the base hostname & protocol for your site
+url: "http://JoeyR84.github.io" # the base hostname & protocol for your site
+
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -12,7 +13,7 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <h1>Designer, Developer, Adventurer, and Brewer.</h1>
+     <h1>Web Developer & Digital Nomad</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
@@ -40,7 +41,7 @@ theme_settings:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-111604439-1"
   disqus_shortname:
   katex: true # Enable if using math markup
 
