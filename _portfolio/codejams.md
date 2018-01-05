@@ -1,15 +1,15 @@
 ---
 layout: post
-title: BlocJams
+title: CodeJams
 feature-img: "img/hubble_img.jpg"
-thumbnail-path: "img/BlocJams/BlocJams_landing.png"
-short-description: BlocJams is a music player app.
+thumbnail-path: "img/code-jams/code_jams_landing.png"
+short-description: CodeJams is a music player app.
 
 ---
-For our first project in the Bloc Software Developer course, we created a music player to play songs from a collection of albums. BlocJams takes a collection of albums and allows the user to choose an album and play songs.
+For our first project in the Bloc Software Developer program, I created a music player to play songs from a collection of albums. CodeJams takes a collection of albums and allows the user to choose an album and play songs.
 
 {:.center}
-![]({{ site.baseurl }}/img/BlocJams/BlocJams_landing.png)
+![]({{ site.baseurl }}/img/code-jams/code_jams_landing.png)
 
 The purpose of this project was to allow students to become familiar with frontend development of an application. We worked with HTML/CSS, JavaScript, and jQuery to produce a functional music player.
 
@@ -20,7 +20,7 @@ Next, we implemented vanilla DOM scripting to add functionality to the player. T
 In the final phase of the project, we refactored the player using jQuery. This was a great opportunity to learn how to use one of the most popular JavaScript libraries while simplifying the code.
 
 {:.center}
-![]({{ site.baseurl }}/img/BlocJams/BlocJams_albumPaused.png)
+![]({{ site.baseurl }}/img/code-jams/code_jams_album.png)
 
 The result was a fully functional music player built while developing frontend skills.  
 
