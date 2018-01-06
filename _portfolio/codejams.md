@@ -3,7 +3,7 @@ layout: post
 title: CodeJams
 feature-img: "img/hubble_img.jpg"
 thumbnail-path: "img/code-jams/code_jams_landing.png"
-short-description: CodeJams is a music player app.
+short-description: A music player app built with JavaScript and jQuery.
 
 ---
 For our first project in the Bloc Software Developer program, I created a music player to play songs from a collection of albums. CodeJams takes a collection of albums and allows the user to choose an album and play songs.

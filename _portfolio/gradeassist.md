@@ -2,8 +2,8 @@
 layout: post
 title: GradeAssist
 feature-img: "img/hubble_img.jpg"
-thumbnail-path: "img/gradeassist/gradeassist_landing.png"
-short-description: A grading app built with Rails.
+thumbnail-path: "img/gradeassist/gradeassist_class_overview.png"
+short-description: A rails app created to aide ESL teachers at QCC.
 
 ---
 Good teachers spend most of their time preparing lessons and working with students. They should spend as little time as possible on recording and compiling grades. That is where GradeAssist comes in. GradeAssist is a record keeping app designed to make grading as efficient as possible so that teachers can get back to teaching.

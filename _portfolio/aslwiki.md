@@ -2,10 +2,13 @@
 layout: post
 title: SLWiki
 feature-img: "img/hubble_img.jpg"
-thumbnail-path: "img/slwiki/slwiki_landing.png"
-short-description: Create public and private markdown wikis.
+thumbnail-path: "img/slwiki/slwiki_edit.png"
+short-description: A Rails app to create public and private markdown wikis.
 
 ---
+SLWiki creates public and private markdown wikis. Try it out here: [SLWiki](https://shielded-falls-24557.herokuapp.com/)
+
+
 GradeAssist is a grading application developed as the capstone project for Bloc. It is currently being used by the teachers in the Port of Entry ESL program at Queensborough Community College.
 
 {:.center}
