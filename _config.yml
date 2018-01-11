@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: #"https://scottlenander.com" # the base hostname & protocol for your site
+url: "https://scottlenander.com" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -12,7 +12,7 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <h1>A developer and a teacher, fluent in Chinese, ready for new challenges!</h1>
+     <h2>A Ruby developer and a teacher, fluent in Chinese, ready for new challenges!</h2>
   header_text_feature_image: "img/hubble_img.jpg"
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
