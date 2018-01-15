@@ -6,7 +6,7 @@ thumbnail-path: "img/slwiki/slwiki_edit.png"
 short-description: A Rails app to create public and private markdown wikis.
 
 ---
-SLWiki creates public and private markdown wikis. It was built with **Ruby 2.4** and **Rails 4.2.8**.
+SLWiki creates public and private markdown wikis. Use them to keep track of recipes, organize your baseball cards or comics, or create cheatsheets to help you code better!
 
 Try it out here: [SLWiki](https://shielded-falls-24557.herokuapp.com/)
 
@@ -21,6 +21,8 @@ The purpose of this project was to deepen my understanding of Rails and learn ho
 + **Stripe** which allows users to update to premium accounts.
 + **Pundit** creates policies to control access to private wikis.
 + **Redcarpet** facilitates markdown processing.
+
+It was built with **Ruby 2.4** and **Rails 4.2.8**.
 
 {:.center}
 ![]({{ site.baseurl }}/img/slwiki/slwiki_view.png)
