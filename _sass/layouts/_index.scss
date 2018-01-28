@@ -36,18 +36,29 @@
 
 // Work listing
 .work {
+  display: grid;
+  grid: 'header header header'
+        'main main main';
+  grid-gap: 10px;
   h2 {
+    grid-area: header;
+    grid-row: auto;
     text-align: center;
   }
   @extend %padding-regular;
   background-size: $feature-image-size;
   border-bottom: 1px solid $border-color;
   li {
-    width: 32%;
-    margin-right:0.5%;
-    margin-left:0.5%;
-    margin-bottom: 0;
+    grid-area: main;
+    grid-row: auto;
+    grid-column: auto;
     display: inline-block;
+    text-align: center;
+    img {
+      display: table-cell;
+      max-height: 150px;
+      margin: auto;
+    }
     p a:hover {
       @extend %link-hover;
     }
@@ -66,4 +77,17 @@
 .pagination {
   padding: $padding-small $padding-large 0 $padding-large;
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .work {
+    grid: 'header header'
+          'main main';
+  }
+}
+@media only screen and (max-width: 640px) {
+  .work {
+    grid: 'header'
+          'main';
+  }
 }

@@ -16,10 +16,10 @@ theme_settings:
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
-
   # Icons
   rss: false
-  email_address: boddyspargo.tyler@gmail.com # Full email address, e.g. "sam@example.com"
+  resume: resume
+  email_address: #boddyspargo.tyler@gmail.com # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
   dribbble:

@@ -5,7 +5,7 @@ permalink: /contact/
 feature-img: "img/sample_feature_img.png"
 ---
 
-If you would like to learn more about me, feel free to get in touch via the email form below. I would be happy to start a conversation, provide my résumé, or listen to your feedback!
+If you would like to learn more about me, feel free to get in touch via the email form below. I would be happy to start a conversation, provide my CV, or listen to your feedback!
 
 ---
 

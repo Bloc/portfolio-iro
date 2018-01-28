@@ -38,7 +38,10 @@
     li {
       display: inline;
       float: left;
-      margin-right: 0.4em;
+      margin-right: 0.75em;
+      a:hover {
+        color: $header-desc-background-color;
+      }
     }
     @media (max-width: 1100px) {
       ul {
