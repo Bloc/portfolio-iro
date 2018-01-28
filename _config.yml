@@ -23,7 +23,7 @@ theme_settings:
   behance:
   bitbucket:
   dribbble:
-  facebook: Scott Lenander
+  facebook:
   flickr:
   github: SJl149
   google_plus:
@@ -38,6 +38,8 @@ theme_settings:
   twitter: ScottLen95
   wordpress:
   youtube:
+  medium: '@sjlteacher'
+  codewars: ScottLen95
 
   # Scripts
   google_analytics: "UA-93486943-1"
