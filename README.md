@@ -2,6 +2,7 @@
 
 This portfolio uses the Iro theme with a few modifications:
 * CSS Grid layout
+* Custom colors
 * Résumé link in `_includes/icons.html`
 * Filter so that work/posts are ordered so that the most recent is first.
 
