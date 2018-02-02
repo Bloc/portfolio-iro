@@ -1,4 +1,10 @@
 # Portfolio Iro Theme
+
+This portfolio uses the Iro theme with a few modifications:
+* CSS Grid layout
+* Résumé link in `_includes/icons.html`
+* Filter so that work/posts are ordered so that the most recent is first.
+
 ## Based on Type Theme
 
 ![Default Type Theme blog](https://bloc-global-assets.s3.amazonaws.com/portfolio/portfolio-iro.png)
