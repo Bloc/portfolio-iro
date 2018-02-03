@@ -2,10 +2,10 @@
 layout: page
 title: Contact
 permalink: /contact/
-feature-img: "img/cairns.jpg"
+feature-img: "img/carsunset.jpg"
 ---
 
-Contact meeeeeee!!! I'm sooo lonely!!!
+Contact me if you have any questions, want to discuss a project, or just to say hello!
 
 <form action="https://getsimpleform.com/messages?form_api_token=ac434efdac00f1816d36eba1e2bc47a7" method="post">
   <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->

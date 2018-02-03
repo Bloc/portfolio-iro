@@ -7,13 +7,13 @@ url: "http://JoeyR84.github.io" # the base hostname & protocol for your site
 theme_settings:
   # Meta
   title: Joey Ricketts
-  avatar: avatar.png
-  gravatar: # Email MD5 hash
+  avatar:
+  gravatar: 7a5b3f9aaf12f95b8ca246d4108889a5
   description: "A website with blog posts and pages" # used by search engines
 
   # Header and footer text
   header_text: >
-     <h1>Web Developer & Digital Nomad</h1>
+     <h1>Web Developer, Freelancer, Nomad</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
