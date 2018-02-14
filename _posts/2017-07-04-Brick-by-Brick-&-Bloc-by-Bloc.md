@@ -7,7 +7,7 @@ short-description: Creating an Angular version of BlocJams proved a fascinating 
 published: true
 ---
 
-My journey to becoming a web developer is a winding one that took me from hard sciences to foreign languages and back and from Wisconsin to Europe and back! Bloc has allowed me to refocus my efforts and get pointed in the direction of a long and successful career in web development.
+My journey to becoming a web developer is a winding one that took me from hard sciences to foreign languages and back; from Wisconsin to Europe and back! Bloc has allowed me to refocus my efforts and get pointed in the direction of a long and successful career in web development.
 
 ---
 
