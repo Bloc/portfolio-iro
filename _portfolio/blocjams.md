@@ -2,8 +2,8 @@
 layout: post
 title: BlocJams
 date: April 4, 2017
-feature-img: "img/Screenshot 2017-07-09 17.57.33.png"
-thumbnail-path: "img/Screenshot 2017-07-09 18.00.59.png"
+feature-img: "img/blocjams_playback_dark.png"
+thumbnail-path: "img/blocjams_logo.png"
 short-description: BlocJams is a simple audio-streaming web application (à la Spotify) built only on JavaScript, HTML5, and CSS.
 published: true
 ---
@@ -51,7 +51,7 @@ function getHtmlQueryAsJson () {
 This was a minor enhancement, but it laid the groundwork for a web application that could be fueled by a robust backend database. Additionally, it made what was a static web page, look and feel as though it was more.
 
 
-![URL query language for album pages]({{ site.baseurl }}/img/Screenshot 2017-07-09 18.38.16.png)
+![URL query language for album pages](/img/blocjams1_album2.png)
 
 
 ---
@@ -61,7 +61,7 @@ This was a minor enhancement, but it laid the groundwork for a web application t
 My past experience with CSS allowed me to add several minor aesthetic enhancements and make the site feel a bit more 'alive'. I added equalizer sound bars to the currently 'playing' track as well as a 'floating' arrow on the home page, indicating there was more content below the fold. These subtle visual additions, rather than detract from the content, actually enhance the user experience (though perhaps in ways that become more clear when there is actually music playing).
 
 
-|![URL query language for album pages]({{ site.baseurl }}/img/Screenshot 2017-07-12 23.17.38.png)|![URL query language for album pages]({{ site.baseurl }}/img/Screenshot 2017-07-12 23.19.52.png)|
+|![URL query language for album pages](/img/blocjams_album3.png)|![URL query language for album pages](/img/blocjams_landing1.png)|
 
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: ChatterBox
 date: July 04, 2017
-feature-img: "img/Screenshot 2018-01-30 22.15.32.png"
+feature-img: "img/chatterbox_landing1.png"
 thumbnail-path: "img/chatter-box-logo.png"
 short-description: ChatterBox is a lightweight forum/chat application built with Angular and fueled by Fire(base)!
 published: true
@@ -69,6 +69,8 @@ That same kind of cross-service communication and disparate data storage locatio
 ## User Authentication
 
 Very early on in the project, my vision for ChatterBox was one where users could not only identify themselves, but log in and have a personalized experience that also allowed for privacy. One of the user stories I was considering right off the bat was one in which users could send each other messages that only they could see (direct/personal messaging). A similar use case is easily imagined with group conversations that you wish to remain closed to the public and accessible by invitees only. While there are many considerations and design choices that went into addressing those user stories, the central one was user authentication. Luckily, Firebase provides a fantastic structure and API to facilitate this. All I had to do was build my `UserService` to expose the important aspects of that API. However, that certainly didn't solve all of the design challenges surrounding user authentication.
+
+![Login Fields](/img/chatterbox_landing1.png)
 
 Once I had a `UserService`, I had to figure out how to use it to lock down the site when a user wasn't logged in, or was logged in as someone who shouldn't be able to see certain content. Each page had to respond to the user authentication state appropriately and guide people intuitively to sign up and log in without those pieces becoming intrusive. My primary strategy to accomplish this behavior was to inject the `UserService` into all the application controllers. Since the `UserService` was the mechanism for logging in, it was a reliable place to get the current login status. I could then use `ngif`, `ngshow`, or `nghide` to control the visibility of relevant UI messages. I also injected all Firebase-related services into the `UserService` so that their cached data could be wiped when the user logged off, both protecting potentially sensitive information and preventing authorization errors in the Firebase data. With more time, I would gladly explore this area in more depth as I'm sure there are more effective ways of achieving this even more reliably.
 

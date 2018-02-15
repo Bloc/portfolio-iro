@@ -2,8 +2,8 @@
 layout: post
 title: ReactJams
 date: May 14, 2017
-feature-img: "img/Screenshot 2017-07-09 17.57.33.png"
-thumbnail-path: "img/Screenshot 2017-07-09 18.00.59_2.png"
+feature-img: "img/blocjams_playback_dark.png"
+thumbnail-path: "img/blocjams_logo_v2.png"
 short-description: This re-write of BlocJams uses React and the plyr audio plugin to create a fully functional audio-streaming app.
 published: true
 ---
@@ -59,7 +59,7 @@ My research led me to the conclusion that I needed to lift some properties 'up' 
 
 The challenges certainly didn't end there! I started out this project with the understanding that I would use the [`plyr`](https://github.com/hadley/plyr) audio library to provide the central functionality of BlocJams – playing music. Learning how to use the library was simple enough, but it needed to hook into the components in appropriate ways to that the page elements responded as the music played and/or as the user interacted with the control elements on the page (audio seek bar, play/pause buttons, next/previous buttons). The seek bar proved most complicated, because it qualified for both of these uses and needed to be updated regularly as a song was playing.
 
-![Audio controls](/img/Screenshot 2017-07-19 23.15.21-2.png)
+![Audio controls](/img/blocjams_album2.png)
 
 The `plyr` library broadcasts events as a songs playback position changes, so I needed to create event listeners that would update the component properties related to the seek bar's position. Now, as the user dragged the seek bar's control it also had to set a new position for the music playback. However, if a user and the `plyr` event were both trying to update the seek bar's position at the same time, it would make for a very frustrating experience indeed - the users dragging action would essentially have no effect because the broadcasted events happen so regularly, that they would always overwrite the user's changes. So, each time the user starts dragging the seek bar slider, the event listener would have to be torn down and re-created when the user stoped dragging.
 
@@ -85,4 +85,4 @@ The final challenge came when reviewing and refactoring the React version of Blo
 
 After overcoming all those obstacles, the React version of BlocJams was a fully functional music streaming application. It was extremely rewarding to be able to use it to actually listen to music while I ironed out the final kinks. Although it wasn't backed by a true database, it accomplished all the essential parts of any streaming service with efficacy. Coming into the project, I didn't know what to expect from React. My previous experience with AngularJS and KnockoutJS gave me a certain approach to creating SPAs. The component architecture itself was new, but relatively easy to wrap my head around - the appeal and benefits seemed clear to me. However, the JSX syntax, component state and properties, and leveraging events from within components were all things that challenged my assumptions about the MVC (Model-View-Controller) approach. I have always loved taking complex problems and looking at them through new lenses as well as solving them with different tools; and re-building BlocJams using React was exactly that kind of exercise!
 
-![App playing music]({{ site.baseurl }}/img/Screenshot 2017-07-19 23.15.21.png)
+![App playing music](/img/blocjams3_album1.png)
