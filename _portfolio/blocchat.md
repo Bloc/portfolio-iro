@@ -62,6 +62,8 @@ The 'flat' data approach led to many complications as I began to write services 
 
 The services I created were also intended to play a specific role, but the needs of the app, as well as the organization of the data, caused overlap that didn't always sit well with me. For example, the UserService, whose primary role was authentication had to keep user data accurate in multiple locations (I know, not very DRY). One of those other locations was a data table that aggregated all users' basic info (so that, as a user, I could look other users up as well as see who posted in various chatrooms as an intelligible name rather than an alphanumeric id string). I had created a separate service for that specific function called UserDataService, but when a user updates his/her own information, the `UserService` has to talk to the `UserDataService` to get and set that data. Even inside of the `UserDataService` the data had to be retrieved and updated from/in different places in the database.
 
+![Landing page](/img/chatterbox_landing2.png)
+
 That same kind of cross-service communication and disparate data storage locations is not uncommon in ChatterBox and it struck me that interdependence among services may not be the best design. On the other hand, and as I'll explain, the only way I could see to create relatively secure data was to save it in different locations, so that particular challenge probably didn't have a solution without moving away from Firebase as the security layer for the database.
 
 ---
@@ -188,6 +190,8 @@ Now the `.read` test that looks for `invitations/'+auth.uid+'/'+$room_id` will p
 Notice that in the `messages` area, no access is given to the the top level, this means that a user can only access the messages for a room if they know the room ID and, as we have seen, they only can only read the room ID if they have been invited to the room. So, as an invitee to a room, I have the ID and can access `messages/$room_id` at which point, I have `.read` and `.write` access to the messages for that room. To bring things full circle, each message for a room has a user ID listed as the 'author'. When displaying a message, we don't show the user ID in the GUI, that's not very user friendly. Instead, we query the `users` area for an entry matching that ID and get that user's picture and display name to put on the page. This request to the `users` area is made as the authenticated user, which is allowed by our `read` permission.
 
 As you can see, setting up these rules can get very tricky when you want to limit access based on things like 'author', 'invitee', whether or not a chatroom is 'public' or 'private', or whether or not someone has 'subscribed' to a chatroom. One shortcoming of my current model is that every invitee technically has permissions to _edit_ any post in the chatroom. Of course, my front-end makes that difficult to accomplish, but I don't doubt that a determined hacker could accomplish some mischief. To solve this, we would have to create another area where messages were associated with user IDs and read access was given to anyone who knew the message ID, but write access was given only to the person whose user ID matched the author's ID.
+
+![Room page](/img/chatterbox_room1.png)
 
 Furthermore, all of these access complications are really just feeble attempts to emulate a relational database with permissions enforced at the back-end. But, Firebase's JSON based data structure doesn't lend itself to the same kinds of data references.
 
