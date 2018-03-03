@@ -2,7 +2,7 @@
 layout: post
 title: Bloccit
 date: December, 2017
-feature-img: "img/bloccit_landing1.png"
+feature-img: "img/bloccit_landing1_banner.png"
 thumbnail-path: "img/bloccit_landing1.png"
 short-description: Rails made building a reddit-style forum application easy and fun!
 published: true
