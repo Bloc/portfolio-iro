@@ -8,7 +8,7 @@ short-description: ChatterBox is a lightweight forum/chat application built with
 published: true
 ---
 
-ChatterBox — originally titled BlocChat — was a way to build a more complex web application using the skills I learned in the BlocJams project. The big difference was that ChatterBox uses a JavaScript based back-end, Firebase, provided by Google. This was a fantastic motivating factor, because with a database the site didn't simply have to look and feel dynamic, it could actually serve up and save off content to be truly dynamic. Firebase made it very easy to create something that just works!
+ChatterBox — originally titled BlocChat — was a project designed to add an element of complexity to architectures and technologies that I am already familiar with. The big difference between it and previous Angular projects was that ChatterBox uses a JavaScript based back-end – Firebase – provided by Google. This was a fantastic motivating factor, because, with a database, the site didn't simply have to look and feel dynamic, it could actually serve up and save off content. Firebase made it very easy to create something that just works!
 
 ---
 
