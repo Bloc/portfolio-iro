@@ -1,6 +1,5 @@
 {% if site.theme_settings.rss %}
 <li>
-	<a href="{{ "/feed.xml" | relative_url }}" title="{{ site.theme_settings.str_rss_follow }}">
 	<a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" title="{{ site.theme_settings.str_rss_follow }}">
 		<i class="fa fa-fw fa-rss"></i>
 	</a>
@@ -131,14 +130,6 @@
 <li>
 	<a href="http://{{ site.theme_settings.tumblr }}.tumblr.com/" title="{{ site.theme_settings.str_follow_on }} Tumblr">
 		<i class="fa fa-fw fa-tumblr"></i>
-	</a>
-</li>
-{% endif %}
-
-{% if site.theme_settings.gitlab %}
-<li>
-	<a href="https://gitlab.com/{{ site.theme_settings.gitlab }}" title="{{ site.theme_settings.str_follow_on }} Gitlab">
-		<i class="fa fa-fw fa-gitlab"></i>
 	</a>
 </li>
 {% endif %}
