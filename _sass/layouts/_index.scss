@@ -75,7 +75,7 @@
     margin-bottom: 0;
     display: inline-block;
     p a:hover {
-      @extend %link-hover;
+      @extend %link-hover !optional;
     }
   }
   .excerpt {
