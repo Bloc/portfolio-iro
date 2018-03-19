@@ -13,8 +13,8 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <h1>Full Stack Web/Mobile Developer</h1>
-  header_text_feature_image:
+     <h1> Web + Mobile Developer</h1>
+  header_text_feature_image: 
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
 
@@ -26,7 +26,7 @@ theme_settings:
   dribbble:
   facebook: "joeyricketts"
   flickr:
-  github: "madebymunsters/type-theme"
+  github: "JoeyR84"
   google_plus:
   instagram:
   linkedin:  https://www.linkedin.com/in/joseph-ricketts-323327141/
