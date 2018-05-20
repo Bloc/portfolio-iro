@@ -15,7 +15,7 @@ layout: default
     {% assign work_items = site.portfolio | sort: 'date' | reverse %}
     {% for project in work_items limit: 3 %}
         <li>
-          <img src="{{ project.thumbnail-path }}" alt="{{ project.title }}"/>
+          <a href="{{ project.url }}"><img src="{{ project.thumbnail-path }}" alt="{{ project.title }}" /> </a>
           <a href="{{ project.url }}">{{ project.title }}</a>
           <p>{{ project.short-description }}</p>
         </li>

@@ -15,78 +15,105 @@
         primary color dark: rgba(0, 58, 117, 1);
 
         accent color: rgba(61, 39, 1, 1);
-      */
-      header,
-      #sidebar,
-      #expand-sidebar {
-        background-color: rgba(2, 69, 138, 1);
+       */
+      h1, h2, h3,
+      .text-primary-color {
+        color: rgb(9, 132, 169);
       }
       a {
         color: rgba(2, 69, 138, 1);
-      }
-      header::before {
-        background: linear-gradient(to right, rgb(2, 69, 138) 225px, rgba(2, 69, 138, 0));
-      }
-      .side-section > h2 {
-        background-color: rgba(0, 38, 76, 1);
       }
       header .pattern {
         fill: black;
       }
       /*
         SITE-WIDE
-      */
+       */
+      * {
+        box-sizing: border-box;
+      }
+      #page-container {
+        font-family: 'Open Sans';
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 3.25em;
+        text-transform: uppercase;
+        margin-top: 0.3em;
+      }
+      h1, h3, h4 {
+        margin-bottom: 5px;
+      }
+      h2 {
+        font-size: 1.7em;
+        padding-bottom: 1px;
+        margin-bottom: 3px;
+      }
+      h2,h3 {
+        border-bottom: 1px solid rgb(9, 132, 169);
+      }
+      h3 {
+        font-size: 1.3em;
+      }
+      h4 {
+        font-size: 1.2em;
+        margin-top: 0;
+      }
+      .remove {
+        display: none !important;
+      }
+      .hidden {
+        visibility: hidden !important;
+      }
       .inverted {
-        background-color: rgba(0,0,0,0.8);
-        color: rgba(255,255,255,1);
+        background-color: rgba(9, 132, 169, 0.8);
+        color: white;
+      }
+      .rounded {
+        border-radius: 3px;
       }
       .label-pill {
         padding: 3px 12px;
         border-radius: 20px;
       }
-      h1 .fa,
-      h2 .fa,
-      h3 .fa {
+      .fa {
         margin: 5px 10px;
       }
-      .fa.left {
-        margin-right: 10px;
-      }
-      .inverted-text {
-        color: rgba(255,255,255,1);
-      }
-      .inverted-text a,
-      .inverted-text a:active {
-        color: rgba(255,255,255,1);
-      }
-      .inverted-text a:visited {
-        color: rgba(180,180,180,1);
+      .right {
+        float: right;
       }
       /*
         LAYOUT
-      */
-      body {
-        margin: 0;
-        font-family: 'Open Sans';
-        font-size: 16px;
-        overflow-x: hidden;
-      }
-      * {
-        box-sizing: border-box;
+       */
+      #page-container {
+        margin: 20px 30px;
+        display: grid;
+        grid-template-columns: 250px auto;
       }
       header {
+        position: relative;
         font-family: 'Josefin Sans';
-        height: 110px;
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        width: 100%;
-        overflow: hidden;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.5);
+        height: 100px;
+        grid-column: 1 / span 2;
       }
+      #sidebar {
+        padding: 10px 10px;
+        grid-column: 1 / 2;
+      }
+      .main {
+        grid-column: 2 / 2;
+        padding: 0 10px;
+      }
+      footer {
+        text-align: center;
+        grid-column: 1 / span 2;
+      }
+
+      /*
+        HEADER
+       */
       .user-buttons {
         position: absolute;
-        z-index: 15;
         right: 0;
         height: 100%;
         margin-right: 20px;
@@ -94,264 +121,118 @@
       .user-buttons > button {
         margin-top: 50%;
       }
-      .header-title {
-        padding: 10px 30px;
-        position: relative;
-        z-index: 10;
-      }
-      header .pattern {
-        left: 5px;
-        top: 0px;
-        position: absolute;
-        opacity: 0.6;
-        z-index: 3;
-        width: 100%;
-        height: 100%;
-      }
-      header::before {
-        display: block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: 5;
-        content: ' ';
-      }
-      h1.name {
-        margin-top: 15px;
-      }
       .profession {
         position: relative;
-        top: -10px;
-      }
-      .grid-container {
-        margin-top: 110px;
-        width: 100%;
-        border-collapse: collapse;
-        table-layout: fixed;
-      }
-      .grid-container > tbody > tr > td {
-        border: none;
-        position: relative;
-        vertical-align: top;
-      }
-      .grid-container,
-      .grid-container > tbody > tr > td {
-        -webkit-transition: width ease-in-out 0.75s;
-        -moz-transition: width ease-in-out 0.75s;
-        -o-transition: width ease-in-out 0.75s;
-        transition: width ease-in-out 0.75s;
-        transition-property: opacity, width;
-      }
-      #sidebar {
-        padding: 0;
-        width: 300px;
-        overflow-x: hidden;
-        box-shadow: 2px 0px 2px 0 rgba(0,0,0,0.5);
-      }
-      .main {
-        opacity: 1;
-        padding: 10px 30px;
-      }
-      footer {
-        margin-top: 5px;
-        text-align: center;
-        background-color: transparent;
-        width: 100%;
+        font-size: 1.5em;
       }
       /*
         SIDEBAR
-      */
-      .sidebar-buttons {
-        display: none;
-        position: fixed;
-        top: calc(50vh + 20px);
-        left: 300px;
-        z-index: 1;
-        text-align: center;
-        -webkit-transition: left ease-in-out 0.75s;
-        -moz-transition: left ease-in-out 0.75s;
-        -o-transition: left ease-in-out 0.75s;
-        transition: left ease-in-out 0.75s;
-      }
-      .minimized .sidebar-buttons {
-        left: 18px;
-        display: none;
-      }
-      #expand-sidebar {
-        box-shadow: 2px 0px 2px 0 rgba(0,0,0,0.5);
-        border-radius: 0 50% 50% 0;
-        border: none;
-        margin: 0;
-        color: rgba(255,255,255,0.8);
-        font-size: 250%;
-        font-weight: 600;
-        padding: 0px 5px 1px 0px;
-        outline: none;
-        animation: padLeft alternate infinite linear 0.5s;
-      }
-      #expand-sidebar:active,
-      #expand-sidebar:focus {
-        outline: none;
-      }
-      .minimized #expand-sidebar {
-        padding-right: 3px;
-      }
-      #expand-sidebar {
-        padding-right: 6px;
-      }
-      #sidebar span,
-      #sidebar a,
-      #sidebar li,
-      #sidebar h2 {
-        white-space: nowrap;
-      }
-      .side-section {
-        -webkit-transition: opacity ease-in-out 0.75s;
-        -moz-transition: opacity ease-in-out 0.75s;
-        -o-transition: opacity ease-in-out 0.75s;
-        transition: opacity ease-in-out 0.75s;
-      }
+       */
       .side-section .content {
-        padding: 10px 5px;
-      }
-      .side-section > h2 {
-        box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.4);
-        margin: 0px;
-        padding: 5px 0;
+        padding: 0 5px;
       }
       .side-list {
         margin: 0;
         padding: 0 20px;
         list-style: none;
-        width: 100%;
       }
       .side-list-item {
-        margin-bottom: 10px;
-      }
-      .side-list-item > td {
-        vertical-align: baseline;
-        white-space: nowrap;
+        margin-bottom: 5px;
       }
       .side-list-item .fa {
         margin-left: 0;
-      }
-      .side-list-item > td:nth-child(n+3) {
-        text-align: right;
-      }
-      .progress {
-        text-align: right;
-        width: 100%;
-      }
-      .progress-bar {
-        height: 20px;
-        width: 100%;
-        display: table;
-      }
-      .progress-bar > div {
-        display: table-cell;
-      }
-      .progress-bar .filled {
-        width: 50%;
-        border-radius: 3px;
-        background-color: rgba(255,255,255,1);
-        box-shadow: 2px 0 2px 0 rgba(0,0,0,0.3);
-      }
-      .progress-bar::after {
-        display: table-cell;
-        content: ' ';
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-        background-color: rgba(0,0,0,0);
-      }
-      .progress-bar.transparent .filled {
-        background-color: rgba(255,255,255,0.45);
-      }
-      .progress-bar.transparent::after  {
-        background-color: rgba(0,0,0,0.45);
-      }
-      .progress-label {
-        margin: 0 5px;
       }
       /*
         CONTENT
        */
       section {
         padding: 0 15px;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
       }
-      section > h2 {
-        margin-top: 5px;
-        border-bottom: 1px solid rgba(0,0,0,0.8);
+      article.wide {
+        padding: 0 10px;
+      }
+      .heading {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .heading h4 {
+        flex: initial;
+        margin-bottom: 0;
+      }
+      .heading .links,
+      .heading .subheading {
+        flex: 100%;
+        font-style: italic;
+      }
+      .heading .years {
+        flex: auto;
+        text-align: right;
+      }
+      section.inline {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      section.inline h2 {
+        grid-column: 1 / span 4;
+      }
+      .content.with-images h2 {
+        grid-column: 1 / span 2;
+      }
+      .content.with-images {
+        display: grid;
+        grid-template-columns: 125px auto;
+      }
+      .content.with-images article {
+        grid-column: 1fr;
       }
       article {
-        margin-top: 20px;
-        padding: 10px;
-        background-color: rgba(150,150,150,0.15);
-        border: 1px solid rgba(50,50,50,0.3);
-        border-radius: 2px;
-        box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5);
-        -webkit-transition: box-shadow ease-in-out 0.25s;
-        -moz-transition: box-shadow ease-in-out 0.25s;
-        -o-transition: box-shadow ease-in-out 0.25s;
-        transition: box-shadow ease-in-out 0.25s;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
-      article h3 {
-        margin: 10px 0;
+      section:last-of-type {
+        margin-bottom: 0;
       }
-      .years {
-        float: right;
-        right: 10px;
+      article.thumbnail .heading {
+        text-align: center;
+      }
+      article.thumbnail h4,
+      article.thumbnail .subheading {
+        flex: 100%;
+      }
+      section .summary {
+        margin: 0;
+        display: table-cell;
+        width: 50%;
+      }
+      .article-body {
+        margin-top: 5px;
+        margin-bottom: 0;
+        padding-left: 25px;
+      }
+      .thumbnail-image {
+        width: 125px;
+        margin: auto;
+        display: table-cell;
       }
       /*
         DESKTOP
-      */
+       */
       @media only screen and (min-width: 1025px) {
-        article:hover {
-          box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);
-        }
+
       }
       /*
         MOBILE & TABLET
-      */
+       */
       @media only screen and (max-width: 768px) {
-        #sidebar {
-          width: 300px;
-        }
-        .minimized #sidebar {
-          width: 18px;
-        }
-        .minimized .side-section {
-          opacity: 0;
-        }
-        .main {
-          padding: 10px 15px;
-        }
-        .sidebar-buttons,
-        .minimized .sidebar-buttons {
-          display: table-cell;
-        }
+
       }
       /*
         MOBILE ONLY
-      */
+       */
       @media only screen and (max-width: 640px) {
-        .main > * {
-          display: none;
-        }
-        .minimized .main > * {
-          display: block;
-        }
-      }
-      /*
-        ANIMATIONS
-      */
-      @keyframes padLeft {
-        from {
-          padding-left: 0px;
-        }
-        to {
-          padding-left: 3px;
-        }
+
       }
 
     </style>
@@ -365,378 +246,247 @@
         table { page-break-inside : avoid }
       }
       /*
-        COLOR HANDLING
-      */
-      @media print and (color) {
-        * {
-          -webkit-print-color-adjust: exact;
-          print-color-adjust: exact;
-        }
-      }
+        MAIN PRINT STYLE
+       */
       @media print {
         /*
           COLOR
-        */
-        * {
-          transistion: none !important;
-        }
-        .profession,
-        h1.name,
-        h2 {
-          color: rgb(2, 69, 138) !important;
-        }
-        #sidebar,
-        header {
-          background-color: white !important;
-        }
-        header .pattern {
-          fill: rgb(2, 69, 138) !important;
-        }
-        header::before {
-          background: linear-gradient(to right, rgb(255, 255, 255) 225px, rgba(255, 255, 255, 0)) !important;
-        }
-        a,
-        .inverted-text,
-        .inverted-text a {
-          color: black !important;
-        }
-        .side-section h2 {
-          background-color: rgba(200,200,200,0.2) !important;
-        }
-        .progress-bar .filled {
-          background-color: rgba(0,0,0,0.5) !important;
-        }
-        .progress-bar:after {
-          background-color: rgba(200,200,200,0.75) !important;
+         */
+        .label-pill {
+          background-color: transparent;
+          border-width: 2px;
         }
         .label-pill.inverted {
           background-color: rgba(0,0,0,0.25) !important;
           color: black !important;
         }
-        article {
-          background-color: transparent !important;
-        }
         /*
           LAYOUT
-        */
-        html {
-          width: 1000px;
-        }
-        #sidebar,
-        header {
-          box-shadow: none;
-        }
-        h2 {
-          font-size: 1.1em;
-          margin: 5px 0;
+         */
+        #page-container {
+          font-size: 11.5px;
+          grid-template-columns: 150px auto
         }
         header {
-          height: 80px;
-          box-sizing: content-box;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.75);
-          position: absolute;
-          font-size: 90%;
+          height: 75px;
         }
-        .user-buttons {
-          display: none;
-        }
-        h1.name {
-          margin-top: 5px;
-        }
-        .grid-container {
-          margin-top: 80px;
-        }
-        #sidebar {
-          width: 275px;
-          font-size: 14px;
-          border-right: 1px solid  rgba(0, 0, 0, 0.75);
-        }
-        .sidebar-buttons {
-          display: none;
-        }
-        .side-section h2 {
-          font-size: 1.1em;
-          padding: 2px 0;
+        .main, #sidebar {
+          padding: 0;
         }
         .side-list-item {
-          margin-bottom: 0px;
+          margin-top: 5px;
+          margin-bottom: 5px;
         }
-        .progress-bar {
-          margin-bottom: -2px;
-          height: 12px;
+        #sidebar {
+          padding-top: 10px;
         }
-        .main {
-          padding: 10px 0 0 10px;
+        #sidebar .content {
+          padding: 0 5px;
         }
-        section {
-          margin-bottom: 12px;
-        }
-        article h3 {
-          font-size: 1em;
-          margin: 0 0 2px;
-        }
-        article {
-          margin-top: 10px;
-          padding: 0;
-          box-shadow: none;
-          border: none;
-        }
-        article:hover {
-          box-shadow: none;
-        }
-        article:nth-last-child(n+2) {
-          border-bottom: 1px solid rgba(0,0,0,0.3);
-        }
-        article p {
-          margin: 5px 0;
-          line-height: 1.2em;
-          font-family: 'Josefin Sans';
+        .thumbnail-image {
+          width: 100px;
         }
       }
     </style>
   </head>
   <body id="page-container" class="minimized">
-    <header class="inverted-text">
+    <header>
       <div class="user-buttons">
-        <button type="button" onclick="history.back()">Back</button>
-        <button type="button" onclick="window.print(); return false;">Print</button>
+        <button type="button" style="" onclick="history.back()" class="back-button">Back</button>
+        <button type="button" style="" onclick="window.print()" class="back-button">Print</button>
       </div>
       <div class="header-title">
         <h1 class="name">Tyler BoddySpargo</h1>
         <i class="profession">Web Developer</i>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" class="pattern">
-        <defs>
-          <path id="circuit" viewBox="0 0 304 110" d="M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z">
-          </path>
-        </defs>
-        <use xlink:href="#circuit" x="0" y="0" />
-        <use xlink:href="#circuit" x="304" y="0" />
-        <use xlink:href="#circuit" x="608" y="0" />
-        <use xlink:href="#circuit" x="912" y="0" />
-        <use xlink:href="#circuit" x="1216" y="0" />
-        <use xlink:href="#circuit" x="1520" y="0" />
-        <use xlink:href="#circuit" x="1824" y="0" />
-        <use xlink:href="#circuit" x="2128" y="0" />
-        <use xlink:href="#circuit" x="2432" y="0" />
-        <use xlink:href="#circuit" x="2736" y="0" />
-        <use xlink:href="#circuit" x="3040" y="0" />
-      </svg>
     </header>
-    <div class="sidebar-buttons">
-      <button id="expand-sidebar" class="fa fa-angle-right"></button>
+    <div id="sidebar">
+      <div class="side-section">
+        <h3><span class="fa fa-address-card left"></span>Contact Info</h3>
+        <div class="content">
+          <ul class="side-list">
+            <li class="side-list-item">
+              <span class="fa fa-envelope left"></span><a href="mailto:boddyspargo.tyler@gmail.com"><strong>E-mail</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-file-text left"></span><a href="http://tyler.boddyspargo.com/portfolio"><strong>Portfolio</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-window-maximize left"></span><a href="http://tyler.boddyspargo.com"><strong>Website</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-linkedin left"></span><a href="http://www.linkedin.com/in/tylerboddyspargo"><strong>LinkedIn</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-github left"></span><a href="http://www.github.com/tboddyspargo"><strong>GitHub</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-terminal left"></span><a href="http://www.codewars.com/users/tyler_bodd"><strong>CodeWars</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-code left"></span><a href="http://www.codeschool.com/users/muyleche"><strong>CodeSchool</strong></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="side-section">
+        <h3><span class="fa fa-tachometer left"></span>Skills</h3>
+        <div class="content">
+          <ul class="side-list">
+            <li class="side-list-item">AngularJS</li>
+            <li class="side-list-item">Knockout.js</li>
+            <li class="side-list-item">JavaScript ES6</li>
+            <li class="side-list-item">CSS & SCSS</li>
+            <li class="side-list-item">Ruby on Rails</li>
+            <li class="side-list-item">React</li>
+            <li class="side-list-item">Git/SVN</li>
+            <li class="side-list-item">HTML5</li>
+            <li class="side-list-item">.NET/C# MVC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="side-section">
+        <h3><span class="fa fa-music left"></span>Hobbies</h3>
+        <div class="content">
+          <ul class="side-list">
+            <li class="side-list-item"><span class="fa fa-circle left remove"></span>Ping-Pong</li>
+            <li class="side-list-item"><span class="fa fa-book left remove"></span>Fiction books</li>
+            <li class="side-list-item"><span class="fa fa-male left remove"></span>Distance running</li>
+            <li class="side-list-item"><span class="fa fa-bicycle left remove"></span>Biking</li>
+            <li class="side-list-item"><span class="fa fa-check left remove"></span>Broomball</li>
+            <li class="side-list-item"><span class="fa fa-check left remove"></span>Playing piano</li>
+            <li class="side-list-item"><span class="fa fa-globe left remove"></span>Budget traveling</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <table class="grid-container">
-      <tr>
-        <td id="sidebar" class="inverted-text">
-          <div class="side-section">
-            <h2><span class="fa fa-address-card left"></span>Contact Info</h2>
-            <div class="content">
-              <table class="side-list">
-                <tbody>
-                  <tr class="side-list-item">
-                    <td><span class="fa fa-map-marker left"></span></td><td><strong>Location</strong></td><td><div>Madison, WI</div><div><small><i>willing to relocate</i></small></div></td>
-                  </tr>
-                  <tr class="side-list-item">
-                    <td><span class="fa fa-envelope left"></span></td><td><a href="mailto:boddyspargo.tyler@gmail.com"><strong>E-mail</strong></a></td>
-                  </tr>
-                  <tr class="side-list-item">
-                    <td><span class="fa fa-window-maximize left"></span></td><td><a href="http://tyler.boddyspargo.com"><strong>Website</strong></a></td>
-                  </tr>
-                  <tr class="side-list-item">
-                    <td><span class="fa fa-file-text left"></span></td><td><a href="http://tyler.boddyspargo.com/portfolio"><strong>Portfolio</strong></a></td>
-                  </tr>
-                  <tr class="side-list-item">
-                    <td><span class="fa fa-linkedin left"></span></td><td><a href="http://www.linkedin.com/in/tylerboddyspargo"><strong>LinkedIn</strong></a></td>
-                  </tr>
-                  <tr class="side-list-item">
-                    <td><span class="fa fa-github left"></span></td><td><a href="http://www.github.com/tboddyspargo"><strong>GitHub</strong></a></td>
-                  </tr>
-                  <tr class="side-list-item">
-                    <td><span class="fa fa-terminal left"></span></td><td><a href="http://www.codewars.com/users/tyler_bodd"><strong>CodeWars</strong></a></td>
-                  </tr>
-                  <tr class="side-list-item">
-                    <td><span class="fa fa-code left"></span></td><td><a href="http://www.codeschool.com/users/muyleche"><strong>CodeSchool</strong></a></td>
-                  </tr>
-                </tbody>
-              </table>
+    <div class="main">
+      <section class="profile">
+        <h2 class="inverted rounded"><span class="fa fa-user-circle left"></span>Summary</h2>
+        <article class="wide">
+          <p>
+            I love to use elegant code to solve problems bit by byte and endeavor to find solutions that perform well too. My training in literature, the humanities, and music adds a unique creative spark to the development projects I undertake. I've also lived abroad for several years, immersing myself in foregin cultures and becoming a more thoughtful developer and person through exposure to different ways of looking at the world.
+          </p>
+        </article>
+      </section>
+      <section class="projects">
+        <h2 class="inverted rounded"><span class="fa fa-wrench left"></span>Projects</h2>
+        <div class="content with-images">
+          <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/blocipedia_landing_1.png" />
+          <article class="wide">
+            <div class="heading">
+              <h4>Blocipedia <small>(Rails)</small></h4>
+              <span class="years"></span>
             </div>
-          </div>
-          <div class="side-section">
-            <h2><span class="fa fa-tachometer left"></span>Skills</h2>
-            <div class="content">
-              <ul class="side-list">
-                <li class="side-list-item">
-                  <strong>AngularJS</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 80%"></div></div>
-                    <span class="progress-label">Advanced</span>
-                  </div>
-                </li>
-                <li class="side-list-item">
-                  <strong>Knockout.js</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 80%"></div></div>
-                    <span class="progress-label">Advanced</span>
-                  </div>
-                </li>
-                <li class="side-list-item">
-                  <strong>JavaScript ES6</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 75%"></div></div>
-                    <span class="progress-label">Advanced</span>
-                  </div>
-                </li>
-                <li class="side-list-item">
-                  <strong>CSS & SCSS</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 75%"></div></div>
-                    <span class="progress-label">Advanced</span>
-                  </div>
-                </li>
-                <li class="side-list-item">
-                  <strong>Ruby on Rails</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 65%"></div></div>
-                    <span class="progress-label">Intermediate</span>
-                  </div>
-                </li>
-                <li class="side-list-item">
-                  <strong>React</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 65%"></div></div>
-                    <span class="progress-label">Intermediate</span>
-                  </div>
-                </li>
-                <li class="side-list-item">
-                  <strong>Git/SVN</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 65%"></div></div>
-                    <span class="progress-label">Intermediate</span>
-                  </div>
-                </li>
-                <li class="side-list-item">
-                  <strong>HTML5</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 60%"></div></div>
-                    <span class="progress-label">Intermediate</span>
-                  </div>
-                </li>
-                <li class="side-list-item">
-                  <strong>.NET/C# MVC</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 50%"></div></div>
-                    <span class="progress-label">Intermediate</span>
-                  </div>
-                </li>
-                <li class="side-list-item">
-                  <strong>Vue.js</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 25%"></div></div>
-                    <span class="progress-label">Exploring</span>
-                  </div>
-                </li>
-              </ul>
+            <ul class="article-body">
+              <li>Used RSpec and TDD paradigm to create a maintainable codebase.</li>
+              <li>Leveraged Devise and Pundit to quickly implement authentication and authorization.</li>
+            </ul>
+          </article>
+          <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/chatterbox_landing2.png" />
+          <article class="wide">
+            <div class="heading">
+              <h4>ChatterBox <small>(AngularJS + Firebase)</small></h4>
+              <span class="years"></span>
             </div>
-          </div>
-          <div class="side-section">
-            <h2><span class="fa fa-music left"></span>Hobbies</h2>
-            <div class="content">
-              <table class="side-list">
-                <tbody>
-                  <tr class="side-list-item"><td><span class="fa fa-circle left"></span></td><td>Ping-pong</td></tr>
-                  <tr class="side-list-item"><td><span class="fa fa-book left"></span></td><td>Reading - fiction and classics</td></tr>
-                  <tr class="side-list-item"><td><span class="fa fa-male left"></span></td><td>Distance running</td></tr>
-                  <tr class="side-list-item"><td><span class="fa fa-bicycle left"></span></td><td>Biking</td></tr>
-                  <tr class="side-list-item"><td><span class="fa fa-language left"></span></td><td>French & Spanish</td></tr>
-                  <tr class="side-list-item"><td><span class="fa fa-check left"></span></td><td>Hockey</td></tr>
-                  <tr class="side-list-item"><td><span class="fa fa-globe left"></span></td><td>Budget traveling</td></tr>
-                </tbody>
-              </table>
+            <ul class="article-body">
+              <li>Created directives and services to appropriately separate concerns and share functionality.</li>
+              <li>Constructed an elaborate data model to enhance security in Firebase.</li>
+            </ul>
+          </article>
+          <img class="thumbnail-image right" src="https://tboddyspargo.github.io/img/blocjams3_landing1.png" />
+          <article class="wide">
+            <div class="heading">
+              <h4>BlocJams <small>(React)</small></h4>
+              <span class="years"></span>
             </div>
+            <ul class="article-body">
+              <li>Built reusable components as site building blocks.</li>
+              <li>Used state-aware event listener callbacks to support plyr audio framework.</li>
+            </ul>
+          </article>
+          <img class="thumbnail-image right" src="https://tboddyspargo.github.io/img/bloculator_main.png" />
+          <article class="wide">
+            <div class="heading">
+              <h4>Bloculator <small>(Ruby)</small></h4>
+              <span class="years"></span>
+            </div>
+            <ul class="article-body">
+              <li>Researched infix and postfix mathematic notation styles to support complex expressions.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="employment">
+        <h2 class="inverted rounded"><span class="fa fa-building left"></span>Technical Work Experience</h2>
+        <article class="employer wide">
+          <div class="heading">
+            <h4>Client Systems Administrator/Citrix Admin</h4>
+            <span class="years">2015 - Present</span>
+            <a class="links" href="http://www.epic.com/">Epic Systems</a>
           </div>
-        </td>
-        <td class="main">
-          <section class="profile">
-            <h2><span class="fa fa-user-circle left"></span>Profile</h2>
-            <article>
-              <p>
-                I come from a small town, but have big aspirations: to become a web developer extraordinaire. Through my work on projects at Epic, my current employer, and continued training with the Bloc web development program, I have worked to create a strong coding foundation and good habits. I love to use elegant code to solve problems bit by byte and endeavor to find solutions that perform well too. My training in literature, the humanities, and music adds a unique creative spark to the development projects I undertake. I've also lived abroad for several years, immersing myself in foregin cultures and becoming a more thoughtful developer and person through exposure to different ways of looking at the world.
-              </p>
-            </article>
-          </section>
-          <section class="employment">
-            <h2><span class="fa fa-building left"></span>Employment History</h2>
-            <article class="employer">
-              <div class="heading">
-                <h3 class="label-pill inverted">Epic Client Systems Administrator/Citrix Admin</h3>
-                <span class="years">2015 - Present</span>
-                <a href="http://www.epic.com/"><span>Epic Systems</span></a>
-              </div>
-              <p class="article-body">
-                At Epic, my daily activities involve managing the presentation layer of Electronic Medical Record (EMR) software solutions for large medical organizations. I am also highly involved in internal web development (.NET/C# + Knockout.js) and automation/scalability projects.
-              </p>
-            </article>
-            <article class="employer">
-              <div class="heading">
-                <h3 class="label-pill inverted">Content Editor/Translator</h3>
-                <span class="years">2013 - 2015</span>
-                <a href="https://www.fluentu.com/"><span>FluentU</span></a>
-              </div>
-              <p class="article-body">
-                While I was primarily hired to translate French into English and prepare online educational materials, I also spent considerable time using Google Apps Scripts (JavaScript-based) to build a content management platform around Google Sheets. I focused on measuring, visualizing, and helping to improve company/employee efficiency.
-              </p>
-            </article>
-            <article class="employer">
-              <div class="heading">
-                <h3 class="label-pill inverted">Technology Assistant</h3>
-                <span class="years">2008 - 2012</span>
-                <a href="https://apps.carleton.edu/campus/its/peps/"><span>Carleton College Media Department</span></a>
-              </div>
-              <p class="article-body">
-                Along with a team of technologically-inclined students, I helped film and publish video versions of campus events and run a media equipment lending library. I also supported students with their multimedia projects by providing guidance in using Logic, Final Cut Pro, and Adobe Photoshop.
-              </p>
-            </article>
-          </section>
-          <section class="education">
-            <h2><span class="fa fa-mortar-board left"></span>Education</h2>
-            <article class="school">
-              <div class="heading">
-                <h3 class="label-pill inverted">Web Development Track</h3>
-                <span class="years">2017 - Present</span>
-                <a href="https://www.bloc.io/"><span>Bloc.io Development Bootcamp</span></a>
-              </div>
-              <p class="article-body">
-                The part-time program at Bloc is an excellent, mentor-led course which has allowed me to work on my skills as a web developer. The curriculum follows many aspects of the web development stack from the front-end with JavaScript (React/AngularJS) to back-ends powered by Ruby on Rails and Google Firebase.
-              </p>
-            </article>
-            <article class="school">
-              <div class="heading">
-                <h3 class="label-pill inverted">Partial BFA in Music - Trumpet</h3>
-                <span class="years">2012 - 2015</span>
-                <span><a href="https://www.seineouest.fr/culture_et_loisirs_conservatoire_d_issy_les_moulineaux.html">Conservatories Niedermeyer</a> and <a href="http://www.conservatoire.be/">Royal de Bruxelles</a></span>
-              </div>
-              <p class="article-body">
-                After receiving my undergraduate degree, I moved to France and then Belgium to pursue a musical education. I ended up at the Royal Conservatory in Brussels where I placed into and completed my second year. While I ultimately decided that a career as a musician wasn’t for me, music is still a passion of mine. Additionally, being a full-time student while working 30-35 hrs/week substantially improved my time management skills.
-              </p>
-            </article>
-            <article class="school">
-              <div class="heading">
-                <h3 class="label-pill inverted">BA in Romance Languages (French/Spanish)</h3>
-                <span class="years">2008 - 2012</span>
-                <a href="https://www.carleton.edu/"><span>Carleton College</span></a>
-              </div>
-              <p class="article-body">
-                I received an exceptional liberal arts education from Carleton, taking advantage of study abroad opportunities in both France and Spain as I slowly decided on a major in Romance Languages. Carleton is also where I took my first computer science class, introducing me to the endless possibilities of a career in programming.
-              </p>
-            </article>
-          </section>
-          <footer>
-            &copy; 2018 BoddySpargo Productions - <span id="date"></span>
-          </footer>
-        </td>
-      </tr>
-    </table>
+          <ul class="article-body">
+            <li>Manage the presentation layer of Electronic Medical Record (EMR) software solutions</li>
+            <li>Develop internal web applications (.NET/C# + Knockout.js)</li>
+            <li>Contriute to automation/scalability projects</li>
+          </ul>
+        </article>
+        <article class="employer wide">
+          <div class="heading">
+            <h4>Content Editor/Administrator</h4>
+            <span class="years">2013 - 2015</span>
+            <a class="links" href="https://www.fluentu.com/">FluentU</a>
+          </div>
+          <ul class="article-body">
+            <li>Developed a content management platform for translators and content seekers.</li>
+            <li>Built tools to measure, visualize, and use performance metrics to improve efficiency.</li>
+          </ul>
+        </article>
+        <article class="employer wide remove">
+          <div class="heading">
+            <h4>Technology Assistant</h4>
+            <span class="years">2008 - 2012</span>
+            <a class="links" href="https://apps.carleton.edu/campus/its/peps/">Carleton College Media Department</a>
+          </div>
+          <p class="article-body">
+            Along with a team of technologically-inclined students, I helped film and publish video versions of campus events and run a media equipment lending library. I also supported students with their multimedia projects by providing guidance in using Logic, Final Cut Pro, and Adobe Photoshop.
+          </p>
+        </article>
+      </section>
+      <section class="education">
+        <h2 class="inverted rounded"><span class="fa fa-mortar-board left"></span>Education</h2>
+        <article class="school wide">
+          <div class="heading">
+            <h4>Web Development Track</h4>
+            <span class="years">2017 - Present</span>
+            <a class="links" href="https://www.bloc.io/">Bloc.io</a>
+          </div>
+          <p class="article-body remove">
+            The part-time program at Bloc is an excellent, mentor-led course which has allowed me to work on my skills as a web developer. The curriculum follows many aspects of the web development stack from the front-end with JavaScript (React/AngularJS) to back-ends powered by Ruby on Rails and Google Firebase.
+          </p>
+        </article>
+        <article class="school wide">
+          <div class="heading">
+            <h4>Partial BFA in Music - Trumpet</h4>
+            <span class="years">2012 - 2015</span>
+            <div class="links"><a href="https://www.seineouest.fr/culture_et_loisirs_conservatoire_d_issy_les_moulineaux.html">Conservatories Niedermeyer</a> and <a href="http://www.conservatoire.be/">Royal de Bruxelles</a></div>
+          </div>
+          <p class="article-body remove">
+            After receiving my undergraduate degree, I moved to France and then Belgium to pursue a musical education. I ended up at the Royal Conservatory in Brussels where I placed into and completed my second year. While I ultimately decided that a career as a musician wasn’t for me, music is still a passion of mine. Additionally, being a full-time student while working 30-35 hrs/week substantially improved my time management skills.
+          </p>
+        </article>
+        <article class="school wide">
+          <div class="heading">
+            <h4>BA in Romance Languages (French/Spanish)</h4>
+            <span class="years">2008 - 2012</span>
+            <a class="links" href="https://www.carleton.edu/">Carleton College</a>
+          </div>
+          <p class="article-body remove">
+            I received an exceptional liberal arts education from Carleton, taking advantage of study abroad opportunities in both France and Spain as I slowly decided on a major in Romance Languages. Carleton is also where I took my first computer science class, introducing me to the endless possibilities of a career in programming.
+          </p>
+        </article>
+      </section>
+    </div>
     <script>
     (function() {
       let dateelement = document.getElementById('date'),
