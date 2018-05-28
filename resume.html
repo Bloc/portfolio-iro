@@ -490,25 +490,5 @@
         </article>
       </section>
     </div>
-    <script>
-    (function() {
-      let dateelement = document.getElementById('date'),
-          expandButton = document.getElementById('expand-sidebar'),
-          pageContainer = document.getElementById('page-container');
-
-      // set the date to the current date to display in the footer.
-      //dateelement.innerHTML = (new Date()).toLocaleDateString();
-
-      // callback function to toggle the sidebar expanded/collapsed for improved mobile viewing.
-      toggleMinimized = (e) => {
-        buttonClass = e.target.className;
-        e.target.className = buttonClass.includes('fa-angle-left') ? buttonClass.replace('fa-angle-left','fa-angle-right') : buttonClass.replace('fa-angle-right','fa-angle-left');
-        pageContainer.className = pageContainer.className.includes('minimized') ? '' : 'minimized';
-      };
-
-      // assign callback to the two expand/collapse buttons.
-      expandButton.addEventListener('click', toggleMinimized);
-    })()
-    </script>
   </body>
 </html>
