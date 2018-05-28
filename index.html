@@ -13,7 +13,7 @@ layout: default
   <div class="work">
     <h2>My Work</h2>
     {% assign work_items = site.portfolio | sort: 'date' | reverse %}
-    {% for project in work_items limit: 3 %}
+    {% for project in work_items limit: 6 %}
         <li>
           <a href="{{ project.url }}"><img src="{{ project.thumbnail-path }}" alt="{{ project.title }}" /> </a>
           <a href="{{ project.url }}">{{ project.title }}</a>
