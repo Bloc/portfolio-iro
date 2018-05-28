@@ -35,7 +35,7 @@ A machine can evaluate the postfix expression above by moving from left to right
 242
 2(42+) = 4+2 = 6
 26
-(26/) = 2/6 = 33.3
+(26/) = 2/6 = 0.33
 ```
 
 # History
