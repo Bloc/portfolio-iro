@@ -10,4 +10,6 @@ This application was created by using React. The application uses the browser's 
 
 Weather information was fetched using open and available APIs from weather organizations. Using the geo coordinates from the browser, was able to surface relevant weather data for the area.
 
+As an additional feature, the ability to switch from Celcius to Fahrenheit depending on the user's preference. Default temperature is Celcius.
+
 The application can be accessed here: https://www.xavierjortiz.com/weather/
