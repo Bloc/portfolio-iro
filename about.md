@@ -15,11 +15,11 @@ When it comes to Scotch, I tend to gravitate towards single malts with full flav
 
 To round off the "favorites" topics with something code relevant, I enjoy writing in Python, chuffed at the lovely syntactic sugar of Ruby, appreciate the strictness of Java, and have weaned myself from abusing the permissiveness of Javascript.
 
-Oh also bee-tee-dubz, [I've got degrees, recommendations, certificates, specializations, and continuous learning achievements and interests](https://www.linkedin.com/in/xavierortiz) if that's what you're into checking out.
+Oh also bee-tee-dubz, [I've got university degrees, recommendations, certificates, specializations, and continuous learning achievements and interests](https://www.linkedin.com/in/xavierortiz)... if that's what you're into checking out.
 
-Though life and [adulting](https://en.oxforddictionaries.com/definition/adulting) can be challenging, I try to make some time to get the blood flowing in the morning by cycling, running, and/or bouldering at the gym. Though recently don't have a lot of time left over after my work day is done, I am particularly fond of a sandbox space [MMORPG](https://en.wikipedia.org/wiki/Massively_multiplayer_online_role-playing_game) called [Eve Online](https://www.eveonline.com/signup/?invc=420d09fc-3559-4317-b9da-202c8ec0ab65) recently. In a nutshell, I get to blow up internet spaceships for fun and have been part of [huge](https://imperium.news/breaking-news-supercap-fight-wicked-creek/) space [battles](https://imperium.news/ualx-3-battle-aftermath-camping-operations-in-effect/) (pew pewz!).
+Though life and [adulting](https://en.oxforddictionaries.com/definition/adulting) can be challenging, I try to make some time to get the blood flowing in the morning by cycling, running, and/or bouldering at the gym. Though recently don't have a lot of personal alone time left over after all is said and done in the day, I am particularly fond of a sandbox space [MMORPG](https://en.wikipedia.org/wiki/Massively_multiplayer_online_role-playing_game) called [Eve Online](https://www.eveonline.com/signup/?invc=420d09fc-3559-4317-b9da-202c8ec0ab65) recently. In a nutshell, I get to blow up internet spaceships for fun and have been part of [huge](https://imperium.news/breaking-news-supercap-fight-wicked-creek/) space [battles](https://imperium.news/ualx-3-battle-aftermath-camping-operations-in-effect/) (pew pewz!).
 
 Plans for the 2H of 2018 and 2019:
-1. Renew zipcar for road trips with friends and fam.
+1. Renew zipcar for road trips with friends and fam. National Parks, B&Bs, & local breakfast haunts to explore.
 2. Take up [NYRR](www.nyrr.org) races again and train to run a half marathon. 
 3. Start holding dinner parties at home.
