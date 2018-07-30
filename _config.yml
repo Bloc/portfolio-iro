@@ -13,7 +13,7 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <h1>Husband, Father, Developer, Linux Geek, Climbing Enthusiast, Whiskey Lover, <a href='https://www.eveonline.com/signup/?invc=420d09fc-3559-4317-b9da-202c8ec0ab65'>Online Spaceship Warfare Nerd</a> :D</h1>
+     <h1> Bouldering Enthusiast, Whiskey Lover, Cycling Afficionado, Linux Geek, Developer, <a href='https://www.eveonline.com/signup/?invc=420d09fc-3559-4317-b9da-202c8ec0ab65'>Online Space Warfare Nerd</a>'s Portfolio Site :D</h1>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
