@@ -12,5 +12,6 @@ Weather information was fetched using open and available APIs from weather organ
 
 As an additional feature, the ability to switch from Celcius to Fahrenheit depending on the user's preference. Default temperature is Celcius.
 
-The application can be accessed here: [https://www.xavierjortiz.com/weather/](https://www.xavierjortiz.com/weather/)
+The application is hosted on a Debian Stable linode instance and is using Nginx as it's webserver. The site can be accessed here: [https://www.xavierjortiz.com/weather/](https://www.xavierjortiz.com/weather/)
+
 The application's source can be found here: [https://github.com/Xavier-J-Ortiz/react-weather](https://github.com/Xavier-J-Ortiz/react-weather)
