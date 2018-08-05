@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "www.dvilailath.com" # the base hostname & protocol for your site
+url: "dvilailath.github.io" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -22,8 +22,8 @@ theme_settings:
   email_address: "dvilailath@gmail.com"
   behance:
   bitbucket:
-  dribbble: 
-  facebook: # "dannyvilailath"
+  dribbble:
+  facebook:  "dannyvilailath"
   flickr:
   github: "dvilailath"
   google_plus:
@@ -35,7 +35,7 @@ theme_settings:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: # "dvilailath"
+  twitter:  "dvilailath"
   wordpress:
   youtube:  "UCIRIND_hqd3CeCBcZV-5rnA"
 

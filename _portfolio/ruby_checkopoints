@@ -1,0 +1,27 @@
+list << item unless list.include?(item)
+list
+
+
+    list.delete(item)
+    list
+ 
+list.sort.uniq
+
+[a, b, c, d]
+
+[a.first, a.last]
+
+
+
+ def withdraw(amount)
+    @number_of_withdrawals += 1
+    if number_of_withdrawals > MAX_FREE_WITHDRAWALS
+      super(amount + 5)
+    else
+      super(amount)
+    end
+  end
+  
+  def transfer(account, amount)
+    account.withdraw(amount) && deposit(amount)
+  end
