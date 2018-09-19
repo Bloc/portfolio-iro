@@ -6,19 +6,20 @@ thumbnail-path: "img/react_chat.png"
 short-description: A chatroom application created in React
 
 ---
+# The High Level Low Down
 This is a webapp created when learning about React. It was a twist on a project that I had to do for the Software Developer Program at [Bloc](https://www.bloc.io). The original project for the program required a different framework, but I wanted to learn some React, so I went ahead and created a React version. 
 
-At a high level, The application allows you to register your name based off of a google account. Once registered, you can create a room, post messages in a room, and interact with other people that are also in these rooms.
+The application allows you to register your name based off of a google account. Once registered, you can create a room, post messages in a room, and interact with other people that are also in these rooms.
 
 On the backend, it uses google firebase in storing the room and message information. Of course, as mentioned earlier, the framework used to create this website is React. 
 
 But enough about the high level technicals. I wanted to share a bit about the process of this project, and the considerations and learnings that were taken into account in it's creation.
 
-From a design perspective, I tried to keep it as simple as possible, so when I went about creating this application I tried to use only the `create-react-app` package available on `npm` adding only the bootstrap library to it for some visual polish.
+# React Design Perspective
 
-In terms of the structure, I wanted the base of the Web app to be `App.js` file. And as such, wanted to keep the _currentUser_, _currentRoomName_, and _currentRoom_ as states in this location. 
+I tried to keep it as simple as possible, so when I went about creating this application I tried to use only the `create-react-app` package available on `npm`, adding only the bootstrap library to it for some visual polish.
 
-The main reason is, it seemed easier to pass any changes from this location down to other components, since this was the highest level I was modifying in the Web App. 
+In terms of the structure, I wanted the base of the Web app to be `App.js` file. This way, I could keep the _currentUser_, _currentRoomName_, and _currentRoom_ as states in this location. It seemed easier to pass any changes from this location down to other components, since this was the highest level I was modifying in the Web App.
 
 These variables in the `App` component's state would need to be modified as user input was made. This was achieved by creating some callbacks.
 
@@ -39,9 +40,9 @@ class App extends Component {
 }
 ```
 
-These callbacks are pretty straightforward and simple. Their main reason of being is to enable other components to pass _currentUser_, _currentRoomName_, and _currentRoom_ states back to the main `App` Component. Using the arrow function, these states that are created will be linked to the `this` of the `App` component, making it very easy to pass it to other components downstream.
+These callbacks are pretty straightforward and simple. Their main reason of being is to enable other components to pass _currentUser_, _currentRoomName_, and _currentRoom_ states back to the main `App` Component. Using the arrow function, any changes passed through these functions facilitate downstream components to effect changes to upstream `App` states.
 
-The callbacks are passed to other components as props in the render function of the `App` component, as is shown being passed to the `RoomList` Component below:
+The callbacks are passed to other components as props in the render function of the `App` component, as is shown being passed to the `RoomList` Component below.
 
 ```html
 render() {
@@ -51,7 +52,7 @@ render() {
 }
 ```
 
-The `callbackCurrentRoom` can them be invoked within the `RoomList` Component as a prop. This can be seen when it is invoked in the `clickRoom` function as shown below.
+The `callbackCurrentRoom` can then be invoked within the `RoomList` Component as a prop. This can be seen when it is invoked in the `clickRoom` function as shown below.
 
 ```javascript
 clickRoom(roomId, roomName) {
@@ -60,15 +61,15 @@ clickRoom(roomId, roomName) {
 }
 ```
 
-When `clickRoom` is executed, the event triggered by the user updates the state values in the `App` component.
+When `clickRoom` is executed through a user triggered `onClick` event, it triggers the changes and updates values within the state of the upstream `App` component.
 
 In theory, all this information passing of state values via callbacks being sent through props downstream of the main `App` component is all well and good. But one thing that I had to learn was exactly _when_ this information is triggered in React. 
 
-One thing I expected from data that I was passing from state information from upstream Components by assigning it as a downstream prop was that when an upstream state would update and/or change, I expected it's downstream component to change as well.
+One thing I expected was that upstream component changes pushed to downstream components via a prop would trigger a `render` in the downstream component the same way a `state` change or update would trigger a `render`. 
 
-While this behavior was happening, what was not happening is that the data that was passed from upstream was not being rendered properly, dispite me viewing the data being passed correctly through the browser's console.
+It was a bit confusing to not see these newly created props be updated and not show up on the DOM, which lead to a whole lot of troubleshooting. The troubleshooting process surfaced that indeed, the props were being refreshed, since I was able to view them change or update values on the browser's JS console output. However, the new prop values which would affect the DOM's visual, was not being changed.
 
-What I had to do to remedy this seemingly poor timing of "new" `props`, was to add a react method called `componentWillReceiveProps`. What this method listens to is that if props have changed, this method will be triggered and the code written inside will be run. So, for example, in this web app, an upstream triggered state change due to switching rooms triggers `componentWillReceiveProps`, and the following code is run.
+After some StackOverflow and heavy googling research, my solution to remedy this seemingly poor timing of "new" `props` was to add a react method called `componentWillReceiveProps`. What this method listens to is that if `props` have changed, this method will be triggered and the code written inside will be run. So, for example, in this web app, an upstream triggered state change due to switching rooms triggers `componentWillReceiveProps`, and the following code is run.
 
 ```javascript
   componentWillReceiveProps(nextProp) {
@@ -115,6 +116,7 @@ What I had to do to remedy this seemingly poor timing of "new" `props`, was to a
 
 Due to this, the new `props` will be updating the `MessageList`'s `state`, and the updated `state` via `setState` will trigger a `render()` within this component. This will then trigger a message refresh, or a change in the user name at the top of the messages.
 
+# Aaaaand Firebase
 This walkthrough wouldn't be complete without me talking a bit about firebase and it's functions that I used within this web app.
 
 It really is quite straightforward after creating a database on the google service.
@@ -171,7 +173,7 @@ componentDidMount() {
     }
   }
 ```
-
+# Server-side Technology and Cloud Compute Stuff
 This application is hosted on a Debian Stable linode instance and is using NGINX as it's webserver. It can be accessed at this location: [https://www.xavierjortiz.com/chatroom/](https://www.xavierjortiz.com/chatroom/)
 
 The Github source: [https://github.com/Xavier-J-Ortiz/react-chatroom-firebase](https://github.com/Xavier-J-Ortiz/react-chatroom-firebase)
