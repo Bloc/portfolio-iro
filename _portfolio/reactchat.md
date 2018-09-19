@@ -14,7 +14,7 @@ On the backend, it uses google firebase in storing the room and message informat
 
 But enough about the high level technicals. I wanted to share a bit about the process of this project, and the considerations and learnings that were taken into account in it's creation.
 
-I tried to keep it as simple as possible, so when I went about creating this application I tried to use only the `create-react-app` package available on `npm` adding only the bootstrap library to it for some visual polish.
+From a design perspective, I tried to keep it as simple as possible, so when I went about creating this application I tried to use only the `create-react-app` package available on `npm` adding only the bootstrap library to it for some visual polish.
 
 In terms of the structure, I wanted the base of the Web app to be `App.js` file. And as such, wanted to keep the _currentUser_, _currentRoomName_, and _currentRoom_ as states in this location. 
 
@@ -114,6 +114,63 @@ What I had to do to remedy this seemingly poor timing of "new" `props`, was to a
 ``` 
 
 Due to this, the new `props` will be updating the `MessageList`'s `state`, and the updated `state` via `setState` will trigger a `render()` within this component. This will then trigger a message refresh, or a change in the user name at the top of the messages.
+
+This walkthrough wouldn't be complete without me talking a bit about firebase and it's functions that I used within this web app.
+
+It really is quite straightforward after creating a database on the google service.
+
+At the beginning of the `App` component I declare some config information that would be necessary to access the correct location of the database within firebase. The information has the following structure, and is outlined on creation of the database.
+
+```javascript
+var config = {
+  apiKey: "xxxx",
+  authDomain: "yyyy",
+  databaseURL: "zzzz",
+  projectId: "iiii",
+  storageBucket: "jjjj",
+  messagingSenderId: "qqqq"
+};
+
+firebase.initializeApp(config);
+```
+
+Once firebase is correctly configured, the database can be manipulated via creating a reference to the database and then accessing the data via queries.
+
+The reference to the database can be created within a Component's `constructor`, for example below is a snippet of this reference being created in the `MessageList`'s component `constructor`.
+
+```javascript
+constructor(props) {
+  super(props);
+  // message database reference is created below
+  this.messageRef = this.props.firebase.database().ref('messages');
+  this.state = {
+    ... 
+  };
+}
+```
+
+Then, later on in the code, a query can be run on `messageRef`. Below is an example of this done during the `componentDidMount()` method.
+
+```javascript
+componentDidMount() {
+    var query = this.messageRef.orderByChild('roomId').equalTo(this.state.currentRoom);
+
+    query.on('child_added', snapshot => {
+      const message = snapshot.val();
+      message.key = snapshot.key;
+
+      this.setState({
+        messages: this.state.messages.concat(message),
+        new_message: '',
+        query: query
+      })
+    });
+
+    if (this.messagesEnd) {
+      this.scrollToBottom();
+    }
+  }
+```
 
 This application is hosted on a Debian Stable linode instance and is using NGINX as it's webserver. It can be accessed at this location: [https://www.xavierjortiz.com/chatroom/](https://www.xavierjortiz.com/chatroom/)
 
