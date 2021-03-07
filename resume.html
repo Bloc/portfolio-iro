@@ -9,32 +9,66 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       /*
-        COLORS
-
-        primary color: rgba(2, 69, 138, 1)
-        primary color dark: rgba(0, 58, 117, 1);
-
-        accent color: rgba(61, 39, 1, 1);
-       */
-      h1, h2, h3,
-      .text-primary-color {
-        color: rgb(9, 132, 169);
-      }
-      a {
-        color: rgba(2, 69, 138, 1);
-      }
-      header .pattern {
-        fill: black;
-      }
-      /*
         SITE-WIDE
        */
-      * {
-        box-sizing: border-box;
+      :root {
+        --white-rgb: 255, 255, 255;
+
+        --primary-1: rgb(86, 208, 245);
+        --primary-1-rgb: 86, 208, 245;
+
+        --primary-2: rgb(12, 191, 245);
+        --primary-2-rgb: 12, 191, 245;
+
+        --primary-3: rgb(9, 132, 169);
+        --primary-3-rgb: 9, 132, 169;
+
+        --primary-4: rgb(6, 91, 117);
+        --primary-4-rgb: 6, 91, 117;
+
+        --primary-5: rgb(4, 69, 89);
+        --primary-5-rgb: 4, 69, 89;
+
+        --complimentary-color: rgb(247, 205, 17);
+        --complimentary-color-rgb: 247, 205, 17;
+
+        --complimentary-color-dark: rgb(217, 179, 16);
+        --complimentary-color-dark-rgb: 217, 179, 16;
       }
       #page-container {
+        background-color: white;
+        color: rgba(50, 50, 50, 1);
         font-family: 'Open Sans';
         font-size: 16px;
+      }
+      #name {
+        color: rgb(9, 132, 169);
+        color: rgba(var(--complimentary-color-dark-rgb), 1);
+        text-shadow: 1px 2px rgba(var(--primary-5-rgb), 1);
+        margin-left: 10px;
+      }
+      h1, h2, h3 {
+        color: rgb(9, 132, 169);
+        color: rgba(var(--primary-4-rgb), 1);
+      }
+      h2,h3 {
+        border-color: rgba(9, 132, 169, 1);
+        border-bottom: 1px solid rgba(var(--primary-4-rgb), 1);
+      }
+      .inverted {
+        background-color: rgba(9, 132, 169, 1);
+        background-color: rgba(var(--primary-3-rgb), 0.8);
+        border: none;
+        color: white;
+        color: rgba(var(--white-rgb), 1);
+      }
+      a {
+        color: rgb(9, 132, 169);
+        color: rgba(var(--primary-3-rgb), 1);
+      }
+      a:hover {
+        color: rgb(12, 191, 245);
+        color: rgba(var(--primary-2-rgb), 1);
       }
       h1 {
         font-size: 3.25em;
@@ -49,15 +83,12 @@
         padding-bottom: 1px;
         margin-bottom: 3px;
       }
-      h2,h3 {
-        border-bottom: 1px solid rgb(9, 132, 169);
-      }
       h3 {
         font-size: 1.3em;
       }
       h4 {
         font-size: 1.2em;
-        margin-top: 0;
+        margin-top: 0px;
       }
       .remove {
         display: none !important;
@@ -65,18 +96,13 @@
       .hidden {
         visibility: hidden !important;
       }
-      .inverted {
-        background-color: rgba(9, 132, 169, 0.8);
-        color: white;
-      }
       .rounded {
         border-radius: 3px;
       }
-      .label-pill {
-        padding: 3px 12px;
-        border-radius: 20px;
-      }
       .fa {
+        margin: 5px 10px 5px 5px;
+      }
+      .inverted .fa {
         margin: 5px 10px;
       }
       .right {
@@ -86,135 +112,194 @@
         LAYOUT
        */
       #page-container {
-        margin: 20px 30px;
+        padding: 10px 20px;
         display: grid;
-        grid-template-columns: 250px auto;
+        grid-template-columns: 180px auto;
+        column-gap: 10px;
       }
       header {
         position: relative;
-        font-family: 'Josefin Sans';
-        height: 100px;
+        font-family: 'Josefin Sans'; 
+        min-height: 80px;
         grid-column: 1 / span 2;
+        grid-row: 1
       }
       #sidebar {
-        padding: 10px 10px;
+        padding: 10px 10px 10px 10px;
         grid-column: 1 / 2;
+        grid-row: 2;
+        font-size: 14px;
       }
-      .main {
+      #main {
         grid-column: 2 / 2;
-        padding: 0 10px;
+        grid-row: 2;
+        padding: 0 0 0 15px;
       }
       footer {
         text-align: center;
         grid-column: 1 / span 2;
+        grid-row: 4;
       }
 
       /*
         HEADER
        */
-      .user-buttons {
-        position: absolute;
-        right: 0;
-        height: 100%;
-        margin-right: 20px;
-      }
-      .user-buttons > button {
-        margin-top: 50%;
-      }
-      .profession {
+      #user-buttons {
         position: relative;
+        float: right;
+      }
+      #profession {
+        position: relative;
+        float: right;
+        bottom: 5px;
         font-size: 1.5em;
+        margin-right: 10px;
       }
       /*
         SIDEBAR
        */
       .side-section .content {
-        padding: 0 5px;
+        padding: 0px 5px;
       }
       .side-list {
-        margin: 0;
-        padding: 0 20px;
+        margin: 0px;
+        padding: 0px 0px 0px 0px;
         list-style: none;
       }
       .side-list-item {
-        margin-bottom: 5px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 1px 0px;
       }
       .side-list-item .fa {
-        margin-left: 0;
+        margin-left: 0px;
+      }
+      progress {
+        /* RESETS */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        width: 100%;
+        height: 10px;
+        color: rgba(9, 132, 169, 1);
+        color: rgba(var(--primary-5-rgb), 1);
+        background-color: rgba(225,225,225, 1);
+        border-radius: 4px;
+        margin-top: 2px;
+      }
+      progress::-webkit-progress-bar {
+        background-color: rgba(225,225,225, 1);
+        border-radius: 3px;
+      }
+      progress::-moz-progress-bar {
+        background-color: rgba(9, 132, 169, 1);
+        background-color: rgba(var(--primary-5-rgb), 1);
+        border-radius: 3px;
+      }
+      progress::-webkit-progress-value {
+        background-color: rgba(9, 132, 169, 1);
+        background-color: rgba(var(--primary-5-rgb), 1);
+        border-radius: 3px;
+      }
+      progress[value="25"]::after {
+        content: "Actively learning";
+      }
+      progress[value="50"]::after {
+        content: "Can be independent";
+      }
+      progress[value="75"]::after {
+        content: "Can coach others";
+      }
+      progress[value="100"]::after {
+        content: "Expert";
+      }
+      .progress-label,
+      progress[value]::after  {
+        display: block;
+        font-style: italic;
+        font-size: 0.8em;
+        text-align: right;
+        color: rgba(100, 100, 100, 1);
       }
       /*
         CONTENT
        */
       section {
-        padding: 0 15px;
+        padding: 0px;
         margin-bottom: 15px;
       }
-      article.wide {
-        padding: 0 10px;
+      section:last-of-type {
+        margin-bottom: 0px;
+      }
+      article {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 0px 10px;
       }
       .heading {
+        grid-row: 1;
+        grid-column: 1 / span 4;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-      }
-      .heading h4 {
-        flex: initial;
-        margin-bottom: 0;
       }
       .heading .links,
       .heading .subheading {
         flex: 100%;
         font-style: italic;
+        font-size: 0.8em;
+        margin-top: -5px;
       }
       .heading .years {
         flex: auto;
         text-align: right;
       }
-      section.inline {
+      article.with-thumbnail {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template: auto auto / minmax(100px, 20%) auto;
       }
-      section.inline h2 {
-        grid-column: 1 / span 4;
+      .project-thumbnail {
+        grid-row: 2;
+        grid-column: 1 / span 1;
+        margin: auto;
+        display: table;
       }
-      .content.with-images h2 {
-        grid-column: 1 / span 2;
+      .thumbnail-image {
+        width: 100%;
+        max-width: 400px;
       }
-      .content.with-images {
-        display: grid;
-        grid-template-columns: 125px auto;
+      .project-icon {
+        color: rgba(4, 69, 89, 0.85);
+        color: rgba(var(--primary-5-rgb), 0.85);
+        text-shadow: 1px 2px rgba(var(--complimentary-color-dark-rgb), 0.85);
+        border-color: rgba(4, 69, 89, 0.85);
+        border: 5px solid rgba(4, 69, 89, 0.85);
+        border: 5px solid rgba(var(--primary-5-rgb), 0.85);
+        box-shadow: 1px 2px rgba(4, 69, 89, 0.85);
+        box-shadow: 1px 2px rgba(var(--complimentary-color-dark-rgb), 0.85);
+        border-radius: 15px;
       }
-      .content.with-images article {
-        grid-column: 1fr;
-      }
-      article {
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      section:last-of-type {
-        margin-bottom: 0;
-      }
-      article.thumbnail .heading {
+      .caption {
         text-align: center;
       }
-      article.thumbnail h4,
-      article.thumbnail .subheading {
-        flex: 100%;
-      }
       section .summary {
-        margin: 0;
+        margin: 0px;
         display: table-cell;
         width: 50%;
       }
       .article-body {
         margin-top: 5px;
-        margin-bottom: 0;
-        padding-left: 25px;
+        margin-bottom: 0px;
+        padding-left: 10px;
+        grid-row: 2;
+        grid-column: 2 / span 1;
       }
-      .thumbnail-image {
-        width: 125px;
-        margin: auto;
-        display: table-cell;
+      .article-body > ul {
+        padding-left: 25px; 
+      }
+      .article-body > ul,
+      .article-body > p {
+        margin: 5px 0px;
       }
       /*
         DESKTOP
@@ -223,9 +308,22 @@
 
       }
       /*
+        TABLET ONLY
+       */
+      @media only screen and (min-width: 640px) and (max-width: 1024px) {
+
+        .side-list-item {
+          font-size: 0.8em;
+        }
+        .contact .side-list-item {
+          font-size: 0.9em;
+        }
+
+      }
+      /*
         MOBILE & TABLET
        */
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
 
       }
       /*
@@ -233,262 +331,387 @@
        */
       @media only screen and (max-width: 640px) {
 
+        #name {
+          font-size: 2.5em;
+        }
+        #main {
+          grid-column: 1 / span 2;
+          grid-row: 2;
+        }
+        #sidebar {
+          grid-column: 1 / span 2;
+          grid-row: 3;
+        }
+        .project-thumbnail {
+          grid-row: 2;
+          grid-column: 1 / span 2;
+        }
+        .article-body {
+          grid-row: 3;
+          grid-column: 1 / span 2;
+        }
+        .heading .links,
+        .heading .subheading {
+          font-size: 0.9em;
+        }
+
       }
 
     </style>
     <style>
       /*
         PRINTOUT STYLE
-      */
+       */
       @page {
         margin: 0.25in;
         size: 8.5in 11in;
-        table { page-break-inside : avoid }
       }
       /*
         MAIN PRINT STYLE
        */
       @media print {
         /*
-          COLOR
-         */
-        .label-pill {
-          background-color: transparent;
-          border-width: 2px;
-        }
-        .label-pill.inverted {
-          background-color: rgba(0,0,0,0.25) !important;
-          color: black !important;
-        }
-        /*
           LAYOUT
          */
         #page-container {
-          font-size: 11.5px;
+          margin: 0px;
+          padding: 0px;
+          font-size: 11px;
           grid-template-columns: 150px auto
         }
-        header {
-          height: 75px;
+        table {
+          page-break-inside : avoid
         }
-        .main, #sidebar {
-          padding: 0;
+        header {
+          height: 60px;
+        }
+        #main {
+          padding: 0 0 0 10px;
         }
         .side-list-item {
-          margin-top: 5px;
-          margin-bottom: 5px;
+          margin: 2px 0px;
         }
         #sidebar {
-          padding-top: 10px;
+          padding: 10px 10px 10px 0px;
+          margin: 0px;
+          font-size: 10px;
         }
         #sidebar .content {
-          padding: 0 5px;
+          padding: 0px 5px;
         }
         .thumbnail-image {
-          width: 100px;
+          width: 90px;
         }
-        .back-button {
+        #user-buttons {
           display: none;
+        }
+        article {
+          margin-top: 10px;
+          margin-bottom: 2px;
         }
       }
     </style>
   </head>
   <body id="page-container" class="minimized">
     <header>
-      <div class="user-buttons">
-        <button type="button" style="" onclick="history.back()" class="back-button">Back</button>
-        <button type="button" style="" onclick="window.print()" class="back-button">Print</button>
+      <div id="user-buttons">
+        <button type="button" class="back-button" onclick="history.back()">Back</button>
+        <button type="button" onclick="window.print()">Print</button>
       </div>
       <div class="header-title">
-        <h1 class="name">Tyler BoddySpargo</h1>
-        <i class="profession">Web Developer</i>
+        <h1 id="name">Tyler Boddy&shy;Spargo</h1>
+        <i id="profession">DevOps Manager</i>
       </div>
     </header>
-    <div id="sidebar">
-      <div class="side-section">
-        <h3><span class="fa fa-address-card left"></span>Contact Info</h3>
-        <div class="content">
-          <ul class="side-list">
-            <li class="side-list-item">
-              <span class="fa fa-envelope left"></span><a href="mailto:boddyspargo.tyler@gmail.com"><strong>E-mail</strong></a>
-            </li>
-            <li class="side-list-item">
-              <span class="fa fa-file-text left"></span><a href="http://tyler.boddyspargo.com/portfolio"><strong>Portfolio</strong></a>
-            </li>
-            <li class="side-list-item">
-              <span class="fa fa-window-maximize left"></span><a href="http://tyler.boddyspargo.com"><strong>Website</strong></a>
-            </li>
-            <li class="side-list-item">
-              <span class="fa fa-linkedin left"></span><a href="http://www.linkedin.com/in/tylerboddyspargo"><strong>LinkedIn</strong></a>
-            </li>
-            <li class="side-list-item">
-              <span class="fa fa-github left"></span><a href="http://www.github.com/tboddyspargo"><strong>GitHub</strong></a>
-            </li>
-            <li class="side-list-item">
-              <span class="fa fa-terminal left"></span><a href="http://www.codewars.com/users/tyler_bodd"><strong>CodeWars</strong></a>
-            </li>
-            <li class="side-list-item">
-              <span class="fa fa-code left"></span><a href="http://www.codeschool.com/users/muyleche"><strong>CodeSchool</strong></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="side-section">
-        <h3><span class="fa fa-tachometer left"></span>Skills</h3>
-        <div class="content">
-          <ul class="side-list">
-            <li class="side-list-item">AngularJS</li>
-            <li class="side-list-item">Knockout.js</li>
-            <li class="side-list-item">JavaScript ES6</li>
-            <li class="side-list-item">CSS & SCSS</li>
-            <li class="side-list-item">Ruby on Rails</li>
-            <li class="side-list-item">React</li>
-            <li class="side-list-item">Git/SVN</li>
-            <li class="side-list-item">HTML5</li>
-            <li class="side-list-item">.NET/C# MVC</li>
-          </ul>
-        </div>
-      </div>
-      <div class="side-section">
-        <h3><span class="fa fa-music left"></span>Hobbies</h3>
-        <div class="content">
-          <ul class="side-list">
-            <li class="side-list-item"><span class="fa fa-circle left remove"></span>Ping-Pong</li>
-            <li class="side-list-item"><span class="fa fa-book left remove"></span>Fiction books</li>
-            <li class="side-list-item"><span class="fa fa-male left remove"></span>Distance running</li>
-            <li class="side-list-item"><span class="fa fa-bicycle left remove"></span>Biking</li>
-            <li class="side-list-item"><span class="fa fa-check left remove"></span>Broomball</li>
-            <li class="side-list-item"><span class="fa fa-check left remove"></span>Playing piano</li>
-            <li class="side-list-item"><span class="fa fa-globe left remove"></span>Budget traveling</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="main">
+    <div id="main">
       <section class="profile">
-        <h2 class="inverted rounded"><span class="fa fa-user-circle left"></span>Summary</h2>
-        <article class="wide">
+        <h2 class="inverted rounded"><span class="fa fa-user-circle"></span>Intro</h2>
+        <article class="">
           <p>
-            I love to use elegant code to solve problems bit by byte and endeavor to find solutions that perform well too. My training in literature, the humanities, and music adds a unique creative spark to the development projects I undertake. I've also lived abroad for several years, immersing myself in foregin cultures and becoming a more thoughtful developer and person through exposure to different ways of looking at the world.
+            Most of my life has been defined by hard work and aggressive goals, but the primary theme of my professional career has been to identify inefficiencies and patterns of negative outcomes and to address them with process improvements and automation. I see the technology industry's Dev(Sec)Ops trend as a validating expression of my inherent instincts for code-based solutions, quick iterations, automated testing and deployments, short feedback loops, and data-driven decision making. Recently, I have focused on scaling such solutions and increasing the adoption of DevOps practices across teams at Epic Hosting, a medical software infrastructure management service provider. I am currently looking for opportunities to further explore cloud IaaS providers like Google Cloud Platform and Amazon Web Services, platforms like Kubernetes, and provisioning tools like Terraform. I know that my leadership skills and high expectations will also help teams use those technologies effectively.
           </p>
         </article>
       </section>
-      <section class="projects">
-        <h2 class="inverted rounded"><span class="fa fa-wrench left"></span>Projects</h2>
-        <div class="content with-images">
-          <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/blocipedia_landing_1.png" />
-          <article class="wide">
-            <div class="heading">
-              <h4><a href="https://github.com/tboddyspargo/blocipedia" target="_blank">Blocipedia</a> <small>(Rails)</small></h4>
-              <span class="years"></span>
-            </div>
-            <ul class="article-body">
-              <li>Used RSpec and TDD paradigm to create a maintainable codebase.</li>
-              <li>Leveraged Devise and Pundit to quickly implement authentication and authorization.</li>
-            </ul>
-          </article>
-          <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/chatterbox_landing2.png" />
-          <article class="wide">
-            <div class="heading">
-              <h4><a href="https://github.com/tboddyspargo/bloc-chat-angular" target="_blank">ChatterBox</a> <small>(AngularJS + Firebase)</small></h4>
-              <span class="years"></span>
-            </div>
-            <ul class="article-body">
-              <li>Created directives and services to appropriately separate concerns and share functionality.</li>
-              <li>Constructed an elaborate data model to enhance security in Firebase.</li>
-            </ul>
-          </article>
-          <img class="thumbnail-image right" src="https://tboddyspargo.github.io/img/blocjams3_landing1.png" />
-          <article class="wide">
-            <div class="heading">
-              <h4><a href="https://github.com/tboddyspargo/bloc-jams-react" target="_blank">BlocJams</a> <small>(React)</small></h4>
-              <span class="years"></span>
-            </div>
-            <ul class="article-body">
-              <li>Built reusable components as site building blocks.</li>
-              <li>Used state-aware event listener callbacks to support plyr audio framework.</li>
-            </ul>
-          </article>
-          <img class="thumbnail-image right" src="https://tboddyspargo.github.io/img/bloculator_main.png" />
-          <article class="wide">
-            <div class="heading">
-              <h4><a href="https://github.com/tboddyspargo/bloc-calculator" target="_blank">Bloculator</a> <small>(Ruby)</small></h4>
-              <span class="years"></span>
-            </div>
-            <ul class="article-body">
-              <li>Researched infix and postfix mathematic notation styles to support complex expressions.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
       <section class="employment">
-        <h2 class="inverted rounded"><span class="fa fa-building left"></span>Technical Work Experience</h2>
-        <article class="employer wide">
+        <h2 class="inverted rounded"><span class="fa fa-building"></span>Work Experience</h2>
+        <article class="employer">
           <div class="heading">
-            <h4>Client Systems Administrator/Citrix Admin</h4>
-            <span class="years">2015 - Present</span>
-            <a class="links" href="http://www.epic.com/">Epic Systems</a>
+            <h4>Systems Engineer/Development Lead</h4>
+            <span class="years">2015 - 2021</span>
+            <a class="links" href="https://www.epic.com/services">Epic Hosting</a>
           </div>
-          <ul class="article-body">
-            <li>Manage the presentation layer of Electronic Medical Record (EMR) software solutions</li>
-            <li>Develop internal web applications (.NET/C# + Knockout.js)</li>
-            <li>Contriute to automation/scalability projects</li>
-          </ul>
+          <div class="article-body">
+            <ul>
+              <li class="">Led development managers and teams in establishing robust policies, processes, standards, and automated testing and CI/CD tools.</li>
+              <li class="">Coordinated the implementation, management, and monitoring of complex infrastructure-as-code pipelines using GitLab, Artifactory, Puppet, Bolt, Splunk, and more.</li>
+              <li class="">Managed multiple Puppet instances serving 20,000+ nodes.</li>
+              <li class="remove">Designed and oversaw the best practices in a Puppet management and development ecosystem.</li>
+              <li>Helped design configuration management strategies to facilitate cloud migrations (Azure).</li>
+              <li class="">Wrote extensive documentation to support maintainable solutions and improve employee on-boarding.</li>
+              <li class="">Created many reliable automation tools using PowerShell to streamline infrastructure build and configuration.</li>
+              <li class="">Co-founded a popular "snack time" weekly team bonding event. 😁</li>
+              <li class="">Managed the virtual application delivery platform (Citrix + Windows) for large health care organizations.</li>
+              <li class="remove">Developed internal web applications (.NET/C# + Knockout.js) to help support engineers better track client environment configurations.</li>
+            </ul>
+          </div>
         </article>
-        <article class="employer wide">
+        <article class="employer">
           <div class="heading">
             <h4>Content Editor/Administrator</h4>
             <span class="years">2013 - 2015</span>
-            <a class="links" href="https://www.fluentu.com/">FluentU</a>
+            <div class="links"><a href="https://www.fluentu.com/">FluentU</a> (French Language Team)</div>
           </div>
-          <ul class="article-body">
-            <li>Developed a content management platform for translators and content seekers.</li>
-            <li>Built tools to measure, visualize, and use performance metrics to improve efficiency.</li>
-          </ul>
+          <div class="article-body">
+            <ul>
+              <li>Created a custom content management platform for translators and content seekers.</li>
+              <li>Built tools to measure, visualize, and use performance metrics to improve efficiency.</li>
+            </ul>
+          </div>
         </article>
-        <article class="employer wide remove">
+        <article class="employer remove">
           <div class="heading">
             <h4>Technology Assistant</h4>
             <span class="years">2008 - 2012</span>
             <a class="links" href="https://apps.carleton.edu/campus/its/peps/">Carleton College Media Department</a>
           </div>
-          <p class="article-body">
-            Along with a team of technologically-inclined students, I helped film and publish video versions of campus events and run a media equipment lending library. I also supported students with their multimedia projects by providing guidance in using Logic, Final Cut Pro, and Adobe Photoshop.
-          </p>
+          <div class="article-body">
+            <p>
+              Along with a team of technologically-inclined students, I helped film and publish video versions of campus events and run a media equipment lending library. I also supported students with their multimedia projects by providing guidance in using Logic, Final Cut Pro, and Adobe Photoshop.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="projects">
+        <h2 class="inverted rounded"><span class="fa fa-code"></span>Development Projects</h2>
+        <article class="">
+          <div class="heading">
+            <h4><a href="https://github.com/tboddyspargo/blocipedia" target="_blank">Blocipedia</a> <small>(Rails)</small></h4>
+            <span class="years"></span>
+          </div>
+          <div class="project-thumbnail remove">
+            <img class="thumbnail-image remove" src="https://tboddyspargo.github.io/img/blocipedia_landing_1.png" />
+            <span class="fa fa-newspaper-o project-icon" style="font-size: 3em; padding: 8px 6px 3px 5px; margin: 0px 10px;"></span>
+          </div>
+          <div class="article-body">
+            <ul>
+              <li>Used RSpec and the test driven development (TDD) paradigm to create a maintainable codebase.</li>
+              <li>Worked with Rails migrations and a simple PostgreSQL back-end to perform schema updates.</li>
+              <li>Worked in a cloud IDE and deployed to Heroku cloud PaaS provider.</li>
+              <li>Leveraged Devise and Pundit to quickly implement authentication and authorization features.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="">
+          <div class="heading">
+            <h4><a href="https://github.com/tboddyspargo/bloc-chat-angular" target="_blank">ChatterBox</a> <small>(AngularJS + Firebase)</small></h4>
+            <span class="years"></span>
+          </div>
+          <div class="project-thumbnail remove">
+            <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/chatterbox_landing2.png" />
+            <span class="fa fa-commenting-o project-icon remove" style="font-size: 3em; padding: 0px 8px 8px 8px; margin: 10px;"></span>
+          </div>
+          <div class="article-body">
+            <ul>
+              <li>Created directives and services to separate and re-use data retrieval and functional elements.</li>
+              <li>Designed an elaborate data model to enhance application security using Firebase.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="with-thumbnail remove">
+          <div class="heading">
+            <h4><a href="https://github.com/tboddyspargo/bloc-jams-react" target="_blank">BlocJams</a> <small>(React)</small></h4>
+            <span class="years"></span>
+          </div>
+          <div class="project-thumbnail remove">
+            <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/blocjams3_landing1.png" />
+          </div>
+          <div class="article-body">
+            <ul>
+              <li>Created site elements as reusable React components.</li>
+              <li>Used state-aware event listener callbacks to support plyr audio framework.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="with-thumbnail remove">
+          <div class="heading">
+            <h4><a href="https://github.com/tboddyspargo/bloc-calculator" target="_blank">Bloculator</a> <small>(Ruby)</small></h4>
+            <span class="years"></span>
+          </div>
+          <div class="project-thumbnail remove">
+            <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/bloculator_main.png" />
+          </div>
+          <div class="article-body">
+            <ul>
+              <li>Researched infix and postfix mathematic notation styles to support complex expressions.</li>
+            </ul>
+          </div>
         </article>
       </section>
       <section class="education">
-        <h2 class="inverted rounded"><span class="fa fa-mortar-board left"></span>Education</h2>
-        <article class="school wide">
+        <h2 class="inverted rounded"><span class="fa fa-mortar-board"></span>Education</h2>
+        <article class="school">
           <div class="heading">
-            <h4>Web Development Track</h4>
-            <span class="years">2017 - Present</span>
-            <a class="links" href="https://www.bloc.io/">Bloc.io</a>
+            <h4>Bloc.io</h4>
+            <span class="years">2017 - 2018</span>
+            <div class="links">
+              Web Development Track
+            </div>
           </div>
-          <p class="article-body remove">
-            The part-time program at Bloc is an excellent, mentor-led course which has allowed me to work on my skills as a web developer. The curriculum follows many aspects of the web development stack from the front-end with JavaScript (React/AngularJS) to back-ends powered by Ruby on Rails and Google Firebase.
-          </p>
+          <div class="article-body remove">
+            <p>
+              The part-time program at Bloc is an excellent, mentor-led course which has allowed me to work on my skills as a web developer. The curriculum follows many aspects of the web development stack from the front-end with JavaScript (React/Angular) to back-ends powered by Ruby on Rails w/ PostgreSQL and Google Firebase.
+            </p>
+          </div>
         </article>
-        <article class="school wide">
+        <article class="school">
           <div class="heading">
-            <h4>Partial BFA in Music - Trumpet</h4>
+            <h4><a href="https://www.seineouest.fr/culture_et_loisirs_conservatoire_d_issy_les_moulineaux.html">Conservatories Niedermeyer</a> and <a href="https://www.conservatoire.be/">Royal de Bruxelles</a></h4>
             <span class="years">2012 - 2015</span>
-            <div class="links"><a href="https://www.seineouest.fr/culture_et_loisirs_conservatoire_d_issy_les_moulineaux.html">Conservatories Niedermeyer</a> and <a href="http://www.conservatoire.be/">Royal de Bruxelles</a></div>
+            <div class="links">Partial Bachelor of Fine Arts in Music - Trumpet</div>
           </div>
-          <p class="article-body remove">
-            After receiving my undergraduate degree, I moved to France and then Belgium to pursue a musical education. I ended up at the Royal Conservatory in Brussels where I placed into and completed my second year. While I ultimately decided that a career as a musician wasn’t for me, music is still a passion of mine. Additionally, being a full-time student while working 30-35 hrs/week substantially improved my time management skills.
-          </p>
+          <div class="article-body remove">
+            <p>
+              After receiving my undergraduate degree, I moved to France and then Belgium to pursue a musical education. I ended up at the Royal Conservatory in Brussels where I placed into and completed my second year. While I ultimately decided that a career as a musician wasn’t for me, music is still a passion of mine. Additionally, being a full-time student while working 30-35 hrs/week substantially improved my time management skills.
+            </p>
+          </div>
         </article>
-        <article class="school wide">
+        <article class="school">
           <div class="heading">
-            <h4>BA in Romance Languages (French/Spanish)</h4>
+            <h4><a href="https://www.carleton.edu/">Carleton College</a></h4>
             <span class="years">2008 - 2012</span>
-            <a class="links" href="https://www.carleton.edu/">Carleton College</a>
+            
+            <div class="links">Bachelor of Arts (Romance Languages - French & Spanish) | 3.54 GPA</div>
           </div>
-          <p class="article-body remove">
-            I received an exceptional liberal arts education from Carleton, taking advantage of study abroad opportunities in both France and Spain as I slowly decided on a major in Romance Languages. Carleton is also where I took my first computer science class, introducing me to the endless possibilities of a career in programming.
-          </p>
+          <div class="article-body remove">
+            <p>
+              I received an exceptional liberal arts education from Carleton, taking advantage of study abroad opportunities in both France and Spain as I slowly decided on a major in Romance Languages. Carleton is also where I took my first computer science class, introducing me to the endless possibilities of a career in programming.
+            </p>
+          </div>
         </article>
       </section>
+    </div>
+
+    <div id="sidebar">
+      <div class="side-section skills">
+        <h3><span class="fa fa-tachometer"></span>Skills</h3>
+        <div class="content">
+          <ul class="side-list">
+            <li class="side-list-item">
+              <strong>Puppet</strong>
+              <progress class="skill-level" max="100" value="100"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>PowerShell</strong>
+              <progress class="skill-level" max="100" value="100"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>GitLab</strong>
+              <progress class="skill-level" max="100" value="100"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>CI/CD (GitLab)</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Git</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>JavaScript</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
+            <li class="side-list-item remove">
+              <strong>CSS & Pre-processors</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
+            <li class="side-list-item remove">
+              <strong>HTML5</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Python</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item remove">
+              <strong>React</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Angular</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item remove">
+              <strong>Knockout</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Ruby</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item remove">
+              <strong>Ruby on Rails</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Docker</strong>
+              <progress class="skill-level" max="100" value="25"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Kubernetes</strong>
+              <progress class="skill-level" max="100" value="25"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Go</strong>
+              <progress class="skill-level" max="100" value="25"></progress>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="side-section">
+        <h3><span class="fa fa-music"></span>Hobbies</h3>
+        <div class="content">
+          <ul class="side-list">
+            <li class="side-list-item"><span class="fa fa-circle remove"></span>Ping-pong</li>
+            <li class="side-list-item"><span class="fa fa-book remove"></span>Fantasy books</li>
+            <li class="side-list-item"><span class="fa fa-male remove"></span>Distance running</li>
+            <li class="side-list-item"><span class="fa fa-bicycle remove"></span>Biking</li>
+            <li class="side-list-item"><span class="fa fa-check remove"></span>Calisthenics</li>
+            <li class="side-list-item"><span class="fa fa-check remove"></span>Golf</li>
+            <li class="side-list-item"><span class="fa fa-check remove"></span>Broomball</li>
+            <li class="side-list-item"><span class="fa fa-check remove"></span>Playing guitar</li>
+            <li class="side-list-item"><span class="fa fa-check remove"></span>Playing piano</li>
+            <li class="side-list-item"><span class="fa fa-globe remove"></span>Budget traveling</li>
+          </ul>
+        </div>
+      </div>
+      <div class="side-section contact">
+        <h3><span class="fa fa-address-card"></span>For more...</h3>
+        <div class="content">
+          <ul class="side-list">
+            <li class="side-list-item remove">
+              <span class="fa fa-envelope"></span><a href="mailto:boddyspargo.tyler@gmail.com"><strong>E-mail</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-linkedin"></span><a href="https://www.linkedin.com/in/tylerboddyspargo"><strong>LinkedIn</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-file-text"></span><a href="https://tboddyspargo.github.io/"><strong>Web portfolio</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-globe"></span><a href="https://tyler.boddyspargo.com"><strong>Website</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-github"></span><a href="https://www.github.com/tboddyspargo"><strong>GitHub</strong></a>
+            </li>
+            <li class="side-list-item remove">
+              <span class="fa fa-terminal"></span><a href="https://www.codewars.com/users/tyler_bodd"><strong>CodeWars</strong></a>
+            </li>
+            <li class="side-list-item remove">
+              <span class="fa fa-code"></span><a href="https://www.codeschool.com/users/muyleche"><strong>CodeSchool</strong></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>
 </html>
