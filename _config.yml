@@ -12,10 +12,10 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <h1>Developing a way to live.</h1>
+    <h1>Developing a way to live.</h1>
   header_text_feature_image:
   footer_text: >
-   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
   # Icons
   rss: false
   resume: resume
@@ -32,7 +32,7 @@ theme_settings:
   pinterest:
   reddit:
   soundcloud:
-  stack_exchange:  # https://stackexchange.com/users/11291848/tyler-boddyspargo # Full URL
+  stack_exchange: # https://stackexchange.com/users/11291848/tyler-boddyspargo # Full URL
   steam:
   tumblr:
   twitter: # @tyler_bodd
@@ -40,7 +40,6 @@ theme_settings:
   youtube:
 
   # Scripts
-  google_analytics: "UA-103027689-1"
   disqus_shortname:
   katex: false # Enable if using math markup
 
@@ -65,10 +64,17 @@ collections:
   portfolio:
     output: true
 
+# CUSTOM GOOGLE ANALYTICS
+google_analytics: "UA-103027689-1"
+
 # BUILD SETTINGS
 markdown: kramdown
 sass:
   sass_dir: _sass
   style: :compressed
 
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
