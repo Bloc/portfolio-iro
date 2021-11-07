@@ -7,16 +7,5 @@
       {{ content }}
     </div>
     {% include footer.html %}
-    <script>
-      if (typeof window.addEventListener === "function") {
-        window.addEventListener("load", function() {
-        if (window.cedexis === undefined) {
-          var radar = document.createElement("script");
-          radar.src = "//radar.cedexis.com/1/22418/radar.js";
-          document.body.appendChild(radar);
-        }
-      });
-    }
-</script>
   </body>
 </html>
