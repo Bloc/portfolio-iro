@@ -41,4 +41,4 @@ For the time being, will keep the certbot snap package, but am not very convince
 
 **UPDATE: as I write this, I realize that the [debian documentation](https://wiki.debian.org/LetsEncrypt) now points to using the certbot that comes with `stable` now. So, Will probably migrate to that in order to not muck around with snaps.**
 
-**UPDATE-2: I did end up using the packages from debian. So much easier to manage, and I also know that the security part is going to be just fine to manage via `unattended-upgrades` **
+**UPDATE-2: I did end up using the packages from debian. So much easier to manage, and I also know that the security part is going to be just fine to manage via `unattended-upgrades`**
