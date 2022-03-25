@@ -9,9 +9,9 @@ pipeline {
         }
     stage('Building') {
             steps {
-                sh '''#!/bin/bash
-                      bundle exec jekyll build 
-                   '''
+                      sh 'bundle exec jekyll build' 
+		      sh 'echo "Hello from bash"'
+                      sh 'echo "Who I'm $SHELL"'
             }
         }
     }
