@@ -10,11 +10,11 @@ pipeline {
             steps {
                 sh 'which jekyll && jekyll --version'
             }
+        }
         stage('Build') {
             steps {
                 sh 'jekyll build'
             }
-        }
     }
 }
 
