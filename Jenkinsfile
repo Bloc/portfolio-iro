@@ -9,7 +9,7 @@ pipeline {
         }
     stage('Building') {
             steps {
-                sh 'gem install jekyll bundler' 
+                sh 'source ~/.bashrc' 
                 sh 'bundle exec jekyll build' 
             }
         }
