@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker { 
 	    image 'jekyll/builder:latest' 
-            args '--rm   --volume="$PWD:/srv/jekyll"   --publish [::1]:4000:4000'
+            args '--rm   --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle"  -it jekyll/jekyll:$JEKYLL_VERSION"
             }
     }
     stages {
