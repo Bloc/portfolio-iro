@@ -1,9 +1,10 @@
 pipeline {
-    agent { docker { image 'ruby:2.7-bullseye' } }
+    agent any
     stages {
         stage('build') {
             steps {
                 sh 'ruby --version'
+		bundle exec jekyll build
             }
         }
     }
