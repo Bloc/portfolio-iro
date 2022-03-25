@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'export JEKYLL_VERSION=3.8'
+                sh 'cd /srv/jekyll'
                 sh 'which jekyll && jekyll --version'
             }
         }
