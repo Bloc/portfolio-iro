@@ -9,8 +9,9 @@ pipeline {
         }
     stage('Building') {
             steps {
-                sh 'source ~/.bashrc' 
-                sh 'bundle exec jekyll build' 
+                sh '''#!/bin/bash
+                      bundle exec jekyll build 
+                   '''
             }
         }
     }
