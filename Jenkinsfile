@@ -1,23 +1,16 @@
 pipeline {
-    agent {
-        docker { 
-	    image 'jekyll/builder:latest' 
-            args '--rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" -u root:root'
-            }
-    }
+    agent any
+
     stages {
-        stage('Test') {
+        stage('Testing') {
             steps {
-                sh 'pwd'
-                sh 'cd /srv/jekyll'
-                sh 'pwd && which jekyll && jekyll --version'
+                sh 'pwd && ' 
             }
         }
-        stage('Build') {
+    stage('Building') {
             steps {
-                sh 'jekyll build'
+                sh 'bundle exec jekyll build' 
             }
         }
     }
 }
-
