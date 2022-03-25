@@ -9,10 +9,12 @@ pipeline {
         }
     stage('Building') {
             steps {
-		      sh 'echo "Hello from test"'
-                      sh 'echo "Who I am $SHELL"'
-		      sh 'export PATH="/var/lib/jenkins/gems/bin"'
-                      sh 'which bundle && which jekyll && bundle exec jekyll build' 
+		      sh '#!/bin/bash'
+                      sh 'set -e'
+                      sh 'which ruby'
+                      sh 'which which gem'
+                      sh 'gem install jekyll bundler' 
+                      sh 'bundle exec jekyll build' 
             }
         }
     }
