@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'ruby --version'
-		bundle exec jekyll build
+		sh 'bundle exec jekyll build'
             }
         }
     }
