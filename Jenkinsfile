@@ -10,6 +10,7 @@ pipeline {
     stage('Building') {
             steps {
 		      sh '#!/bin/bash'
+		      sh 'source "$HOME/.rvm/scripts/rvm"'
                       sh 'set -e'
                       sh 'which rvm'
                       sh 'rvm use --default 3.0.0'
