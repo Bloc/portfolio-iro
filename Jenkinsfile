@@ -4,11 +4,12 @@ pipeline {
     stages {
         stage('Testing') {
             steps {
-                sh 'pwd && bundle --version && jekyll --version' 
+                sh 'pwd' 
             }
         }
     stage('Building') {
             steps {
+                sh 'gem install jekyll bundler' 
                 sh 'bundle exec jekyll build' 
             }
         }
