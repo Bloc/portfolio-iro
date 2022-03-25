@@ -8,8 +8,9 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                sh 'pwd'
                 sh 'cd /srv/jekyll'
-                sh 'which jekyll && jekyll --version'
+                sh 'pwd && which jekyll && jekyll --version'
             }
         }
         stage('Build') {
