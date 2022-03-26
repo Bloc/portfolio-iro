@@ -20,6 +20,11 @@ pipeline {
             }
         }
     stage('Deploy') {
+		when {
+		  expression {
+				env.BRANCH_NAME == 'master'		
+			}
+		  }
             steps {
 		sshagent(credentials: ['18c89dce-f6d2-490d-854c-27c06a9d92b5']) {
 		  sh '''
