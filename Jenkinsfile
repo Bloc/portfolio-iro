@@ -5,7 +5,6 @@ pipeline {
         stage('Testing') {
             steps {
 	sh '''
-	  source ~/.bashrc
 	  cd .
 	   '''
             }
@@ -13,6 +12,7 @@ pipeline {
     stage('Building') {
             steps {
 	sh '''
+	  source ~/.bashrc
 	  pwd
 	  bundle install
 	  bundle exec jekyll build
