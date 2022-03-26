@@ -28,19 +28,22 @@ I'm paraphrasing, but on first login, you'll be asked to "install commonly used 
 # Installing Github Multibranch GitSCm plugin
 
 Make sure you have the `Git Branch Source Plugin`. This will allow you to add a webhook to your git repo, so that any change that is uploaded would get sensed by Jenkins, and it's process would get kicked off.
-![Multibranch Plugin](/assets/img/jenkins-installed/pipeline_4.png)
 
+![Multibranch Plugin](/assets/img/jenkins-installed/pipeline_4.png)
 
 # Setting up a pipeline for Jekyll portfolio sourced from github
 After logging into Jenkins, click on new Pipeline here.
+
 ![New Item](/assets/img/jenkins-installed/pipeline_1.png)
 
 Select Multibranch Pipeline, and fill in a meaningful name, like shown below
+
 ![enter Item](/assets/img/jenkins-installed/pipeline_2.png)
 
 Select Github as the branch source and input the repository. notice that the `Blue Ocean` credentails were input. This automagically got added once when I added the repo on BlueOcean. However, I don't know how to remove it. You can use credentials as "none" for the time being, and not have any additional issues, as this repo is public. 
 
 At a later date, I'll find a way to generate the proper token or auth manually, as I would like to move off of the Blue Ocean credentials.
+
 ![Github source](/assets/img/jenkins-installed/pipeline_3.png)
 
 Since we installed the `Git Branch Source Plugin`, you can now add the webhook for github so that it will trigger Jenkins to pull and run it's configured build process.
@@ -59,6 +62,7 @@ Voila, it's done!
 So, we've configured the webhook token on Jenkins. Lets create the webhook on Github. Remember, you will need the token you created on the pipeline creation.
 
 Go to your repo, and select your repo's settings.
+
 ![github repo settings](/assets/img/jenkins-installed/pipeline_6.png)
 
 Then on the left pane, select webhooks and `Add webhook`.
