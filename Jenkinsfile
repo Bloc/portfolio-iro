@@ -18,14 +18,13 @@ pipeline {
 	  bundle exec jekyll build
 	   '''
             }
+        }
     stage('Deploy') {
             steps {
 	sh '''
 	  scp -r -i ~/.ssh/id_rsa _site/* xortiz@localhost:apps/xavier-j-ortiz.github.io/_site
 	   '''
             }
-
-
         }
     }
 }
