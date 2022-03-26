@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with Jenkins
+title: Adding and Working with a Jenkins Multibranch Pipeline
 ---
 
 Now comes the bit part. Many bits and bobs, but will try to capture all the steps required to install Jenkins as well as setup a repo together with the key links that helped me along the way.
