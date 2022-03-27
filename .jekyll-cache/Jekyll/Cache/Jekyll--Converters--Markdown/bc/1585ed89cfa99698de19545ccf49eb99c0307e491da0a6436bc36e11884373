@@ -1,0 +1,165 @@
+I"yT<h2 id="the-high-level-low-down">The High Level Low Down</h2>
+<p>This is a webapp created when learning about React. It was a twist on a project that I had to do for the Software Developer Program at <a href="https://www.bloc.io">Bloc</a>. The original project for the program required a different framework, but I wanted to learn some React, so I went ahead and created a React version.</p>
+
+<p>The application allows you to register your name based off of a google account. Once registered, you can create a room, post messages in a room, and interact with other people that are also in these rooms.</p>
+
+<p>On the backend, it uses google firebase in storing the room and message information. Of course, as mentioned earlier, the framework used to create this website is React.</p>
+
+<p>But enough about the high level technicals. I wanted to share a bit about the process of this project, and the considerations and learnings that were taken into account in it’s creation.</p>
+
+<h2 id="react-design-perspective">React Design Perspective</h2>
+
+<p>I tried to keep it as simple as possible, so when I went about creating this application I tried to use only the <code class="language-plaintext highlighter-rouge">create-react-app</code> package available on <code class="language-plaintext highlighter-rouge">npm</code>, adding only the bootstrap library to it for some visual polish.</p>
+
+<p>In terms of the structure, I wanted the base of the Web app to be <code class="language-plaintext highlighter-rouge">App.js</code> file. This way, I could keep the <em>currentUser</em>, <em>currentRoomName</em>, and <em>currentRoom</em> as states in this location. It seemed easier to pass any changes from this location down to other components, since this was the highest level I was modifying in the Web App.</p>
+
+<p>These variables in the <code class="language-plaintext highlighter-rouge">App</code> component’s state would need to be modified as user input was made. This was achieved by creating some callbacks.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="nx">currentRoomCallback</span> <span class="o">=</span> <span class="p">(</span><span class="nx">roomListCurrentRoom</span><span class="p">,</span> <span class="nx">roomListCurrentRoomName</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+      <span class="na">currentRoom</span><span class="p">:</span> <span class="nx">roomListCurrentRoom</span><span class="p">,</span>
+      <span class="na">currentRoomName</span><span class="p">:</span> <span class="nx">roomListCurrentRoomName</span>
+    <span class="p">});</span>
+  <span class="p">};</span>
+
+  <span class="nx">currentUserCallback</span> <span class="o">=</span> <span class="p">(</span><span class="nx">userCurrentUser</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">currentUser</span><span class="p">:</span> <span class="nx">userCurrentUser</span> <span class="p">});</span>
+  <span class="p">};</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>These callbacks are pretty straightforward and simple. Their main reason of being is to enable other components to pass <em>currentUser</em>, <em>currentRoomName</em>, and <em>currentRoom</em> states back to the main <code class="language-plaintext highlighter-rouge">App</code> Component. Using the arrow function, any changes passed through these functions facilitate downstream components to effect changes to upstream <code class="language-plaintext highlighter-rouge">App</code> states.</p>
+
+<p>The callbacks are passed to other components as props in the render function of the <code class="language-plaintext highlighter-rouge">App</code> component, as is shown being passed to the <code class="language-plaintext highlighter-rouge">RoomList</code> Component below.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>render() {
+  ...
+  <span class="nt">&lt;RoomList</span> <span class="na">firebase=</span><span class="s">{firebase}</span> <span class="na">callbackCurrentRoom=</span><span class="s">{this.currentRoomCallback}/</span><span class="nt">&gt;</span>
+  ...
+}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">callbackCurrentRoom</code> can then be invoked within the <code class="language-plaintext highlighter-rouge">RoomList</code> Component as a prop. This can be seen when it is invoked in the <code class="language-plaintext highlighter-rouge">clickRoom</code> function as shown below.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">clickRoom</span><span class="p">(</span><span class="nx">roomId</span><span class="p">,</span> <span class="nx">roomName</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">currentRoom</span><span class="p">:</span> <span class="nx">roomId</span><span class="p">,</span> <span class="na">currentRoomName</span><span class="p">:</span> <span class="nx">roomName</span> <span class="p">});</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">callbackCurrentRoom</span><span class="p">(</span><span class="nx">roomId</span><span class="p">,</span> <span class="nx">roomName</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>When <code class="language-plaintext highlighter-rouge">clickRoom</code> is executed through a user triggered <code class="language-plaintext highlighter-rouge">onClick</code> event, it triggers the changes and updates values within the state of the upstream <code class="language-plaintext highlighter-rouge">App</code> component.</p>
+
+<p>In theory, all this information passing of state values via callbacks being sent through props downstream of the main <code class="language-plaintext highlighter-rouge">App</code> component is all well and good. But one thing that I had to learn was exactly <em>when</em> this information is triggered in React.</p>
+
+<p>One thing I expected was that upstream component changes pushed to downstream components via a prop would trigger a <code class="language-plaintext highlighter-rouge">render</code> in the downstream component the same way a <code class="language-plaintext highlighter-rouge">state</code> change or update would trigger a <code class="language-plaintext highlighter-rouge">render</code>.</p>
+
+<p>It was a bit confusing to not see these newly created props be updated and not show up on the DOM, which lead to a whole lot of troubleshooting. The troubleshooting process surfaced that indeed, the props were being refreshed, since I was able to view them change or update values on the browser’s JS console output. However, the new prop values which would affect the DOM’s visual, was not being changed.</p>
+
+<p>After some StackOverflow and heavy googling research, my solution to remedy this seemingly poor timing of “new” <code class="language-plaintext highlighter-rouge">props</code> was to add a react method called <code class="language-plaintext highlighter-rouge">componentWillReceiveProps</code>. What this method listens to is that if <code class="language-plaintext highlighter-rouge">props</code> have changed, this method will be triggered and the code written inside will be run. So, for example, an upstream triggered state change due to switching rooms triggers <code class="language-plaintext highlighter-rouge">componentWillReceiveProps</code>, and the following code is run.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">componentWillReceiveProps</span><span class="p">(</span><span class="nx">nextProp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// here we're making sure that the refreshed prop</span>
+    <span class="c1">// has actually changed.</span>
+    <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">currentRoom</span> <span class="o">!==</span> <span class="nx">nextProp</span><span class="p">.</span><span class="nx">currentRoom</span><span class="p">)</span> <span class="p">{</span>
+
+      <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">query</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">off</span><span class="p">(</span><span class="dl">'</span><span class="s1">child_added</span><span class="dl">'</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">messageRef</span><span class="p">.</span><span class="nx">orderByChild</span><span class="p">(</span><span class="dl">'</span><span class="s1">roomId</span><span class="dl">'</span><span class="p">).</span><span class="nx">equalTo</span><span class="p">(</span><span class="nx">nextProp</span><span class="p">.</span><span class="nx">currentRoom</span><span class="p">);</span>
+      <span class="c1">// query.on takes action on the query run above.</span>
+      <span class="nx">query</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">child_added</span><span class="dl">'</span><span class="p">,</span> <span class="nx">snapshot</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">snapshot</span><span class="p">.</span><span class="nx">val</span><span class="p">();</span>
+        <span class="nx">message</span><span class="p">.</span><span class="nx">key</span> <span class="o">=</span> <span class="nx">snapshot</span><span class="p">.</span><span class="nx">key</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+          <span class="na">currentRoom</span><span class="p">:</span> <span class="nx">nextProp</span><span class="p">.</span><span class="nx">currentRoom</span><span class="p">,</span>
+          <span class="na">currentRoomName</span><span class="p">:</span> <span class="nx">nextProp</span><span class="p">.</span><span class="nx">currentRoomName</span><span class="p">,</span>
+          <span class="na">messages</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">message</span><span class="p">),</span>
+          <span class="na">new_message</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+          <span class="na">query</span><span class="p">:</span> <span class="nx">query</span>
+        <span class="p">})</span>
+      <span class="p">});</span>
+      <span class="c1">// create blank message slate. This actually happens</span>
+      <span class="c1">// quicker than the query.on() command above.</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> 
+        <span class="na">currentRoom</span><span class="p">:</span> <span class="nx">nextProp</span><span class="p">.</span><span class="nx">currentRoom</span><span class="p">,</span>
+        <span class="na">currentRoomName</span><span class="p">:</span> <span class="nx">nextProp</span><span class="p">.</span><span class="nx">currentRoomName</span><span class="p">,</span>
+        <span class="na">messages</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="na">query</span><span class="p">:</span> <span class="nx">query</span>
+      <span class="p">});</span>
+
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">currentUser</span> <span class="o">!==</span> <span class="nx">nextProp</span><span class="p">.</span><span class="nx">currentUser</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// updates the state given that the</span>
+      <span class="c1">// user has changed</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> 
+        <span class="na">currentUser</span><span class="p">:</span> <span class="nx">nextProp</span><span class="p">.</span><span class="nx">currentUser</span><span class="p">,</span>
+      <span class="p">});</span>
+      <span class="k">return</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<p>The new <code class="language-plaintext highlighter-rouge">props</code> will be updating the <code class="language-plaintext highlighter-rouge">MessageList</code>’s <code class="language-plaintext highlighter-rouge">state</code>, and the updated <code class="language-plaintext highlighter-rouge">state</code> via <code class="language-plaintext highlighter-rouge">setState</code> will trigger a <code class="language-plaintext highlighter-rouge">render()</code> within this component. This will then trigger a message refresh, or a change in the user name at the top of the messages.</p>
+
+<h2 id="aaaaand-firebase">Aaaaand Firebase</h2>
+<p>This walkthrough wouldn’t be complete without me talking a bit about firebase and it’s functions that I used within this web app.</p>
+
+<p>It really is quite straightforward after creating a database on the google service.</p>
+
+<p>At the beginning of the <code class="language-plaintext highlighter-rouge">App</code> component I declare some config information that would be necessary to access the correct location of the database within firebase. The information has the following structure, and is outlined on creation of the database.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">xxxx</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">authDomain</span><span class="p">:</span> <span class="dl">"</span><span class="s2">yyyy</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">databaseURL</span><span class="p">:</span> <span class="dl">"</span><span class="s2">zzzz</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">projectId</span><span class="p">:</span> <span class="dl">"</span><span class="s2">iiii</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">storageBucket</span><span class="p">:</span> <span class="dl">"</span><span class="s2">jjjj</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">messagingSenderId</span><span class="p">:</span> <span class="dl">"</span><span class="s2">qqqq</span><span class="dl">"</span>
+<span class="p">};</span>
+
+<span class="nx">firebase</span><span class="p">.</span><span class="nx">initializeApp</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Once firebase is correctly configured, the database can be manipulated via creating a reference to the database and then accessing the data via queries.</p>
+
+<p>The reference to the database can be created within a Component’s <code class="language-plaintext highlighter-rouge">constructor</code>, for example below is a snippet of this reference being created in the <code class="language-plaintext highlighter-rouge">MessageList</code>’s component <code class="language-plaintext highlighter-rouge">constructor</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+  <span class="c1">// message database reference is created below</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">messageRef</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">firebase</span><span class="p">.</span><span class="nx">database</span><span class="p">().</span><span class="nx">ref</span><span class="p">(</span><span class="dl">'</span><span class="s1">messages</span><span class="dl">'</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">...</span> 
+  <span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Then, later on in the code, a query can be run on <code class="language-plaintext highlighter-rouge">messageRef</code>. Below is an example of this done during the <code class="language-plaintext highlighter-rouge">componentDidMount()</code> method.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">messageRef</span><span class="p">.</span><span class="nx">orderByChild</span><span class="p">(</span><span class="dl">'</span><span class="s1">roomId</span><span class="dl">'</span><span class="p">).</span><span class="nx">equalTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">currentRoom</span><span class="p">);</span>
+
+    <span class="nx">query</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">child_added</span><span class="dl">'</span><span class="p">,</span> <span class="nx">snapshot</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">snapshot</span><span class="p">.</span><span class="nx">val</span><span class="p">();</span>
+      <span class="nx">message</span><span class="p">.</span><span class="nx">key</span> <span class="o">=</span> <span class="nx">snapshot</span><span class="p">.</span><span class="nx">key</span><span class="p">;</span>
+
+      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+        <span class="na">messages</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">message</span><span class="p">),</span>
+        <span class="na">new_message</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+        <span class="na">query</span><span class="p">:</span> <span class="nx">query</span>
+      <span class="p">})</span>
+    <span class="p">});</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">messagesEnd</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">scrollToBottom</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<h2 id="honorable-server-side-technology-and-cloud-compute-stuff-mention">Honorable ‘Server-side Technology and Cloud Compute Stuff’ Mention</h2>
+<p>This application is hosted on a Debian Stable linode instance and is using NGINX as it’s webserver. It can be accessed at this location: <a href="https://www.xavierjortiz.com/chatroom/">https://www.xavierjortiz.com/chatroom/</a></p>
+
+<p>The Github source: <a href="https://github.com/Xavier-J-Ortiz/react-chatroom-firebase">https://github.com/Xavier-J-Ortiz/react-chatroom-firebase</a></p>
+:ET
