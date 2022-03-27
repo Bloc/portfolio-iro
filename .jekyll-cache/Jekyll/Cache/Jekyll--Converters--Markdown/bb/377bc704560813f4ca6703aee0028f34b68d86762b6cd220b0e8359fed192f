@@ -1,0 +1,10 @@
+I"�<p>It’s been quite an effort, but I believe I’ve done it!</p>
+
+<p>Right now, this blog has Github and Jenkins integrated, and <em>should</em> feed into the the website on adding new commits to <code class="language-plaintext highlighter-rouge">master</code>.</p>
+
+<p>It’s been a long ride, which I’ll be writing about today. As mentioned before, two fold motivation. One in case I have to do it again at some point in the future, and two, because I don’t want to have my site fall to the wayside again.</p>
+
+<p>Additonally, this post is also for making sure the CI/CD stuff is working as expected.</p>
+
+<p>More later, after I get some sleep!</p>
+:ET

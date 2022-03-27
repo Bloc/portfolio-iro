@@ -1,0 +1,197 @@
+I"TI<p>Now comes the bit part. Many bits and bobs, but will try to capture all the steps required to install Jenkins as well as setup a repo together with the key links that helped me along the way.</p>
+
+<h1 id="install-jenkins-lets-start-from-the-top">Install Jenkins, lets start from the top</h1>
+
+<p>So, Jenkins install. Easy, instructions found <a href="https://www.jenkins.io/doc/book/installing/linux/#debianubuntu">here</a>.</p>
+
+<p>Below is the code block to install the LTS version of Jenkins on Debian. LTS because we don’t want to get constant updates on our Jenkins environment and having us micromanage our CI/CD software at a possibly much more granular level. We want to aim for “set it and forget it” for the most part.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc &gt; /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list &gt; /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+</code></pre></div></div>
+
+<p><strong>One thing worth mentioning as we did just install jenkins, all jenkins processes <em>will be run</em> as the <code class="language-plaintext highlighter-rouge">jenkins</code> user, which is why we installed the RVM and ruby environemnt on the <code class="language-plaintext highlighter-rouge">jenkins</code> user as described in the <a href="https://www.xavierjortiz.com/2022/03/26/rvm.html">RVM and Jekyll install for Jenkins</a> post</strong></p>
+
+<p>I’m paraphrasing, but on first login, you’ll be asked to “install commonly used plugins”. It’s highly recommended that you do this.</p>
+
+<h1 id="installing-github-multibranch-gitscm-plugin">Installing Github Multibranch GitSCm plugin</h1>
+
+<p>Make sure you have the <code class="language-plaintext highlighter-rouge">Git Branch Source Plugin</code>. This will allow you to add a webhook to your git repo, so that any change that is uploaded would get sensed by Jenkins, and it’s process would get kicked off.</p>
+
+<p><img src="/assets/img/jenkins-installed/pipeline_4.png" alt="Multibranch Plugin" /></p>
+
+<h1 id="setting-up-a-pipeline-for-jekyll-portfolio-sourced-from-github">Setting up a pipeline for Jekyll portfolio sourced from github</h1>
+<p>After logging into Jenkins, click on new Pipeline here.</p>
+
+<p><img src="/assets/img/jenkins-installed/pipeline_1.png" alt="New Item" /></p>
+
+<p>Select Multibranch Pipeline, and fill in a meaningful name, like shown below</p>
+
+<p><img src="/assets/img/jenkins-installed/pipeline_2.png" alt="enter Item" /></p>
+
+<p>Select Github as the branch source and input the repository. notice that the <code class="language-plaintext highlighter-rouge">Blue Ocean</code> credentails were input. This automagically got added once when I added the repo on BlueOcean. However, I don’t know how to remove it. You can use credentials as “none” for the time being, and not have any additional issues, as this repo is public.</p>
+
+<p>At a later date, I’ll find a way to generate the proper token or auth manually, as I would like to move off of the Blue Ocean credentials.</p>
+
+<p><img src="/assets/img/jenkins-installed/pipeline_3.png" alt="Github source" /></p>
+
+<p>Since we installed the <code class="language-plaintext highlighter-rouge">Git Branch Source Plugin</code>, you can now add the webhook for github so that it will trigger Jenkins to pull and run it’s configured build process.</p>
+
+<p>Select the <code class="language-plaintext highlighter-rouge">Scan by webhook</code> and input a token of your choosing. You’ll need to use this token and add it to github when creating the webhook later on.</p>
+
+<p>I added a value for <code class="language-plaintext highlighter-rouge">Periodically if not otherwise run</code>, once a day, just in case the webhook breaks for whatever reason. Not required.</p>
+
+<p><img src="/assets/img/jenkins-installed/pipeline_5.png" alt="adding webhook" /></p>
+
+<p>Scroll to the bottom and hit save!</p>
+
+<p>Voila, it’s done!</p>
+
+<h1 id="webhook-on-github">Webhook on Github</h1>
+<p>So, we’ve configured the webhook token on Jenkins. Lets create the webhook on Github. Remember, you will need the token you created on the pipeline creation.</p>
+
+<p>Go to your repo, and select your repo’s settings.</p>
+
+<p><img src="/assets/img/jenkins-installed/pipeline_6.png" alt="github repo settings" /></p>
+
+<p>Then on the left pane, select webhooks and <code class="language-plaintext highlighter-rouge">Add webhook</code>.</p>
+
+<p>Under the Manage webhook view, specify the <code class="language-plaintext highlighter-rouge">Payload URL</code> like so: <code class="language-plaintext highlighter-rouge">JENKINS_URL/multibranch-webhook-trigger/invoke?token=[Trigger token]</code> and set the <code class="language-plaintext highlighter-rouge">Content type</code> as <code class="language-plaintext highlighter-rouge">application/json</code>. You can then set all the rest of the settings as you would like. I’d recommend that SSL verification be setup, but you may need to set up your workload to be served via <code class="language-plaintext highlighter-rouge">https</code>.</p>
+
+<p><img src="/assets/img/jenkins-installed/pipeline_7.png" alt="Manage Webhooks" /></p>
+
+<p>Congratz! You’re now going to let Jenkins run this pipeline once one of your repositories is updated.</p>
+
+<h1 id="home-stretch-creating-and-understanding-the-jenkinsfile">Home Stretch, creating and understanding the <code class="language-plaintext highlighter-rouge">Jenkinsfile</code></h1>
+
+<p>I remember that in the order of things, this was the first part that I <em>huge</em> issues with. But it all boiled down to not understanding that all these scripts were run by the <code class="language-plaintext highlighter-rouge">jenkins</code> users, and creating the environment links in files such as <code class="language-plaintext highlighter-rouge">.bashrc</code>, as well as making sure that the <code class="language-plaintext highlighter-rouge">.bashrc</code> file is sourced when the script is run. So, there was a lot of trial and error, but in the end, the resulting script was this.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pipeline {
+    agent any
+
+    stages {
+        stage('Testing') {
+            steps {
+	sh '''
+	  cd .
+	   '''
+            }
+        }
+    stage('Building') {
+            steps {
+	sh '''
+	  source ~/.bashrc
+	  pwd
+	  bundle install
+	  bundle exec jekyll build
+	   '''
+            }
+        }
+    stage('Deploy') {
+		when {
+		  expression {
+				env.BRANCH_NAME == 'master'		
+			}
+		  }
+            steps {
+		sshagent(credentials: ['xxx-xxx-xxx']) {
+		  sh '''
+	  	  scp -r -i ~/.ssh/id_rsa _site/* xortiz@localhost:apps/xavier-j-ortiz.github.io/_site
+		  ssh -i ~/.ssh/id_rsa xortiz@localhost "sudo systemctl reload nginx"
+	   	  '''
+            }
+	    }
+        }
+    }
+}
+</code></pre></div></div>
+
+<p>It is not optimized, and will probably need to have a once over, but this so far worked.</p>
+
+<p>So, to do a high level explanation of this, with CI/CD, you want your processes to run by stages. i.e. Test, Build, Deploy.</p>
+
+<h2 id="test">Test</h2>
+<p>Fortunately, we don’t really <em>need</em> to test, because I’m constantly running <code class="language-plaintext highlighter-rouge">jekyll serve</code> which shows me my content when I open my browser to <code class="language-plaintext highlighter-rouge">localhost:4000</code>. So I know if my additions/changes are working or not. Probably wouldn’t be bad to do a dry run here though. May change it at a later date. In a way, I’m just checking the directory I’m in under this current <code class="language-plaintext highlighter-rouge">Test</code> stage. Not necessary, but at one point it was during my discovery of how <code class="language-plaintext highlighter-rouge">Jenkinsfile</code> works, and how it’s running it’s console commands and scripts.</p>
+
+<p>Anyway, the build and deploy part is where the real work is done.</p>
+
+<h2 id="build">Build</h2>
+<p>The <code class="language-plaintext highlighter-rouge">Build</code> stage is where the static content for the site is built. It is built in the root directory of the repo file tree, and is spit out under <code class="language-plaintext highlighter-rouge">_site</code>. When built, <code class="language-plaintext highlighter-rouge">_site</code> would be the root folder which I should host in order to see this portfolio/blog website.</p>
+
+<p>Of note, <code class="language-plaintext highlighter-rouge">source ~/.bashrc</code> is needed since it has all the ruby/rvm environment paths which are needed for jenkins to run the <code class="language-plaintext highlighter-rouge">bundle</code> and <code class="language-plaintext highlighter-rouge">jekyll</code> commands successfully. It is super counterintutive since this shell <em>is</em> <code class="language-plaintext highlighter-rouge">bash</code>, not sure why I have to source <code class="language-plaintext highlighter-rouge">.bashrc</code> again, but whatever.</p>
+
+<p><code class="language-plaintext highlighter-rouge">bundle install</code> is run so that we know that the environment is ready and has all the dependency gems it would need.</p>
+
+<p>And finally, <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code> is what actually builds the static content in <code class="language-plaintext highlighter-rouge">_site</code>.</p>
+
+<p>With that we move on to the <code class="language-plaintext highlighter-rouge">Deploy</code> portion</p>
+
+<h2 id="deploy">Deploy</h2>
+
+<p>I was very happy and surprised with the last deploy section. It allowed me to determine in a very nice way, <em>if</em> the <code class="language-plaintext highlighter-rouge">env.BRANCH_NAME == 'master'</code> branch was the process that was being run, <em>then and only then</em> should we Deploy.</p>
+
+<p>This detail is super important as I do not want to deploy anything that is not in the <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
+
+<p>The reasoning behind this is, say we run something on a made up branch called <code class="language-plaintext highlighter-rouge">booby-trap</code> branch. Every time I commit something to this branch, on Jenkins, the <code class="language-plaintext highlighter-rouge">Test</code>, <code class="language-plaintext highlighter-rouge">Build</code>, <code class="language-plaintext highlighter-rouge">Deploy</code> stages would run. <code class="language-plaintext highlighter-rouge">Test</code> and <code class="language-plaintext highlighter-rouge">Build</code> are all well and good, but the <code class="language-plaintext highlighter-rouge">Deploy</code> portion would not be welcome as this would overwrite the <code class="language-plaintext highlighter-rouge">master</code> branch generated <code class="language-plaintext highlighter-rouge">_site</code> folder <em>and more importantly</em> restart <code class="language-plaintext highlighter-rouge">nginx</code> which would then put any branch’s commits into full fledged production. Not an ideal scenario!</p>
+
+<p>This is why we added the expression:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		  expression {
+				env.BRANCH_NAME == 'master'		
+			}
+		  }
+</code></pre></div></div>
+
+<p>Basically an <code class="language-plaintext highlighter-rouge">if</code> case evaluator expression. So, <code class="language-plaintext highlighter-rouge">if</code> the branch that is being run and evaluated is <code class="language-plaintext highlighter-rouge">master</code>, then run the rest of the commands that would copy the <code class="language-plaintext highlighter-rouge">_site</code> file to where <code class="language-plaintext highlighter-rouge">nginx</code> is reading it from, and then <code class="language-plaintext highlighter-rouge">reload nginx</code> which would then bring this new content into production, and for your eyes to see!</p>
+
+<h3 id="sshagent-to-allow-scp-and-ssh-commands-from-the-deploy-stage-script">SSHAgent to allow scp and ssh commands from the <code class="language-plaintext highlighter-rouge">Deploy</code> stage script</h3>
+
+<p>Assuming you have created an SSH key on your <code class="language-plaintext highlighter-rouge">jenkins</code> user on your machine. if not, run the following as the <code class="language-plaintext highlighter-rouge">jenkins</code> user:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -b 4096 -m PEM
+</code></pre></div></div>
+<p>Of note, <code class="language-plaintext highlighter-rouge">PEM</code> is necessary to be used from the link I derived this on. I did not test if removing this arg would make it work. YMMV, but the intention is the same. Have an <code class="language-plaintext highlighter-rouge">SSH</code> key created.</p>
+
+<p>Also, I am always one to put a passphrase to my private key. I don’t like knowing that a private key is clearly visible to anyone. One accidental <code class="language-plaintext highlighter-rouge">cat</code> of the private key, in the wrong place, at the wrong time can create a security breach.</p>
+
+<p>You may have noticed the ssh agent crednetials there in the <code class="language-plaintext highlighter-rouge">steps</code> section of the code.</p>
+
+<p>Once created, you should make sure that you have the following Jenkins plugin called <a href="https://plugins.jenkins.io/ssh-agent/">SSH Agent</a>.</p>
+
+<p>There is a place where you can add existing keys in your file system structure created by the <code class="language-plaintext highlighter-rouge">jenkins</code> user, and add it’s passphrase to it. That place is under <strong>Manage Jenkins » Manage Credentials » Jenkins (global)</strong> and select <code class="language-plaintext highlighter-rouge">add credential</code>.</p>
+
+<p><img src="/assets/img/jenkins-installed/pipeline_8.png" alt="credential config" /></p>
+
+<p>After this credential is created and saved, you should see the new entry, as seen below.</p>
+
+<p><img src="/assets/img/jenkins-installed/pipeline_9.png" alt="credential view" /></p>
+
+<p>Since you don’t want to show the passphrase in clear text, the <code class="language-plaintext highlighter-rouge">sshagent(credentials: ['ssh-credentials-id']</code> command is used from this plugin to reference the passphrase input. The value to use within quotes in this example, were we wanting to reference the newly created SSH key, would be <code class="language-plaintext highlighter-rouge">eb4c3b51-81e1-46e8-bc40-3dea561c8018</code> and it would be put inbetween the single quotes in place of the <code class="language-plaintext highlighter-rouge">ssh-credentials-id</code> value.</p>
+
+<p>Now, I won’t be going into what I’m doing with <code class="language-plaintext highlighter-rouge">ssh</code> or <code class="language-plaintext highlighter-rouge">scp</code> in detail. But basically what I’m doing is I’m allowing my <code class="language-plaintext highlighter-rouge">jenkins</code> user to log into my <code class="language-plaintext highlighter-rouge">main</code> user (where the main <code class="language-plaintext highlighter-rouge">_site</code> folder lives and <code class="language-plaintext highlighter-rouge">nginx</code> will be reading from to surface the web content) and copy the newly built files by Jenkins via the CI/CD process described above into where <code class="language-plaintext highlighter-rouge">nginx</code> is going to be reading my files from. I could have done this another way, but I wanted to learn how to publish files via SSH. Might come in handy if ever there was a more distributed system where one server would be the Jenkins node, and anothe server the NGINX node.</p>
+
+<p>Finally the <code class="language-plaintext highlighter-rouge">ssh</code> command is just reloading the <code class="language-plaintext highlighter-rouge">nginx</code> service, which in turn will refresh the web content with the newly placed files from <code class="language-plaintext highlighter-rouge">_site</code>. For this case, I had to make sure that my user <code class="language-plaintext highlighter-rouge">xortiz</code> was found in a file I created just for him in <code class="language-plaintext highlighter-rouge">/etc/sudoers.d/nginx</code>. The file looks like the following, and allows me to run <code class="language-plaintext highlighter-rouge">sudo</code> commands relevant to <code class="language-plaintext highlighter-rouge">nginx</code> so that I can reload the <code class="language-plaintext highlighter-rouge">nginx</code> service and immediatly have the new web content be surfaced on the internet.</p>
+
+<p>So, a command run by <code class="language-plaintext highlighter-rouge">xortiz</code> such as <code class="language-plaintext highlighter-rouge">sudo /bin/systemctl reload nginx</code> would not require a password upon entry, and would allow an automated call to reload <code class="language-plaintext highlighter-rouge">nginx</code> to run without needing to log into <code class="language-plaintext highlighter-rouge">root</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">/etc/sudoers.d/nginx</code> file looks something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xortiz ALL=NOPASSWD: /bin/systemctl start nginx
+xortiz ALL=NOPASSWD: /bin/systemctl stop nginx
+xortiz ALL=NOPASSWD: /bin/systemctl restart nginx
+xortiz ALL=NOPASSWD: /bin/systemctl reload nginx
+</code></pre></div></div>
+
+<h1 id="closing-throughs">Closing throughs</h1>
+
+<p>There is a lot of optimization to do, both on the Jenkins process (specifically the <code class="language-plaintext highlighter-rouge">Jenkinsfile</code>), as well as in the writing of this blog. I’ll probably proofread and edit the content at some point for posts written yesterday and today.</p>
+
+<p>But now I have a beautiful CI/CD workflow, that on a commit to a branch other than <code class="language-plaintext highlighter-rouge">master</code>, the site is built as a test to make sure everything is working. And if a new commit comes into <code class="language-plaintext highlighter-rouge">master</code>, it builds the site as well as deploys it on the webserver.</p>
+
+<p>Now, I can focus on making more of this high quality content!</p>
+:ET

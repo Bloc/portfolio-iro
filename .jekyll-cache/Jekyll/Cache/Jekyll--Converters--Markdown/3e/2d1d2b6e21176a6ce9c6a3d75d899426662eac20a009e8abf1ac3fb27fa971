@@ -1,0 +1,40 @@
+I".<p>Clearly I have things running, given that the previous, and this current, post are both up and running.</p>
+
+<p>However, I did run into some NGINX issues. Or rather, NGINX config issues that stemmed from a letsencrypt update.</p>
+
+<p>Letsencrypt recently had a certificate issue. The gist of it is, one of their root CA certs expired, which basically made all the certs that were signed by this cert to be invalid and need to be reissued. This issue did not affect this website, as it seems that the version of <code class="language-plaintext highlighter-rouge">certbot</code> that I had used was new enough that it had correctly addressed this issue.</p>
+
+<p>However… It had been quite some time since the package had been installed on the debian server. In fact, I had installed it via <code class="language-plaintext highlighter-rouge">backports</code>.</p>
+
+<p>Package mantainers sometimes add  packages that have made it into unstable, and then add them to the <code class="language-plaintext highlighter-rouge">backports</code> repo so you may leverage some more up to date packages on the <code class="language-plaintext highlighter-rouge">stable</code> branch of debian. This is important, and I’ve used the following packages off of backports when I was using debian <code class="language-plaintext highlighter-rouge">stable</code> as my main distro. Things such as <code class="language-plaintext highlighter-rouge">linux-kernel-headers</code>, <code class="language-plaintext highlighter-rouge">linux-kernel-image</code>, and <code class="language-plaintext highlighter-rouge">nvidia-drivers</code>. Given that these move ahead quite quickly, and even the kernel may have some new modules that might benefit a desktop user.</p>
+
+<p>Getting back to <code class="language-plaintext highlighter-rouge">certbot</code>, it <em>used</em> to be in the <code class="language-plaintext highlighter-rouge">stable</code> branch’s backports, but as of late, <a href="https://certbot.eff.org/lets-encrypt/debiantesting-nginx">that has changed</a>. Seems the way to install it is via a <code class="language-plaintext highlighter-rouge">snap</code> package.</p>
+
+<p>Not gonna lie, I don’t like to add snap packages if I can avoid them.</p>
+
+<p>Snap packages are supposed to be version, distro agnostic. This of course <em>sounds</em> really cool, and does have it’s benefits. But…. unfortunately, from what I’ve read, you also install a lot of extra packages into the snap environment that runs the program you’re installing, and well… creates a bit of bloat. Though I would hope that the bloat won’t go into the main system, given that I would assume that the snap environment is isolated form the main distro’s environment, but I don’t know enough of this just yet to say it is one way or another.</p>
+
+<p>Anyway, lets assume the best, and that the snap environment is just going to use some more storage space up on my server. Fine. Price paid.</p>
+
+<p>The bigger issue that I haven’t figured out yet is how to upgrade the package so that it’s up to date without my intervention.</p>
+
+<p>So… with debian, I could always do unattended upgrades. Which, typically I only enabled unattended upgrades on security patches/upgrades. But, not sure how to go about doing something unattended on a snap that is housing the <code class="language-plaintext highlighter-rouge">cerbot</code> package.</p>
+
+<p>Though, now that I think about it, the <code class="language-plaintext highlighter-rouge">unattended-upgrade</code> packages would not activate the certbot package from what I recall, given that the <code class="language-plaintext highlighter-rouge">certbot</code> package was part of <code class="language-plaintext highlighter-rouge">backports</code>. I don’t believe that backports is in <code class="language-plaintext highlighter-rouge">unattended-upgrades</code> unless you made it. Which I didn’t, mainly because you never know when a package upstream might bork something downstream.</p>
+
+<p>Anyway…. I had to bite this bullet for the short term, and as I get familiar with the way this goes, maybe long term. We’ll see.</p>
+
+<p>Either way, NGINX was working, then after updating certbot, it wasn’t. It seems that the <code class="language-plaintext highlighter-rouge">certbot</code> snap package would modify the nginx config files for the sites incorrectly. grrr.</p>
+
+<p>Anyway, after brushing up on my nginx-ese, I realized that certbot was adding a couple of lines where not needed, and creating a serverblock where not needed. With this, would generate some bad URL routing and basically take my site offline.</p>
+
+<p>grrr.</p>
+
+<p>Was able to fix this and get it working, and I’m better for it because I updated my nginx config for this website! Yay!</p>
+
+<p>For the time being, will keep the certbot snap package, but am not very convinced, nor really wanting, to move to having a snap on a debian system. Kinda defeats the point to add bloat, when the reason when I installed debian was to avoid any (slight) Ubuntu bloat.</p>
+
+<p><strong>UPDATE: as I write this, I realize that the <a href="https://wiki.debian.org/LetsEncrypt">debian documentation</a> now points to using the certbot that comes with <code class="language-plaintext highlighter-rouge">stable</code> now. So, Will probably migrate to that in order to not muck around with snaps.</strong></p>
+
+<p><strong>UPDATE-2: I did end up using the packages from debian. So much easier to manage, and I also know that the security part is going to be just fine to manage via <code class="language-plaintext highlighter-rouge">unattended-upgrades</code></strong></p>
+:ET
