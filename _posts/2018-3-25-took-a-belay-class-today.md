@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Did the Belay Class Today at the Climbing Gym!
 ---
 

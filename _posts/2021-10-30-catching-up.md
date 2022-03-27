@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: It's been a while....
 ---
 

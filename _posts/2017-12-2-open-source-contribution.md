@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Open Source Apprenticeship Contribution - Part 1
 ---
 

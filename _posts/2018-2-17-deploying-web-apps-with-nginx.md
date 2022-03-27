@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Deploying React, Angular apps, as well as Wordpress on a VM
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Thoughts on github pages and analytics tags *OR* a multi-fold teaser for other future posts!
 ---
 

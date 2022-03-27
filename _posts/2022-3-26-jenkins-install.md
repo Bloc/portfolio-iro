@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Adding and Working with a Jenkins Multibranch Pipeline
 ---
 

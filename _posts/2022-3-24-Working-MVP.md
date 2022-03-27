@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MVP, CI/CD, and Data... oh my!
 ---
 

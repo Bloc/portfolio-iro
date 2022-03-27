@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: My very first blog post. FINALLY!!!! :D 
 ---
 

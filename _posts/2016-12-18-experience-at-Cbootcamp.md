@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: My experience in a (30+ weekly commitment) Coding Bootcamp. 
 ---
 
