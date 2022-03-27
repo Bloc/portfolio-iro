@@ -1,10 +1,9 @@
 ---
-layout: post
 title: Chat App in React
-feature-img: "img/react_chat.png"
-thumbnail-path: "img/react_chat.png"
-short-description: A chatroom application created in React
-
+layout: single
+header:
+  image: img/react_chat.png
+  teaser: img/react_chat.png
 ---
 ## The High Level Low Down
 This is a webapp created when learning about React. It was a twist on a project that I had to do for the Software Developer Program at [Bloc](https://www.bloc.io). The original project for the program required a different framework, but I wanted to learn some React, so I went ahead and created a React version. 

@@ -1,10 +1,9 @@
 ---
-layout: post
 title: Weather Application
-feature-img: "img/weather_app.png"
-thumbnail-path: "img/weather_app.png"
-short-description: A simple Weather App created with React
-
+layout: single
+header:
+  image: "img/weather_app.png"
+  teaser: "img/weather_app.png"
 ---
 This application was created by using React. The application uses the browser's geo-location abilities to fetch relevant weather data from the user.
 
