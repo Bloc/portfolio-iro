@@ -1,0 +1,83 @@
+# SITE CONFIGURATION
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://www.xavierjortiz.com" # the base hostname & protocol for your site
+
+# THEME-SPECIFIC CONFIGURATION
+theme_settings:
+  # Meta
+  title: Xavier Ortiz
+  avatar: assets/img/avatar.png
+  favicon: assets/favicon.ico
+  gravatar: # Email MD5 hash
+  description: "A website with blog posts and pages" # used by search engines
+
+  # Header and footer text
+  header_text: >
+     <h1> Bouldering Enthusiast, Whiskey Lover, Cycling Afficionado, Linux Geek, Developer, <a href='https://www.eveonline.com/signup/?invc=420d09fc-3559-4317-b9da-202c8ec0ab65'>Online Space Warfare Nerd</a>'s Portfolio Site :D</h1>
+  header_text_feature_image:
+  footer_text: >
+   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+
+  # Icons
+  rss: false
+  email_address: "xavier.ortiz.ch@gmail.com"
+  behance:
+  bitbucket: "XavierOrtiz"
+  dribbble: 
+  facebook:
+  flickr:
+  github: "Xavier-J-Ortiz"
+  google_plus: "cuchumino"
+  instagram:
+  linkedin: "https://www.linkedin.com/in/xavierortiz"
+  pinterest:
+  reddit: "cuchumino"
+  soundcloud:
+  stack_exchange:  
+  steam: "x_man81"
+  tumblr:
+  twitter: 
+  wordpress:
+  youtube:
+
+  # Scripts
+  google_analytics: "UA-89418797-1" 
+  disqus_shortname:
+  katex: true # Enable if using math markup
+  search: false # Enable the search feature
+
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "Follow RSS feed"
+  str_email: "Email"
+  str_next_post: "Next post"
+  str_previous_post: "Previous post"
+  str_next_page: "Next"
+  str_previous_page: "Prev"
+  str_continue_reading: "Continue reading"
+  str_javascript_required_disqus: "Please enable JavaScript to view comments."
+  str_search_no_results: "No results found."
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+
+  # Post navigation
+  post_navigation: false
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+# COLLECTIONS
+collections:
+  portfolio:
+    output: true
+
+# BUILD SETTINGS
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+plugins: [jekyll-paginate]
